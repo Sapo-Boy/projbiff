@@ -1,20 +1,20 @@
-[gd_scene load_steps=15 format=4 uid="uid://bm1yjh71xswve"]
+[gd_scene load_steps=15 format=4 uid="uid://beevh3pg6kg5i"]
 
-[ext_resource type="Texture2D" uid="uid://cw4jrairkoi55" path="res://Assets/Img/Parallax/Epee/Couleur1/BG2.png" id="1_6mihd"]
-[ext_resource type="Texture2D" uid="uid://bgqkw7vujuu4t" path="res://Assets/Img/Parallax/Epee/Couleur1/Sun2.png" id="2_derb7"]
-[ext_resource type="Texture2D" uid="uid://d0n640yib6kcx" path="res://Assets/Img/Parallax/Epee/Couleur1/Dense Atmostphere2.png" id="3_82cci"]
-[ext_resource type="Texture2D" uid="uid://powt7xsett6f" path="res://Assets/Img/Parallax/Epee/Couleur1/Far2.png" id="4_bku4h"]
-[ext_resource type="Texture2D" uid="uid://n5q2d6ieu3b4" path="res://Assets/Img/Parallax/Epee/Couleur1/Mid2.png" id="5_wajx3"]
-[ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="6_7kuhl"]
-[ext_resource type="Texture2D" uid="uid://cw0linm207fu3" path="res://Assets/Img/Parallax/Epee/Couleur1/Close2.png" id="6_vmpq3"]
-[ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="7_4lbgu"]
-[ext_resource type="Texture2D" uid="uid://dwi55ixoygbln" path="res://Assets/Img/Parallax/Epee/Couleur1/Fog2.png" id="7_l84iw"]
-[ext_resource type="Texture2D" uid="uid://bnd8087hc33na" path="res://Assets/Img/Sprites/Sprite21.png" id="8_hkgs2"]
-[ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="8_ywkuv"]
-[ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
+[ext_resource type="Texture2D" uid="uid://dv2o6yakn534g" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/BG1.png" id="1_7tfqe"]
+[ext_resource type="Texture2D" uid="uid://cpkui8r1sglwu" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Sun1.png" id="2_qjnkq"]
+[ext_resource type="Texture2D" uid="uid://ccariu5lkcl6e" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/dense atmostphere1.png" id="2_u2fs0"]
+[ext_resource type="Texture2D" uid="uid://b8nwrnxwk8ck3" path="res://Assets/Img/Sprites/Sprite16.png" id="3_0lr0j"]
+[ext_resource type="Texture2D" uid="uid://cx2jguka2id58" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Far1.png" id="4_k0pcb"]
+[ext_resource type="Texture2D" uid="uid://bum726wygen3v" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/FG1.png" id="5_u1q5n"]
+[ext_resource type="Texture2D" uid="uid://bg8qsrpsc18d1" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Fog1.png" id="6_wxq2q"]
+[ext_resource type="Texture2D" uid="uid://b1cv58yylj0ii" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Mid1.png" id="7_hsm83"]
+[ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="7_pcl7q"]
+[ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="8_o2khg"]
+[ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="9_sv6k8"]
+[ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_ypmdf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
-texture = ExtResource("10_km0d0")
+texture = ExtResource("10_ypmdf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -184,7 +184,6 @@ texture = ExtResource("10_km0d0")
 sources/0 = SubResource("TileSetAtlasSource_ug51b")
 
 [node name="Node2D" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [100.0]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -210,70 +209,80 @@ position = Vector2(-148, -20)
 position = Vector2(10, 10)
 
 [node name="Parallax2D" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
+repeat_size = Vector2(355, 0)
+autoscroll = Vector2(8, 0)
+repeat_times = 2
 
-[node name="Bg2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D"]
-position = Vector2(300, 100)
-texture = ExtResource("1_6mihd")
+[node name="Bg1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D"]
+position = Vector2(250, 60)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_7tfqe")
 
-[node name="Parallax2D2" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
-repeat_size = Vector2(360, 0)
+[node name="Parallax2D7" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
+repeat_size = Vector2(356, 0)
 autoscroll = Vector2(0.5, 0)
 repeat_times = 2
 
-[node name="Sun2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D2"]
-position = Vector2(200, 80)
-texture = ExtResource("2_derb7")
+[node name="Sun1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D7"]
+position = Vector2(250, 90)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_qjnkq")
+flip_h = true
+
+[node name="Parallax2D2" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
+
+[node name="DenseAtmostphere1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D2"]
+position = Vector2(250, 90)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_u2fs0")
 
 [node name="Parallax2D3" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
-[node name="DenseAtmostphere2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D3"]
-position = Vector2(300, 100)
-texture = ExtResource("3_82cci")
-
-[node name="Parallax2D5" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
-
-[node name="Far2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D5"]
-position = Vector2(300, 100)
-texture = ExtResource("4_bku4h")
-
-[node name="Parallax2D6" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
-
-[node name="Mid2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D6"]
-position = Vector2(300, 100)
-texture = ExtResource("5_wajx3")
-
-[node name="Parallax2D7" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
-
-[node name="Close2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D7"]
-position = Vector2(300, 100)
-texture = ExtResource("6_vmpq3")
+[node name="Far1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D3"]
+position = Vector2(250, 90)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_k0pcb")
 
 [node name="Parallax2D4" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
-[node name="Fog2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D4"]
-position = Vector2(300, 100)
-texture = ExtResource("7_l84iw")
+[node name="Fg1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D4"]
+position = Vector2(250, 90)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("5_u1q5n")
+
+[node name="Parallax2D5" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
+
+[node name="Fog1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D5"]
+position = Vector2(250, 90)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("6_wxq2q")
+
+[node name="Parallax2D6" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
+
+[node name="Mid1" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D6"]
+position = Vector2(250, 90)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("7_hsm83")
 
 [node name="Portrait" type="Node2D" parent="Control/SubViewportContainer/SubViewport/Node2D"]
 position = Vector2(330, 140)
 
-[node name="Sprite21" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-25, -20)
+[node name="Sprite16" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
+position = Vector2(-20, -5)
 scale = Vector2(2, 2)
-texture = ExtResource("8_hkgs2")
-flip_h = true
+texture = ExtResource("3_0lr0j")
 
 [node name="IconHeart" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 position = Vector2(-160, -32)
-texture = ExtResource("6_7kuhl")
+texture = ExtResource("7_pcl7q")
 
 [node name="IconHand" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 position = Vector2(-160, 0)
-texture = ExtResource("7_4lbgu")
+texture = ExtResource("8_o2khg")
 
 [node name="IconCard" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 position = Vector2(-162, 32)
-texture = ExtResource("8_ywkuv")
+texture = ExtResource("9_sv6k8")
 
 [node name="Cadre" type="Node2D" parent="."]
 position = Vector2(-149, -20)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg8qsrpsc18d1"
-path="res://.godot/imported/Fog1.png-e6fdd210046b5d3a3a612d379590875c.ctex"
+uid="uid://cw0linm207fu3"
+path="res://.godot/imported/Close2.png-8136e7646829de89af84f85832cb538d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Montagne/Couleur1/Fog1.png"
-dest_files=["res://.godot/imported/Fog1.png-e6fdd210046b5d3a3a612d379590875c.ctex"]
+source_file="res://Assets/Img/Parallax/Epee/Couleur1/Close2.png"
+dest_files=["res://.godot/imported/Close2.png-8136e7646829de89af84f85832cb538d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpkui8r1sglwu"
-path="res://.godot/imported/Sun1.png-c506dc8b8f27c0b2cea5274acc765076.ctex"
+uid="uid://d0n640yib6kcx"
+path="res://.godot/imported/Dense Atmostphere2.png-6e8f245ba318d73ab91e8118f238e7b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Montagne/Couleur1/Sun1.png"
-dest_files=["res://.godot/imported/Sun1.png-c506dc8b8f27c0b2cea5274acc765076.ctex"]
+source_file="res://Assets/Img/Parallax/Epee/Couleur1/Dense Atmostphere2.png"
+dest_files=["res://.godot/imported/Dense Atmostphere2.png-6e8f245ba318d73ab91e8118f238e7b2.ctex"]
 
 [params]
 

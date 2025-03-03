@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccariu5lkcl6e"
-path="res://.godot/imported/dense atmostphere1.png-edc5daedbc3e962e43a1e448574da201.ctex"
+uid="uid://cjh2o648kgfku"
+path="res://.godot/imported/Mid Homes3.png-630a81f64fd20743c309b1efe9e3c2b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Montagne/Couleur1/dense atmostphere1.png"
-dest_files=["res://.godot/imported/dense atmostphere1.png-edc5daedbc3e962e43a1e448574da201.ctex"]
+source_file="res://Assets/Img/Parallax/Ville_Montagne/Couleur1/Mid Homes3.png"
+dest_files=["res://.godot/imported/Mid Homes3.png-630a81f64fd20743c309b1efe9e3c2b2.ctex"]
 
 [params]
 
