@@ -184,70 +184,89 @@ sources/0 = SubResource("TileSetAtlasSource_ug51b")
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [100.0]
 
-[node name="Parallax" type="Node2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 0
+offset_right = 245.0
+offset_bottom = 167.0
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+canvas_item_default_texture_filter = 3
+size = Vector2i(245, 167)
+
+[node name="Node2D" type="Node2D" parent="Control/SubViewportContainer/SubViewport"]
+position = Vector2(-148, -20)
+
+[node name="Parallax" type="Node2D" parent="Control/SubViewportContainer/SubViewport/Node2D"]
 position = Vector2(10, 10)
 
-[node name="Parallax2D" type="Parallax2D" parent="Parallax"]
+[node name="Parallax2D" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
-[node name="Fond" type="Sprite2D" parent="Parallax/Parallax2D"]
+[node name="Fond" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D"]
 position = Vector2(200, 96)
 texture = ExtResource("1_tdgdg")
 
-[node name="Parallax2D2" type="Parallax2D" parent="Parallax"]
+[node name="Parallax2D2" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 repeat_size = Vector2(400, 0)
 autoscroll = Vector2(0.5, 0)
 repeat_times = 2
 
-[node name="Lune" type="Sprite2D" parent="Parallax/Parallax2D2"]
+[node name="Lune" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D2"]
 position = Vector2(200, 80)
 texture = ExtResource("2_jgyd3")
 flip_h = true
 
-[node name="Parallax2D3" type="Parallax2D" parent="Parallax"]
+[node name="Parallax2D3" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 repeat_size = Vector2(200, 0)
 autoscroll = Vector2(3, 0)
 repeat_times = 2
 
-[node name="Nuage" type="Sprite2D" parent="Parallax/Parallax2D3"]
+[node name="Nuage" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D3"]
 position = Vector2(200, 60)
 texture = ExtResource("3_wjywv")
 
-[node name="Parallax2D4" type="Parallax2D" parent="Parallax"]
+[node name="Parallax2D4" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 repeat_size = Vector2(400, 0)
 repeat_times = 2
 
-[node name="Ville_Fond" type="Sprite2D" parent="Parallax/Parallax2D4"]
+[node name="Ville_Fond" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D4"]
 position = Vector2(200, 96)
 texture = ExtResource("4_4u43r")
 
-[node name="Parallax2D5" type="Parallax2D" parent="Parallax"]
+[node name="Parallax2D5" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 repeat_size = Vector2(400, 0)
 repeat_times = 2
 
-[node name="Ville" type="Sprite2D" parent="Parallax/Parallax2D5"]
+[node name="Ville" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D5"]
 position = Vector2(200, 96)
 texture = ExtResource("5_loc8h")
 
-[node name="Portrait" type="Node2D" parent="."]
+[node name="Portrait" type="Node2D" parent="Control/SubViewportContainer/SubViewport/Node2D"]
 position = Vector2(330, 140)
 
-[node name="Sprite19" type="Sprite2D" parent="Portrait"]
+[node name="Sprite19" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 scale = Vector2(2, 2)
 texture = ExtResource("6_mnoos")
 
-[node name="IconHeart" type="Sprite2D" parent="Portrait"]
+[node name="IconHeart" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 position = Vector2(-160, -32)
 texture = ExtResource("6_7kuhl")
 
-[node name="IconHand" type="Sprite2D" parent="Portrait"]
+[node name="IconHand" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 position = Vector2(-160, 0)
 texture = ExtResource("7_4lbgu")
 
-[node name="IconCard" type="Sprite2D" parent="Portrait"]
+[node name="IconCard" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
 position = Vector2(-162, 32)
 texture = ExtResource("8_ywkuv")
 
 [node name="Cadre" type="Node2D" parent="."]
+position = Vector2(-149, -20)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Cadre"]
 tile_map_data = PackedByteArray("AAAYAAEAAAASAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAASAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAQAAQAAAAJAAsAAAAQAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
