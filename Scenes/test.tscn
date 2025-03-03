@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctyhk3m7wprc6"]
+[gd_scene load_steps=19 format=3 uid="uid://bw572hu24gjux"]
 
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="1_fo5fk"]
 [ext_resource type="Texture2D" uid="uid://dfd2c2pm4qq3e" path="res://Assets/Img/Sprites/Sprite12.png" id="2_omyrw"]
@@ -14,7 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="11_ckj45"]
 [ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="12_li3pt"]
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="14_0wodq"]
-[ext_resource type="PackedScene" uid="uid://cjk23qymdpjqx" path="res://Scenes/PNJ/PNJ_Le_Duc.tscn" id="15_0hoq8"]
+[ext_resource type="PackedScene" uid="uid://bm1yjh71xswve" path="res://Scenes/PNJ/PNJ_Kadaki_V1.tscn" id="15_0hoq8"]
+[ext_resource type="PackedScene" uid="uid://db1saqkuhfbp2" path="res://Scenes/PNJ/PNJ_Le_Duc.tscn" id="16_cx7t1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdaji"]
 texture = ExtResource("14_0wodq")
@@ -186,7 +187,7 @@ texture = ExtResource("14_0wodq")
 [sub_resource type="TileSet" id="TileSet_1llbt"]
 sources/0 = SubResource("TileSetAtlasSource_xdaji")
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(521, 251)
@@ -315,3 +316,6 @@ texture = ExtResource("5_gtbw3")
 
 [node name="Node2D" parent="Sprites_Template" instance=ExtResource("15_0hoq8")]
 position = Vector2(678, -2)
+
+[node name="Node2D2" parent="Sprites_Template" instance=ExtResource("16_cx7t1")]
+position = Vector2(859, 189)
