@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://egnybu1rsd6e"
-path="res://.godot/imported/Icon4.png-9bce90d513de16f9a7afc3df22375433.ctex"
+uid="uid://bbch6oowjfjll"
+path="res://.godot/imported/Passe_Tour.png-f2b582ed87c1cfdbac8673f564c043f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Symboles/Icon4.png"
-dest_files=["res://.godot/imported/Icon4.png-9bce90d513de16f9a7afc3df22375433.ctex"]
+source_file="res://Assets/Img/Symboles/Centre/Passe_Tour.png"
+dest_files=["res://.godot/imported/Passe_Tour.png-f2b582ed87c1cfdbac8673f564c043f7.ctex"]
 
 [params]
 

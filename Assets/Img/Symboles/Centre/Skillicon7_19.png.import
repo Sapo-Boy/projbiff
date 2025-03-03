@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkm7k70rorff7"
-path="res://.godot/imported/Skillicon7_19.png-e0db071c314d1851e9d00584a4018fae.ctex"
+path="res://.godot/imported/Skillicon7_19.png-798b0e3f6c4bd2bf1984faa3928a9e22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Symboles/Skillicon7_19.png"
-dest_files=["res://.godot/imported/Skillicon7_19.png-e0db071c314d1851e9d00584a4018fae.ctex"]
+source_file="res://Assets/Img/Symboles/Centre/Skillicon7_19.png"
+dest_files=["res://.godot/imported/Skillicon7_19.png-798b0e3f6c4bd2bf1984faa3928a9e22.ctex"]
 
 [params]
 
