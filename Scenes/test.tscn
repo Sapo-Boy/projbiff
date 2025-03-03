@@ -1,0 +1,102 @@
+[gd_scene load_steps=13 format=3 uid="uid://bw572hu24gjux"]
+
+[ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="1_fo5fk"]
+[ext_resource type="Texture2D" uid="uid://dfd2c2pm4qq3e" path="res://Assets/Img/Sprites/Sprite12.png" id="2_omyrw"]
+[ext_resource type="Texture2D" uid="uid://b8nwrnxwk8ck3" path="res://Assets/Img/Sprites/Sprite16.png" id="3_52ai4"]
+[ext_resource type="Texture2D" uid="uid://bnd8087hc33na" path="res://Assets/Img/Sprites/Sprite21.png" id="4_2woo5"]
+[ext_resource type="Texture2D" uid="uid://bfwg5wmoxc0su" path="res://Assets/Img/Sprites/Sprite18.png" id="5_gtbw3"]
+[ext_resource type="Texture2D" uid="uid://bbch6oowjfjll" path="res://Assets/Img/Symboles/Passe_Tour.png" id="6_addn8"]
+[ext_resource type="Texture2D" uid="uid://cstw7ny0uprvt" path="res://Assets/Img/Cartes_Vides/carte_fond_jaune2.png" id="7_5eai6"]
+[ext_resource type="Texture2D" uid="uid://ce1unh4xcrt6y" path="res://Assets/Img/Cartes_Vides/carte_fond_noir.png" id="8_gmcct"]
+[ext_resource type="Texture2D" uid="uid://btei81dgo6dxr" path="res://Assets/Img/Cartes_Vides/carte_fond_violet1.png" id="9_ewn3a"]
+[ext_resource type="Texture2D" uid="uid://bjx7j1v3bm1ho" path="res://Assets/Img/Cartes_Vides/carte_fond__cyan.png" id="10_nigys"]
+[ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Icon4.png" id="11_ckj45"]
+[ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="12_li3pt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Carte_Fond4" type="Sprite2D" parent="."]
+position = Vector2(71, 452)
+texture = ExtResource("1_fo5fk")
+
+[node name="Carte_Fond2" type="Sprite2D" parent="."]
+position = Vector2(97, 454)
+texture = ExtResource("1_fo5fk")
+
+[node name="Carte_Fond" type="Sprite2D" parent="."]
+position = Vector2(130, 454)
+texture = ExtResource("1_fo5fk")
+
+[node name="Carte_Fond3" type="Sprite2D" parent="."]
+position = Vector2(164, 455)
+texture = ExtResource("1_fo5fk")
+
+[node name="Sprite12" type="Sprite2D" parent="."]
+position = Vector2(739, 56)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_omyrw")
+
+[node name="Sprite16" type="Sprite2D" parent="."]
+position = Vector2(866, 246)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_52ai4")
+
+[node name="Sprite21" type="Sprite2D" parent="."]
+position = Vector2(749, 450)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_2woo5")
+
+[node name="Sprite18" type="Sprite2D" parent="."]
+position = Vector2(218, 210)
+scale = Vector2(3, 3)
+texture = ExtResource("5_gtbw3")
+
+[node name="CarteFondJaune2" type="Sprite2D" parent="."]
+position = Vector2(652, 202)
+texture = ExtResource("7_5eai6")
+
+[node name="CarteFondNoir" type="Sprite2D" parent="."]
+position = Vector2(588, 249)
+texture = ExtResource("8_gmcct")
+
+[node name="CarteFondViolet1" type="Sprite2D" parent="."]
+position = Vector2(658, 290)
+texture = ExtResource("9_ewn3a")
+
+[node name="CarteFondCyan" type="Sprite2D" parent="."]
+position = Vector2(715, 249)
+texture = ExtResource("10_nigys")
+
+[node name="PasseTour" type="Sprite2D" parent="."]
+position = Vector2(717, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("6_addn8")
+
+[node name="Carte_Fond5" type="Sprite2D" parent="."]
+position = Vector2(200, 455)
+texture = ExtResource("1_fo5fk")
+
+[node name="Carte_Fond6" type="Sprite2D" parent="."]
+position = Vector2(226, 457)
+texture = ExtResource("1_fo5fk")
+
+[node name="Carte_Fond7" type="Sprite2D" parent="."]
+position = Vector2(259, 457)
+texture = ExtResource("1_fo5fk")
+
+[node name="Carte_Fond8" type="Sprite2D" parent="."]
+position = Vector2(293, 458)
+texture = ExtResource("1_fo5fk")
+
+[node name="Icon4" type="Sprite2D" parent="Carte_Fond8"]
+position = Vector2(-23, -45)
+texture = ExtResource("11_ckj45")
+
+[node name="Label" type="Label" parent="Carte_Fond8"]
+offset_left = -20.0
+offset_top = -24.0
+offset_right = 27.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("12_li3pt")
+theme_override_font_sizes/font_size = 64
+text = "9"
