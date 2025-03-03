@@ -314,8 +314,7 @@ texture = ExtResource("4_2woo5")
 flip_h = true
 
 [node name="Sprite18" type="Sprite2D" parent="Sprites_Template"]
-visible = false
-position = Vector2(307, 267)
+position = Vector2(254, 277)
 scale = Vector2(4, 4)
 texture = ExtResource("5_gtbw3")
 
