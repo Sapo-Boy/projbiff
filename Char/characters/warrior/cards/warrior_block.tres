@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://wyhy2ieydsmx"]
+
+[ext_resource type="Script" path="res://characters/warrior/cards/warrior_block.gd" id="1_2wlb3"]
+
+[sub_resource type="Resource" id="Resource_2p601"]
+metadata/__load_path__ = "res://art/tile_0102.png"
+
+[resource]
+script = ExtResource("1_2wlb3")
+id = "warrior_block"
+type = 1
+target = 0
+cost = 1
+icon = SubResource("Resource_2p601")
+tooltip_text = "[center]Gain [color=\"0044ff\"]5[/color] block.[/center]"
