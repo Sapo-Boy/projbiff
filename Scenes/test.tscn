@@ -191,7 +191,6 @@ sources/0 = SubResource("TileSetAtlasSource_xdaji")
 position = Vector2(521, 251)
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
 offset_left = -48.0
 offset_top = -37.0
 offset_right = 1199.0

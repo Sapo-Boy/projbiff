@@ -1,0 +1,254 @@
+[gd_scene load_steps=13 format=4 uid="uid://cjk23qymdpjqx"]
+
+[ext_resource type="Texture2D" uid="uid://ctfkp1o15bhkv" path="res://Assets/Img/Parallax/Victorian/layer 1.png" id="1_tdgdg"]
+[ext_resource type="Texture2D" uid="uid://n1ptn1ejrp6u" path="res://Assets/Img/Parallax/Victorian/layer 2.png" id="2_jgyd3"]
+[ext_resource type="Texture2D" uid="uid://boy0f520fwt5h" path="res://Assets/Img/Parallax/Victorian/layer 3.png" id="3_wjywv"]
+[ext_resource type="Texture2D" uid="uid://cmhchf1swracc" path="res://Assets/Img/Parallax/Victorian/layer 4.png" id="4_4u43r"]
+[ext_resource type="Texture2D" uid="uid://cskulg6vfk4uh" path="res://Assets/Img/Parallax/Victorian/layer 5.png" id="5_loc8h"]
+[ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="6_7kuhl"]
+[ext_resource type="Texture2D" uid="uid://bk1544p42jpym" path="res://Assets/Img/Sprites/Sprite19.png" id="6_mnoos"]
+[ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="7_4lbgu"]
+[ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="8_ywkuv"]
+[ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
+texture = ExtResource("10_km0d0")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+18:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+2:8/0 = 0
+6:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+6:9/0 = 0
+11:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+11:10/0 = 0
+15:10/0 = 0
+2:11/0 = 0
+6:11/0 = 0
+11:11/0 = 0
+15:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+2:12/0 = 0
+6:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+2:13/0 = 0
+6:13/0 = 0
+11:13/0 = 0
+15:13/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+11:14/0 = 0
+15:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+2:15/0 = 0
+6:15/0 = 0
+11:15/0 = 0
+15:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rf4jb"]
+sources/0 = SubResource("TileSetAtlasSource_ug51b")
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [100.0]
+
+[node name="Parallax" type="Node2D" parent="."]
+position = Vector2(10, 10)
+
+[node name="Parallax2D" type="Parallax2D" parent="Parallax"]
+
+[node name="Fond" type="Sprite2D" parent="Parallax/Parallax2D"]
+position = Vector2(200, 96)
+texture = ExtResource("1_tdgdg")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(0.5, 0)
+repeat_times = 2
+
+[node name="Lune" type="Sprite2D" parent="Parallax/Parallax2D2"]
+position = Vector2(200, 80)
+texture = ExtResource("2_jgyd3")
+flip_h = true
+
+[node name="Parallax2D3" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(200, 0)
+autoscroll = Vector2(3, 0)
+repeat_times = 2
+
+[node name="Nuage" type="Sprite2D" parent="Parallax/Parallax2D3"]
+position = Vector2(200, 60)
+texture = ExtResource("3_wjywv")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(400, 0)
+repeat_times = 2
+
+[node name="Ville_Fond" type="Sprite2D" parent="Parallax/Parallax2D4"]
+position = Vector2(200, 96)
+texture = ExtResource("4_4u43r")
+
+[node name="Parallax2D5" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(400, 0)
+repeat_times = 2
+
+[node name="Ville" type="Sprite2D" parent="Parallax/Parallax2D5"]
+position = Vector2(200, 96)
+texture = ExtResource("5_loc8h")
+
+[node name="Portrait" type="Node2D" parent="."]
+position = Vector2(330, 140)
+
+[node name="Sprite19" type="Sprite2D" parent="Portrait"]
+scale = Vector2(2, 2)
+texture = ExtResource("6_mnoos")
+
+[node name="IconHeart" type="Sprite2D" parent="Portrait"]
+position = Vector2(-160, -32)
+texture = ExtResource("6_7kuhl")
+
+[node name="IconHand" type="Sprite2D" parent="Portrait"]
+position = Vector2(-160, 0)
+texture = ExtResource("7_4lbgu")
+
+[node name="IconCard" type="Sprite2D" parent="Portrait"]
+position = Vector2(-162, 32)
+texture = ExtResource("8_ywkuv")
+
+[node name="Cadre" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Cadre"]
+tile_map_data = PackedByteArray("AAAYAAEAAAASAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAASAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAQAAQAAAAJAAsAAAAQAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
+tile_set = SubResource("TileSet_rf4jb")
