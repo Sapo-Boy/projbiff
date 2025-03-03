@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=3 format=3 uid="uid://ct8a16hidlaao"]
+
+[ext_resource type="Texture2D" uid="uid://d2j047iot46hw" path="res://Assets/Img/Sprites/Sprite22.png" id="1_628vm"]
+[ext_resource type="Script" path="res://Char/custom_ressourcces/character_stats.gd" id="1_bsl5t"]
+
+[resource]
+script = ExtResource("1_bsl5t")
+cards_per_turn = 7
+max_mana = 1
+max_health = 1
+art = ExtResource("1_628vm")

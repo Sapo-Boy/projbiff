@@ -182,7 +182,6 @@ texture = ExtResource("10_km0d0")
 sources/0 = SubResource("TileSetAtlasSource_ug51b")
 
 [node name="Node2D" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [100.0]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -196,8 +195,10 @@ offset_right = 245.0
 offset_bottom = 167.0
 
 [node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
 canvas_item_default_texture_filter = 3
 size = Vector2i(245, 167)
+render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="Control/SubViewportContainer/SubViewport"]
 position = Vector2(-148, -20)

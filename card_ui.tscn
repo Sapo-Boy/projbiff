@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="11_pm57g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn07p"]
-size = Vector2(25, 30)
+size = Vector2(106, 138)
 
 [sub_resource type="Theme" id="Theme_nmb7a"]
 default_font_size = 80
@@ -69,7 +69,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
-position = Vector2(12.5, 15)
+position = Vector2(53, 69)
 shape = SubResource("RectangleShape2D_cn07p")
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
