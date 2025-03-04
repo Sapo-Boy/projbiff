@@ -513,20 +513,23 @@ position = Vector2(850, 240)
 position = Vector2(850, 456)
 
 [node name="PjL3S4ge" parent="." instance=ExtResource("19_q8sys")]
-position = Vector2(-30, 30)
+position = Vector2(-9, 63)
 
 [node name="Portail_Cartes" type="AnimatedSprite2D" parent="."]
-position = Vector2(574, 45)
+position = Vector2(576, 45)
 rotation = 3.14159
 sprite_frames = SubResource("SpriteFrames_vbh6s")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.521747
 
-[node name="Ui-Icons1" type="Sprite2D" parent="."]
+[node name="Node2D3" type="Node2D" parent="."]
+position = Vector2(406, 3)
+
+[node name="Ui-Icons1" type="Sprite2D" parent="Node2D3"]
 position = Vector2(16, 16)
 texture = ExtResource("20_n0wup")
 
-[node name="Ui-Icons18" type="Sprite2D" parent="."]
+[node name="Ui-Icons18" type="Sprite2D" parent="Node2D3"]
 position = Vector2(40, 16)
 texture = ExtResource("21_wojap")
