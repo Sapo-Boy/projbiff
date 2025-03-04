@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blpd4hn3jscrj"
-path="res://.godot/imported/Fog2.png-609093e79cf4c462dd6d7eebad8c731d.ctex"
+uid="uid://b7arlahi3ijx5"
+path="res://.godot/imported/cages.png-9acf071337b2a7a3b32f6610cad81846.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/Fog2.png"
-dest_files=["res://.godot/imported/Fog2.png-609093e79cf4c462dd6d7eebad8c731d.ctex"]
+source_file="res://Assets/Img/Parallax/Underground/cages.png"
+dest_files=["res://.godot/imported/cages.png-9acf071337b2a7a3b32f6610cad81846.ctex"]
 
 [params]
 

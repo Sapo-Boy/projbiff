@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do0xphdevscxs"
-path="res://.godot/imported/Far2.png-70c34a6d353f8611ca4f519245a7f1b4.ctex"
+uid="uid://bpwt618b2o6ip"
+path="res://.godot/imported/warp 28x41.png-df9379896895623dd0b7503d417e6fe4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/Far2.png"
-dest_files=["res://.godot/imported/Far2.png-70c34a6d353f8611ca4f519245a7f1b4.ctex"]
+source_file="res://Assets/Img/Sprites/Animation/Portail/warp 28x41.png"
+dest_files=["res://.godot/imported/warp 28x41.png-df9379896895623dd0b7503d417e6fe4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cavln0ik1r2m3"
-path="res://.godot/imported/Sun2.png-9180e1ad99d43c5a4e89874e8bdd2db1.ctex"
+uid="uid://cmr2bgm0wsp2q"
+path="res://.godot/imported/fog.png-04281d9a86ee119b5416f2679805dd54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/Sun2.png"
-dest_files=["res://.godot/imported/Sun2.png-9180e1ad99d43c5a4e89874e8bdd2db1.ctex"]
+source_file="res://Assets/Img/Parallax/Underground/fog.png"
+dest_files=["res://.godot/imported/fog.png-04281d9a86ee119b5416f2679805dd54.ctex"]
 
 [params]
 

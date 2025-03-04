@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f8sbkeubjk3"
-path="res://.godot/imported/Mid2.png-a0154247a743dad20cda8f310ae12d21.ctex"
+uid="uid://bb0lkdq06nklo"
+path="res://.godot/imported/background.png-b94a5ca90c9e820aa70661c633e66149.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/Mid2.png"
-dest_files=["res://.godot/imported/Mid2.png-a0154247a743dad20cda8f310ae12d21.ctex"]
+source_file="res://Assets/Img/Parallax/Underground/background.png"
+dest_files=["res://.godot/imported/background.png-b94a5ca90c9e820aa70661c633e66149.ctex"]
 
 [params]
 

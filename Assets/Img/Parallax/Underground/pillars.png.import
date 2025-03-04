@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3d16q7dv8567"
-path="res://.godot/imported/Dense Atmostphere2.png-132bf86bdb35b962b7841aa48f33fd2f.ctex"
+uid="uid://c538b283aede"
+path="res://.godot/imported/pillars.png-bd6089f4ff969261c47837d70d501138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/Dense Atmostphere2.png"
-dest_files=["res://.godot/imported/Dense Atmostphere2.png-132bf86bdb35b962b7841aa48f33fd2f.ctex"]
+source_file="res://Assets/Img/Parallax/Underground/pillars.png"
+dest_files=["res://.godot/imported/pillars.png-bd6089f4ff969261c47837d70d501138.ctex"]
 
 [params]
 

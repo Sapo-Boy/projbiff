@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y3kh2h0bns10"
-path="res://.godot/imported/BG2.png-6d19797ea04879c0e9528f6de95f6789.ctex"
+uid="uid://d0p02vitixbwm"
+path="res://.godot/imported/Normal Portal.png-7b933583ecdb3eb8b35518933c171814.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/BG2.png"
-dest_files=["res://.godot/imported/BG2.png-6d19797ea04879c0e9528f6de95f6789.ctex"]
+source_file="res://Assets/Img/Sprites/Animation/Portail/Normal Portal.png"
+dest_files=["res://.godot/imported/Normal Portal.png-7b933583ecdb3eb8b35518933c171814.ctex"]
 
 [params]
 

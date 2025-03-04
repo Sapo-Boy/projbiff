@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bw572hu24gjux"]
+[gd_scene load_steps=49 format=4 uid="uid://bw572hu24gjux"]
 
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="1_fo5fk"]
 [ext_resource type="Texture2D" uid="uid://dfd2c2pm4qq3e" path="res://Assets/Img/Sprites/Sprite12.png" id="2_omyrw"]
@@ -17,8 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://bm1yjh71xswve" path="res://Scenes/PNJ/PNJ_Kadaki_V1.tscn" id="15_0hoq8"]
 [ext_resource type="PackedScene" uid="uid://db1saqkuhfbp2" path="res://Scenes/PNJ/PNJ_Le_Duc.tscn" id="16_cx7t1"]
 [ext_resource type="PackedScene" uid="uid://beevh3pg6kg5i" path="res://Scenes/PNJ/PNJ_Triclop.tscn" id="17_i3yt0"]
-[ext_resource type="Texture2D" uid="uid://d2j047iot46hw" path="res://Assets/Img/Sprites/Sprite22.png" id="18_kuf18"]
+[ext_resource type="Texture2D" uid="uid://cihyynk1if1bv" path="res://Assets/Img/Sprites/Animation/Portail/Ancient Tech Portal.png" id="19_n0wup"]
 [ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="19_q8sys"]
+[ext_resource type="Texture2D" uid="uid://y2xtqg3psmpd" path="res://Assets/Img/Symboles/UI/UI - Icons1.png" id="20_n0wup"]
+[ext_resource type="Texture2D" uid="uid://c8iqphwmy7f8i" path="res://Assets/Img/Symboles/UI/UI - Icons18.png" id="21_wojap"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdaji"]
 texture = ExtResource("14_0wodq")
@@ -190,8 +192,185 @@ texture = ExtResource("14_0wodq")
 [sub_resource type="TileSet" id="TileSet_1llbt"]
 sources/0 = SubResource("TileSetAtlasSource_xdaji")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wojap"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(0, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_copon"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(189, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjyqs"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(378, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxtw2"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(567, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhq6j"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(756, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgu05"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(945, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nkef"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(1134, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpf1r"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(1323, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m64o6"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(1512, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55gk5"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(1701, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnpbo"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(1890, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkh07"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(2079, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jg6l"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(2268, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlfrn"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(2457, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j44qy"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(2646, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipur1"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(2835, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fddv"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(3024, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqbs1"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(3213, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_051wo"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(3402, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn8tc"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(3591, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66mtb"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(3780, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d83ya"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(3969, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ocgh"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(4158, 0, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcn80"]
+atlas = ExtResource("19_n0wup")
+region = Rect2(4347, 0, 189, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vbh6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wojap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_copon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjyqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxtw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhq6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgu05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nkef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpf1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m64o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55gk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnpbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkh07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jg6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlfrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j44qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipur1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fddv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqbs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_051wo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn8tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66mtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d83ya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ocgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcn80")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
 [node name="Node2D" type="Node2D"]
-metadata/_edit_vertical_guides_ = [500.0]
+metadata/_edit_vertical_guides_ = [576.0]
+metadata/_edit_horizontal_guides_ = [324.0]
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(521, 251)
@@ -201,26 +380,27 @@ offset_left = -48.0
 offset_top = -37.0
 offset_right = 1199.0
 offset_bottom = 686.0
+metadata/_edit_lock_ = true
 
 [node name="Node2D2" type="Node2D" parent="."]
 
 [node name="CarteFondJaune2" type="Sprite2D" parent="Node2D2"]
-position = Vector2(664, 255)
+position = Vector2(579, 311)
 texture = ExtResource("7_5eai6")
 
 [node name="CarteFondNoir" type="Sprite2D" parent="Node2D2"]
-position = Vector2(573, 313)
+position = Vector2(556, 330)
 texture = ExtResource("8_gmcct")
 
 [node name="CarteFondViolet1" type="Sprite2D" parent="Node2D2"]
-position = Vector2(652, 398)
+position = Vector2(586, 346)
 texture = ExtResource("9_ewn3a")
 
 [node name="Carte_Modele" type="Node2D" parent="."]
 position = Vector2(-122, 54)
 
 [node name="CarteFondCyan" type="Sprite2D" parent="Carte_Modele"]
-position = Vector2(863, 281)
+position = Vector2(729, 272)
 texture = ExtResource("10_nigys")
 
 [node name="PasseTour2" type="Sprite2D" parent="Carte_Modele"]
@@ -247,48 +427,49 @@ texture = ExtResource("11_8pq88")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-109, 4)
+tile_map_data = PackedByteArray("AAAkAA0AAAAEAAQAAAAkABoAAAAEAAYAAAAxABoAAAAGAAYAAAAxAA0AAAAGAAQAAAAIACMAAAAEAAQAAAApACMAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_1llbt")
 
 [node name="Zone_Pioche" type="Node2D" parent="."]
 position = Vector2(-17, 6)
 
 [node name="Carte_Fond4" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(85, 558)
+position = Vector2(187, 643)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond2" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(111, 560)
+position = Vector2(213, 645)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(144, 560)
+position = Vector2(246, 645)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond3" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(178, 561)
+position = Vector2(280, 646)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond5" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(214, 561)
+position = Vector2(316, 646)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond6" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(240, 563)
+position = Vector2(342, 648)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond7" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(273, 563)
+position = Vector2(375, 648)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond8" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(307, 564)
+position = Vector2(409, 649)
 texture = ExtResource("1_fo5fk")
 
 [node name="Label" type="Label" parent="Zone_Pioche"]
-offset_left = 287.0
-offset_top = 540.0
-offset_right = 334.0
-offset_bottom = 608.0
+offset_left = 389.0
+offset_top = 625.0
+offset_right = 436.0
+offset_bottom = 693.0
 theme_override_fonts/font = ExtResource("12_li3pt")
 theme_override_font_sizes/font_size = 64
 text = "9"
@@ -323,19 +504,29 @@ scale = Vector2(4, 4)
 texture = ExtResource("5_gtbw3")
 
 [node name="Kadaki_V1" parent="." instance=ExtResource("15_0hoq8")]
-position = Vector2(886, 24)
+position = Vector2(850, 24)
 
 [node name="Le_Duc" parent="." instance=ExtResource("16_cx7t1")]
-position = Vector2(884, 218)
+position = Vector2(850, 240)
 
 [node name="Triclop" parent="." instance=ExtResource("17_i3yt0")]
-position = Vector2(883, 419)
-
-[node name="Sprite22" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(212, 300)
-scale = Vector2(4, 4)
-texture = ExtResource("18_kuf18")
+position = Vector2(850, 456)
 
 [node name="PjL3S4ge" parent="." instance=ExtResource("19_q8sys")]
-position = Vector2(-30, -30)
+position = Vector2(-30, 30)
+
+[node name="Portail_Cartes" type="AnimatedSprite2D" parent="."]
+position = Vector2(574, 45)
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_vbh6s")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.521747
+
+[node name="Ui-Icons1" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("20_n0wup")
+
+[node name="Ui-Icons18" type="Sprite2D" parent="."]
+position = Vector2(40, 16)
+texture = ExtResource("21_wojap")

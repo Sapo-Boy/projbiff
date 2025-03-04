@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdwgp361edwvc"
-path="res://.godot/imported/Close2.png-508b44107d805754395bb69565528885.ctex"
+uid="uid://bhyq1d7w5j188"
+path="res://.godot/imported/Grassy Portal.png-a1736ee8751a286fa2204018cf27b22c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/Parallax/Epees/Couleur1/Close2.png"
-dest_files=["res://.godot/imported/Close2.png-508b44107d805754395bb69565528885.ctex"]
+source_file="res://Assets/Img/Sprites/Animation/Portail/Grassy Portal.png"
+dest_files=["res://.godot/imported/Grassy Portal.png-a1736ee8751a286fa2204018cf27b22c.ctex"]
 
 [params]
 
