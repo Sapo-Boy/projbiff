@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1snqs13umdid"]
+
+[ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="1_7yxsl"]
+[ext_resource type="PackedScene" uid="uid://cb75jkgby3ycu" path="res://Scenes/1_Zone_De_Jeu/parallax/montagne_parallax_zd_j.tscn" id="1_jnskn"]
+[ext_resource type="PackedScene" uid="uid://fhhfggb0v272" path="res://Scenes/1_Zone_De_Jeu/decors/plateforme_pj.tscn" id="2_57tcf"]
+[ext_resource type="PackedScene" uid="uid://bm1yjh71xswve" path="res://Scenes/PNJ/PNJ_Kadaki_V1.tscn" id="2_jnskn"]
+[ext_resource type="PackedScene" uid="uid://db1saqkuhfbp2" path="res://Scenes/PNJ/PNJ_Le_Duc.tscn" id="3_57tcf"]
+[ext_resource type="PackedScene" uid="uid://beevh3pg6kg5i" path="res://Scenes/PNJ/PNJ_Triclop.tscn" id="4_u2043"]
+[ext_resource type="PackedScene" uid="uid://dlbjq713gisqq" path="res://Scenes/ui/zone_jeu.tscn" id="5_oge7d"]
+[ext_resource type="PackedScene" uid="uid://bpri1ymqpycjc" path="res://Scenes/ui/ui_menu_ig.tscn" id="6_knkcy"]
+
+[node name="SceneDeJeu" type="Node2D"]
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="ParallaxZdJMtg" parent="Decor" instance=ExtResource("1_jnskn")]
+
+[node name="Plateforme_PJ" parent="Decor" instance=ExtResource("2_57tcf")]
+
+[node name="PjL3S4ge" parent="." instance=ExtResource("1_7yxsl")]
+position = Vector2(-10, 60)
+
+[node name="PNJ" type="Node2D" parent="."]
+position = Vector2(850, 0)
+
+[node name="Kadaki_V1" parent="PNJ" instance=ExtResource("2_jnskn")]
+position = Vector2(0, 240)
+
+[node name="Le_Duc" parent="PNJ" instance=ExtResource("3_57tcf")]
+position = Vector2(0, 456)
+
+[node name="Triclop" parent="PNJ" instance=ExtResource("4_u2043")]
+position = Vector2(0, 24)
+
+[node name="Zone_Jeu" parent="." instance=ExtResource("5_oge7d")]
+
+[node name="UI_Menu_IG" parent="." instance=ExtResource("6_knkcy")]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0

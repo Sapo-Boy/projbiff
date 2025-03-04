@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://cb75jkgby3ycu"]
+
+[ext_resource type="Texture2D" uid="uid://ccb85xdgfju7b" path="res://Assets/Img/Parallax/Ville_Montagne/Couleur2/BG4.png" id="1_goj6l"]
+[ext_resource type="Texture2D" uid="uid://cyi4ce3b7aabj" path="res://Assets/Img/Parallax/Ville_Montagne/Couleur2/Sun4.png" id="2_kah3m"]
+[ext_resource type="Texture2D" uid="uid://dfvkk44knkkfw" path="res://Assets/Img/Parallax/Ville_Montagne/Couleur2/Clouds4.png" id="3_w34j1"]
+[ext_resource type="Texture2D" uid="uid://c6khbtknprxxm" path="res://Assets/Img/Parallax/Ville_Montagne/Couleur2/Clouds 5.png" id="4_b02cc"]
+[ext_resource type="Texture2D" uid="uid://b1wklf7nrsjae" path="res://Assets/Img/Parallax/Ville_Montagne/Couleur2/Mid Mountain4.png" id="5_d3y2d"]
+[ext_resource type="Texture2D" uid="uid://birgd441tan3g" path="res://Assets/Img/Parallax/Ville_Montagne/Couleur2/Fog4.png" id="6_648j8"]
+
+[node name="ParallaxZdJMtg" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(1176, 0)
+autoscroll = Vector2(6, 0)
+repeat_times = 2
+
+[node name="Bg4" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(575, 330)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_goj6l")
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+repeat_size = Vector2(1176, 0)
+autoscroll = Vector2(0.1, 0)
+repeat_times = 2
+
+[node name="Sun4" type="Sprite2D" parent="Parallax2D5"]
+position = Vector2(575, 330)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_kah3m")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+repeat_size = Vector2(1176, 0)
+autoscroll = Vector2(4, 0)
+repeat_times = 2
+
+[node name="Clouds4" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(575, 330)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_w34j1")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+repeat_size = Vector2(1176, 0)
+autoscroll = Vector2(2, 0)
+repeat_times = 2
+
+[node name="Clouds5" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(575, 330)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_b02cc")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+
+[node name="MidMountain4" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(575, 330)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("5_d3y2d")
+
+[node name="Fog4" type="Sprite2D" parent="."]
+position = Vector2(575, 330)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("6_648j8")

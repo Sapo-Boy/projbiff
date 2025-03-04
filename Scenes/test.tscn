@@ -1,6 +1,8 @@
-[gd_scene load_steps=49 format=4 uid="uid://bw572hu24gjux"]
+[gd_scene load_steps=51 format=4 uid="uid://bw572hu24gjux"]
 
+[ext_resource type="PackedScene" uid="uid://fhhfggb0v272" path="res://Scenes/1_Zone_De_Jeu/decors/plateforme_pj.tscn" id="1_copon"]
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="1_fo5fk"]
+[ext_resource type="PackedScene" uid="uid://cb75jkgby3ycu" path="res://Scenes/1_Zone_De_Jeu/parallax/montagne_parallax_zd_j.tscn" id="1_wjyqs"]
 [ext_resource type="Texture2D" uid="uid://dfd2c2pm4qq3e" path="res://Assets/Img/Sprites/Sprite12.png" id="2_omyrw"]
 [ext_resource type="Texture2D" uid="uid://b8nwrnxwk8ck3" path="res://Assets/Img/Sprites/Sprite16.png" id="3_52ai4"]
 [ext_resource type="Texture2D" uid="uid://bnd8087hc33na" path="res://Assets/Img/Sprites/Sprite21.png" id="4_2woo5"]
@@ -19,8 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://beevh3pg6kg5i" path="res://Scenes/PNJ/PNJ_Triclop.tscn" id="17_i3yt0"]
 [ext_resource type="Texture2D" uid="uid://cihyynk1if1bv" path="res://Assets/Img/Sprites/Animation/Portail/Ancient Tech Portal.png" id="19_n0wup"]
 [ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="19_q8sys"]
-[ext_resource type="Texture2D" uid="uid://y2xtqg3psmpd" path="res://Assets/Img/Symboles/UI/UI - Icons1.png" id="20_n0wup"]
-[ext_resource type="Texture2D" uid="uid://c8iqphwmy7f8i" path="res://Assets/Img/Symboles/UI/UI - Icons18.png" id="21_wojap"]
+[ext_resource type="PackedScene" uid="uid://bpri1ymqpycjc" path="res://Scenes/ui/ui_menu_ig.tscn" id="20_n0wup"]
+[ext_resource type="PackedScene" uid="uid://dlbjq713gisqq" path="res://Scenes/ui/zone_jeu.tscn" id="21_wojap"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdaji"]
 texture = ExtResource("14_0wodq")
@@ -372,6 +374,10 @@ animations = [{
 metadata/_edit_vertical_guides_ = [576.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 
+[node name="ParallaxZdJMtg" parent="." instance=ExtResource("1_wjyqs")]
+
+[node name="Plateforme_PJ" parent="." instance=ExtResource("1_copon")]
+
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(521, 251)
 
@@ -397,6 +403,7 @@ position = Vector2(586, 346)
 texture = ExtResource("9_ewn3a")
 
 [node name="Carte_Modele" type="Node2D" parent="."]
+visible = false
 position = Vector2(-122, 54)
 
 [node name="CarteFondCyan" type="Sprite2D" parent="Carte_Modele"]
@@ -426,11 +433,13 @@ position = Vector2(765, 210)
 texture = ExtResource("11_8pq88")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+visible = false
 position = Vector2(-109, 4)
 tile_map_data = PackedByteArray("AAAkAA0AAAAEAAQAAAAkABoAAAAEAAYAAAAxABoAAAAGAAYAAAAxAA0AAAAGAAQAAAAIACMAAAAEAAQAAAApACMAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_1llbt")
 
 [node name="Zone_Pioche" type="Node2D" parent="."]
+visible = false
 position = Vector2(-17, 6)
 
 [node name="Carte_Fond4" type="Sprite2D" parent="Zone_Pioche"]
@@ -476,6 +485,7 @@ text = "9"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprites_Template" type="Node2D" parent="."]
+visible = false
 position = Vector2(-18, 32)
 
 [node name="Sprite12" type="Sprite2D" parent="Sprites_Template"]
@@ -513,7 +523,7 @@ position = Vector2(850, 240)
 position = Vector2(850, 456)
 
 [node name="PjL3S4ge" parent="." instance=ExtResource("19_q8sys")]
-position = Vector2(-9, 63)
+position = Vector2(-10, 60)
 
 [node name="Portail_Cartes" type="AnimatedSprite2D" parent="."]
 position = Vector2(576, 45)
@@ -523,13 +533,10 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.521747
 
-[node name="Node2D3" type="Node2D" parent="."]
-position = Vector2(406, 3)
+[node name="UI_Menu_IG" parent="." instance=ExtResource("20_n0wup")]
+offset_left = 210.0
+offset_top = 15.0
+offset_right = 210.0
+offset_bottom = 15.0
 
-[node name="Ui-Icons1" type="Sprite2D" parent="Node2D3"]
-position = Vector2(16, 16)
-texture = ExtResource("20_n0wup")
-
-[node name="Ui-Icons18" type="Sprite2D" parent="Node2D3"]
-position = Vector2(40, 16)
-texture = ExtResource("21_wojap")
+[node name="Zone_Jeu" parent="." instance=ExtResource("21_wojap")]
