@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://q8llcklo5on8"]
+
+[ext_resource type="Script" uid="uid://bpxaqrajts21t" path="res://Scenes/ui/mana_ui.gd" id="2_e6hal"]
+
+[sub_resource type="Resource" id="Resource_hikpi"]
+metadata/__load_path__ = "res://main_theme.tres"
+
+[node name="ManaUI" type="Panel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -23.0
+offset_right = 24.0
+offset_bottom = -5.0
+grow_vertical = 0
+theme = SubResource("Resource_hikpi")
+script = ExtResource("2_e6hal")
+
+[node name="ManaLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1/3"
+horizontal_alignment = 1
+vertical_alignment = 1
