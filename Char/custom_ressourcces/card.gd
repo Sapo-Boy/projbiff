@@ -1,12 +1,13 @@
 class_name Card
 extends Resource
 
-enum Type {ATTACK, SKILL, POWER}
+enum TypeColor{Yellow,Black,Purple,Cyan}
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE}
 
 @export_group("Card Attributes")
 @export var id: String
-@export var type: Type
+@export var typeCard: int
+@export var typeColor: TypeColor
 @export var target: Target
 @export var cost: int
 
