@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Card" load_steps=6 format=3 uid="uid://72jdr1hrwg5y"]
 
 [ext_resource type="Texture2D" uid="uid://ce1unh4xcrt6y" path="res://Assets/Img/Cartes_Vides/carte_fond_noir.png" id="1_20adw"]
-[ext_resource type="Script" path="res://Char/custom_ressourcces/card.gd" id="1_l0d3u"]
+[ext_resource type="Script" uid="uid://7xiqly7igio7" path="res://Char/custom_ressourcces/card.gd" id="1_l0d3u"]
 [ext_resource type="Texture2D" uid="uid://bfskyvi6njjv" path="res://Assets/Img/Symboles/Bonus/icon_time.png" id="2_y0685"]
 [ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="3_q5nyh"]
 [ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="4_fkgu1"]

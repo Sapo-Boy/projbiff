@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=15 format=4 uid="uid://bm1yjh71xswve"]
 
 [ext_resource type="Texture2D" uid="uid://cw4jrairkoi55" path="res://Assets/Img/Parallax/Epee/Couleur1/BG2.png" id="1_6mihd"]
@@ -10,19 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cw0linm207fu3" path="res://Assets/Img/Parallax/Epee/Couleur1/Close2.png" id="6_vmpq3"]
 [ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="7_4lbgu"]
 [ext_resource type="Texture2D" uid="uid://dwi55ixoygbln" path="res://Assets/Img/Parallax/Epee/Couleur1/Fog2.png" id="7_l84iw"]
-=======
-[gd_scene load_steps=15 format=4 uid="uid://cjk23qymdpjqx"]
-
-[ext_resource type="Texture2D" uid="uid://y3kh2h0bns10" path="res://Assets/Img/Parallax/Epees/Couleur1/BG2.png" id="1_tqvkt"]
-[ext_resource type="Texture2D" uid="uid://cavln0ik1r2m3" path="res://Assets/Img/Parallax/Epees/Couleur1/Sun2.png" id="2_fvel4"]
-[ext_resource type="Texture2D" uid="uid://b3d16q7dv8567" path="res://Assets/Img/Parallax/Epees/Couleur1/Dense Atmostphere2.png" id="3_ttrsd"]
-[ext_resource type="Texture2D" uid="uid://do0xphdevscxs" path="res://Assets/Img/Parallax/Epees/Couleur1/Far2.png" id="4_s2wfs"]
-[ext_resource type="Texture2D" uid="uid://f8sbkeubjk3" path="res://Assets/Img/Parallax/Epees/Couleur1/Mid2.png" id="5_4rj1p"]
-[ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="6_7kuhl"]
-[ext_resource type="Texture2D" uid="uid://cdwgp361edwvc" path="res://Assets/Img/Parallax/Epees/Couleur1/Close2.png" id="6_jb34j"]
-[ext_resource type="Texture2D" uid="uid://blpd4hn3jscrj" path="res://Assets/Img/Parallax/Epees/Couleur1/Fog2.png" id="7_0jk2x"]
-[ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="7_4lbgu"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://bnd8087hc33na" path="res://Assets/Img/Sprites/Sprite21.png" id="8_hkgs2"]
 [ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="8_ywkuv"]
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
@@ -214,11 +200,7 @@ offset_bottom = 167.0
 [node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
 handle_input_locally = false
 canvas_item_default_texture_filter = 3
-<<<<<<< Updated upstream
-size = Vector2i(246, 168)
-=======
 size = Vector2i(245, 167)
->>>>>>> Stashed changes
 render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="Control/SubViewportContainer/SubViewport"]
@@ -231,11 +213,7 @@ position = Vector2(10, 10)
 
 [node name="Bg2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D"]
 position = Vector2(300, 100)
-<<<<<<< Updated upstream
 texture = ExtResource("1_6mihd")
-=======
-texture = ExtResource("1_tqvkt")
->>>>>>> Stashed changes
 
 [node name="Parallax2D2" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 repeat_size = Vector2(360, 0)
@@ -244,61 +222,37 @@ repeat_times = 2
 
 [node name="Sun2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D2"]
 position = Vector2(200, 80)
-<<<<<<< Updated upstream
 texture = ExtResource("2_derb7")
-=======
-texture = ExtResource("2_fvel4")
->>>>>>> Stashed changes
 
 [node name="Parallax2D3" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
 [node name="DenseAtmostphere2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D3"]
 position = Vector2(300, 100)
-<<<<<<< Updated upstream
 texture = ExtResource("3_82cci")
-=======
-texture = ExtResource("3_ttrsd")
->>>>>>> Stashed changes
 
 [node name="Parallax2D5" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
 [node name="Far2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D5"]
 position = Vector2(300, 100)
-<<<<<<< Updated upstream
 texture = ExtResource("4_bku4h")
-=======
-texture = ExtResource("4_s2wfs")
->>>>>>> Stashed changes
 
 [node name="Parallax2D6" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
 [node name="Mid2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D6"]
 position = Vector2(300, 100)
-<<<<<<< Updated upstream
 texture = ExtResource("5_wajx3")
-=======
-texture = ExtResource("5_4rj1p")
->>>>>>> Stashed changes
 
 [node name="Parallax2D7" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
 [node name="Close2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D7"]
 position = Vector2(300, 100)
-<<<<<<< Updated upstream
 texture = ExtResource("6_vmpq3")
-=======
-texture = ExtResource("6_jb34j")
->>>>>>> Stashed changes
 
 [node name="Parallax2D4" type="Parallax2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax"]
 
 [node name="Fog2" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Parallax/Parallax2D4"]
 position = Vector2(300, 100)
-<<<<<<< Updated upstream
 texture = ExtResource("7_l84iw")
-=======
-texture = ExtResource("7_0jk2x")
->>>>>>> Stashed changes
 
 [node name="Portrait" type="Node2D" parent="Control/SubViewportContainer/SubViewport/Node2D"]
 position = Vector2(330, 140)
@@ -325,9 +279,5 @@ texture = ExtResource("8_ywkuv")
 position = Vector2(-149, -20)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Cadre"]
-<<<<<<< Updated upstream
-tile_map_data = PackedByteArray("AAAYAAEAAAAMAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAAMAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAKAAQAAAAJAAsAAAAKAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
-=======
 tile_map_data = PackedByteArray("AAAYAAEAAAASAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAASAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAQAAQAAAAJAAsAAAAQAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
->>>>>>> Stashed changes
 tile_set = SubResource("TileSet_rf4jb")

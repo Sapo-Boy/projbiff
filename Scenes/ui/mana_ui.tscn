@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://q8llcklo5on8"]
 
-[ext_resource type="Theme" uid="uid://b40hal6e6ryrg" path="res://main_theme.tres" id="1_p587x"]
-[ext_resource type="Script" path="res://Scenes/ui/mana_ui.gd" id="2_e6hal"]
+[ext_resource type="Script" uid="uid://bpxaqrajts21t" path="res://Scenes/ui/mana_ui.gd" id="2_e6hal"]
+
+[sub_resource type="Resource" id="Resource_hikpi"]
+metadata/__load_path__ = "res://main_theme.tres"
 
 [node name="ManaUI" type="Panel"]
 anchors_preset = 2
@@ -12,7 +14,7 @@ offset_top = -23.0
 offset_right = 24.0
 offset_bottom = -5.0
 grow_vertical = 0
-theme = ExtResource("1_p587x")
+theme = SubResource("Resource_hikpi")
 script = ExtResource("2_e6hal")
 
 [node name="ManaLabel" type="Label" parent="."]
