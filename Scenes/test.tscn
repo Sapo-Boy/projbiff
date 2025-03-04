@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bw572hu24gjux"]
+[gd_scene load_steps=22 format=3 uid="uid://bw572hu24gjux"]
 
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="1_fo5fk"]
 [ext_resource type="Texture2D" uid="uid://dfd2c2pm4qq3e" path="res://Assets/Img/Sprites/Sprite12.png" id="2_omyrw"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://bm1yjh71xswve" path="res://Scenes/PNJ/PNJ_Kadaki_V1.tscn" id="15_0hoq8"]
 [ext_resource type="PackedScene" uid="uid://db1saqkuhfbp2" path="res://Scenes/PNJ/PNJ_Le_Duc.tscn" id="16_cx7t1"]
 [ext_resource type="PackedScene" uid="uid://beevh3pg6kg5i" path="res://Scenes/PNJ/PNJ_Triclop.tscn" id="17_i3yt0"]
+[ext_resource type="Texture2D" uid="uid://d2j047iot46hw" path="res://Assets/Img/Sprites/Sprite22.png" id="18_kuf18"]
+[ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="19_q8sys"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdaji"]
 texture = ExtResource("14_0wodq")
@@ -189,6 +191,7 @@ texture = ExtResource("14_0wodq")
 sources/0 = SubResource("TileSetAtlasSource_xdaji")
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [500.0]
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(521, 251)
@@ -250,42 +253,42 @@ tile_set = SubResource("TileSet_1llbt")
 position = Vector2(-17, 6)
 
 [node name="Carte_Fond4" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(186, 537)
+position = Vector2(85, 558)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond2" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(212, 539)
+position = Vector2(111, 560)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(245, 539)
+position = Vector2(144, 560)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond3" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(279, 540)
+position = Vector2(178, 561)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond5" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(315, 540)
+position = Vector2(214, 561)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond6" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(341, 542)
+position = Vector2(240, 563)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond7" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(374, 542)
+position = Vector2(273, 563)
 texture = ExtResource("1_fo5fk")
 
 [node name="Carte_Fond8" type="Sprite2D" parent="Zone_Pioche"]
-position = Vector2(408, 543)
+position = Vector2(307, 564)
 texture = ExtResource("1_fo5fk")
 
 [node name="Label" type="Label" parent="Zone_Pioche"]
-offset_left = 388.0
-offset_top = 519.0
-offset_right = 435.0
-offset_bottom = 587.0
+offset_left = 287.0
+offset_top = 540.0
+offset_right = 334.0
+offset_bottom = 608.0
 theme_override_fonts/font = ExtResource("12_li3pt")
 theme_override_font_sizes/font_size = 64
 text = "9"
@@ -319,11 +322,20 @@ position = Vector2(307, 267)
 scale = Vector2(4, 4)
 texture = ExtResource("5_gtbw3")
 
-[node name="Node2D" parent="Sprites_Template" instance=ExtResource("15_0hoq8")]
-position = Vector2(907, 1)
+[node name="Kadaki_V1" parent="." instance=ExtResource("15_0hoq8")]
+position = Vector2(886, 24)
 
-[node name="Node2D2" parent="Sprites_Template" instance=ExtResource("16_cx7t1")]
-position = Vector2(907, 199)
+[node name="Le_Duc" parent="." instance=ExtResource("16_cx7t1")]
+position = Vector2(884, 218)
 
-[node name="Node2D3" parent="Sprites_Template" instance=ExtResource("17_i3yt0")]
-position = Vector2(907, 394)
+[node name="Triclop" parent="." instance=ExtResource("17_i3yt0")]
+position = Vector2(883, 419)
+
+[node name="Sprite22" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(212, 300)
+scale = Vector2(4, 4)
+texture = ExtResource("18_kuf18")
+
+[node name="PjL3S4ge" parent="." instance=ExtResource("19_q8sys")]
+position = Vector2(-30, -30)

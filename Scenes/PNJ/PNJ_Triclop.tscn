@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://beevh3pg6kg5i"]
+[gd_scene load_steps=16 format=4 uid="uid://beevh3pg6kg5i"]
 
 [ext_resource type="Texture2D" uid="uid://dv2o6yakn534g" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/BG1.png" id="1_7tfqe"]
 [ext_resource type="Texture2D" uid="uid://cpkui8r1sglwu" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Sun1.png" id="2_qjnkq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="8_o2khg"]
 [ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="9_sv6k8"]
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_ypmdf"]
+[ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="13_titlx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
 texture = ExtResource("10_ypmdf")
@@ -183,7 +184,7 @@ texture = ExtResource("10_ypmdf")
 [sub_resource type="TileSet" id="TileSet_rf4jb"]
 sources/0 = SubResource("TileSetAtlasSource_ug51b")
 
-[node name="Node2D" type="Node2D"]
+[node name="Triclop" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -272,21 +273,55 @@ position = Vector2(-20, -5)
 scale = Vector2(2, 2)
 texture = ExtResource("3_0lr0j")
 
-[node name="IconHeart" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-160, -32)
-texture = ExtResource("7_pcl7q")
-
-[node name="IconHand" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-160, 0)
-texture = ExtResource("8_o2khg")
-
-[node name="IconCard" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-162, 32)
-texture = ExtResource("9_sv6k8")
-
 [node name="Cadre" type="Node2D" parent="."]
 position = Vector2(-149, -20)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Cadre"]
 tile_map_data = PackedByteArray("AAAYAAEAAAAMAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAAMAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAKAAQAAAAJAAsAAAAKAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
 tile_set = SubResource("TileSet_rf4jb")
+
+[node name="UI2" type="Node2D" parent="."]
+
+[node name="IconHeart" type="Sprite2D" parent="UI2"]
+position = Vector2(22, 88)
+texture = ExtResource("7_pcl7q")
+
+[node name="UI_PV" type="Label" parent="UI2/IconHeart"]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("13_titlx")
+text = "1"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="IconHand" type="Sprite2D" parent="UI2"]
+position = Vector2(22, 120)
+texture = ExtResource("8_o2khg")
+
+[node name="UI_Action" type="Label" parent="UI2/IconHand"]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("13_titlx")
+text = "1"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="IconCard" type="Sprite2D" parent="UI2"]
+position = Vector2(22, 152)
+texture = ExtResource("9_sv6k8")
+
+[node name="UI_Card" type="Label" parent="UI2/IconCard"]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("13_titlx")
+text = "1"
+horizontal_alignment = 2

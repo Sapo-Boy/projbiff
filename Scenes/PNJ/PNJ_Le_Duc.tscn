@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://db1saqkuhfbp2"]
+[gd_scene load_steps=14 format=4 uid="uid://db1saqkuhfbp2"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkp1o15bhkv" path="res://Assets/Img/Parallax/Victorian/layer 1.png" id="1_tdgdg"]
 [ext_resource type="Texture2D" uid="uid://n1ptn1ejrp6u" path="res://Assets/Img/Parallax/Victorian/layer 2.png" id="2_jgyd3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bk1544p42jpym" path="res://Assets/Img/Sprites/Sprite19.png" id="6_mnoos"]
 [ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="7_4lbgu"]
 [ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="8_ywkuv"]
+[ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="9_1xalq"]
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
@@ -181,8 +182,9 @@ texture = ExtResource("10_km0d0")
 [sub_resource type="TileSet" id="TileSet_rf4jb"]
 sources/0 = SubResource("TileSetAtlasSource_ug51b")
 
-[node name="Node2D" type="Node2D"]
+[node name="Le_Duc" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [100.0]
+metadata/_edit_vertical_guides_ = [70.0]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -198,7 +200,7 @@ offset_bottom = 167.0
 [node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
 handle_input_locally = false
 canvas_item_default_texture_filter = 3
-size = Vector2i(245, 167)
+size = Vector2i(246, 168)
 render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="Control/SubViewportContainer/SubViewport"]
@@ -255,21 +257,55 @@ position = Vector2(330, 140)
 scale = Vector2(2, 2)
 texture = ExtResource("6_mnoos")
 
-[node name="IconHeart" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-160, -32)
-texture = ExtResource("6_7kuhl")
-
-[node name="IconHand" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-160, 0)
-texture = ExtResource("7_4lbgu")
-
-[node name="IconCard" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport/Node2D/Portrait"]
-position = Vector2(-162, 32)
-texture = ExtResource("8_ywkuv")
-
 [node name="Cadre" type="Node2D" parent="."]
 position = Vector2(-149, -20)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Cadre"]
-tile_map_data = PackedByteArray("AAAYAAEAAAASAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAASAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAQAAQAAAAJAAsAAAAQAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
+tile_map_data = PackedByteArray("AAAYAAEAAAAMAAQAAAAYAAIAAAAMAAUAAAAYAAMAAAAMAAUAAAAYAAQAAAAMAAUAAAAYAAUAAAAMAAUAAAAYAAYAAAAMAAUAAAAYAAcAAAAMAAUAAAAYAAgAAAAMAAUAAAAYAAkAAAAMAAUAAAAYAAoAAAAMAAUAAAAYAAsAAAAMAAYAAAAXAAsAAAALAAYAAAAWAAsAAAALAAYAAAAVAAsAAAALAAYAAAAUAAsAAAALAAYAAAATAAsAAAALAAYAAAASAAsAAAALAAYAAAARAAsAAAALAAYAAAAQAAsAAAALAAYAAAAPAAsAAAALAAYAAAAOAAsAAAALAAYAAAANAAsAAAALAAYAAAAMAAsAAAALAAYAAAAXAAEAAAALAAQAAAAWAAEAAAALAAQAAAAVAAEAAAALAAQAAAAUAAEAAAALAAQAAAATAAEAAAALAAQAAAASAAEAAAALAAQAAAARAAEAAAALAAQAAAAQAAEAAAALAAQAAAAPAAEAAAALAAQAAAAOAAEAAAALAAQAAAANAAEAAAALAAQAAAAMAAEAAAALAAQAAAAJAAEAAAAKAAQAAAAJAAsAAAAKAAYAAAAKAAsAAAALAAYAAAALAAsAAAALAAYAAAALAAEAAAALAAQAAAAKAAEAAAALAAQAAAAJAAIAAAAKAAUAAAAJAAMAAAAKAAUAAAAJAAQAAAAKAAUAAAAJAAUAAAAKAAUAAAAJAAYAAAAKAAUAAAAJAAcAAAAKAAUAAAAJAAgAAAAKAAUAAAAJAAkAAAAKAAUAAAAJAAoAAAAKAAUAAAA=")
 tile_set = SubResource("TileSet_rf4jb")
+
+[node name="UI2" type="Node2D" parent="."]
+
+[node name="IconHeart" type="Sprite2D" parent="UI2"]
+position = Vector2(22, 88)
+texture = ExtResource("6_7kuhl")
+
+[node name="UI_PV" type="Label" parent="UI2/IconHeart"]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("9_1xalq")
+text = "1"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="IconHand" type="Sprite2D" parent="UI2"]
+position = Vector2(22, 120)
+texture = ExtResource("7_4lbgu")
+
+[node name="UI_Action" type="Label" parent="UI2/IconHand"]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("9_1xalq")
+text = "1"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="IconCard" type="Sprite2D" parent="UI2"]
+position = Vector2(22, 152)
+texture = ExtResource("8_ywkuv")
+
+[node name="UI_Card" type="Label" parent="UI2/IconCard"]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("9_1xalq")
+text = "1"
+horizontal_alignment = 2
