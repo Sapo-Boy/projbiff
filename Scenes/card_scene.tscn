@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dul20wyoebdy1"]
+[gd_scene load_steps=10 format=3 uid="uid://dul20wyoebdy1"]
 
 [ext_resource type="Script" uid="uid://bfs2ukfwhou4e" path="res://Scenes/ui/hand.gd" id="1_1eyib"]
-[ext_resource type="PackedScene" uid="uid://caidq38e0q1xk" path="res://card_ui.tscn" id="1_hn4tc"]
-[ext_resource type="Resource" uid="uid://72jdr1hrwg5y" path="res://Char/characters/warrior/cards/UNOREDCARD.tres" id="3_b5yic"]
+[ext_resource type="Resource" uid="uid://coq3klfxiq4ms" path="res://Char/characters/warrior/cards/UNOBLACKCARD.tres" id="3_0sxir"]
+[ext_resource type="PackedScene" uid="uid://to3v4txm3p7r" path="res://Scenes/card_ui/card_ui.tscn" id="3_b5yic"]
+[ext_resource type="Resource" uid="uid://dk8p1rqa6vp5" path="res://Char/characters/warrior/cards/UNOCYANCARD2.tres" id="4_so5b3"]
+[ext_resource type="Resource" uid="uid://7a2inkypgje" path="res://Char/characters/warrior/cards/UNOCYANCARD.tres" id="5_so5b3"]
+[ext_resource type="Resource" uid="uid://72jdr1hrwg5y" path="res://Char/characters/warrior/cards/UNOREDCARD.tres" id="6_ms70h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1eyib"]
 
@@ -55,14 +58,18 @@ grow_vertical = 0
 alignment = 1
 script = ExtResource("1_1eyib")
 
-[node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("1_hn4tc")]
+[node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("3_b5yic")]
 layout_mode = 2
-card = ExtResource("3_b5yic")
+card = ExtResource("3_0sxir")
 
-[node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("1_hn4tc")]
+[node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("3_b5yic")]
 layout_mode = 2
-card = ExtResource("3_b5yic")
+card = ExtResource("4_so5b3")
 
-[node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("1_hn4tc")]
+[node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("3_b5yic")]
 layout_mode = 2
-card = ExtResource("3_b5yic")
+card = ExtResource("5_so5b3")
+
+[node name="CardUI4" parent="BattleUI/Hand" instance=ExtResource("3_b5yic")]
+layout_mode = 2
+card = ExtResource("6_ms70h")

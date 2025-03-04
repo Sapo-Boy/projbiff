@@ -16,5 +16,12 @@ func on_input(event: InputEvent) -> void:
 	if cancel:
 		transition_requested.emit(self, CardState.State.BASE)
 	elif confirm:
-		get_viewport().set_input_as_handled()
-		transition_requested.emit(self, CardState.State.RELEASED)
+		if Events.oldcardnmb != card_ui.card.typeCardat and Events.oldcardcolor != card_ui.card.typeColorat:
+			transition_requested.emit(self, CardState.State.BASE)
+		else:
+			print(Events.oldcardcolor)
+			Events.oldcardnmb = card_ui.card.typeCardat
+			Events.oldcardcolor = card_ui.card.typeColorat
+			print(Events.oldcardcolor)
+			get_viewport().set_input_as_handled()
+			transition_requested.emit(self, CardState.State.RELEASED)
