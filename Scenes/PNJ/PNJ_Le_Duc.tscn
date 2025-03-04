@@ -198,7 +198,11 @@ offset_bottom = 167.0
 [node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
 handle_input_locally = false
 canvas_item_default_texture_filter = 3
+<<<<<<< Updated upstream
 size = Vector2i(246, 168)
+=======
+size = Vector2i(245, 167)
+>>>>>>> Stashed changes
 render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="Control/SubViewportContainer/SubViewport"]
