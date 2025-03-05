@@ -39,7 +39,4 @@ metadata/_edit_vertical_guides_ = [576.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 
 [node name="UI_Menu_IG" parent="." instance=ExtResource("6_knkcy")]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 8.0
-offset_bottom = 8.0
+z_index = 1
