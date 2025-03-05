@@ -21,7 +21,9 @@ signal reparent_requested(which_card_ui: CardUI)
 
 
 var parent: Control
-
+var tween: Tween
+var disabled := false
+var original_index := 0
 
 
 func _ready() -> void:

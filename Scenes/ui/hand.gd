@@ -15,7 +15,7 @@ func add_card(card: Card) -> void:
 	new_card_ui.reparent_requested.connect(_on_card_ui_reparent_requested)
 	new_card_ui.card = card
 	new_card_ui.parent = self
-	#new_card_ui.char_stats = char_stats
+	new_card_ui.char_stats = char_stats
 	
 func _on_card_played(_card: Card) -> void:
 	cards_played_this_turn += 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dul20wyoebdy1"]
+[gd_scene load_steps=8 format=3 uid="uid://dul20wyoebdy1"]
 
 [ext_resource type="Script" uid="uid://bfs2ukfwhou4e" path="res://Scenes/ui/hand.gd" id="1_1eyib"]
 [ext_resource type="Script" uid="uid://h7i7axfis4mc" path="res://Scenes/ui/battle.gd" id="1_1mmgb"]
@@ -7,45 +7,18 @@
 [ext_resource type="Script" uid="uid://bmmqsfrmg6g5o" path="res://Scenes/player/player_handler.gd" id="3_so5b3"]
 [ext_resource type="PackedScene" uid="uid://q8llcklo5on8" path="res://Scenes/ui/mana_ui.tscn" id="9_8uc1c"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1eyib"]
-
-[sub_resource type="Theme" id="Theme_b5yic"]
-Panel/styles/panel = SubResource("StyleBoxFlat_1eyib")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eyib"]
-size = Vector2(60, 90)
 
 [node name="CardScene" type="Node2D"]
 script = ExtResource("1_1mmgb")
 char_stats = ExtResource("2_55aab")
 metadata/_edit_lock_ = true
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = -48.0
-offset_top = -37.0
-offset_right = 1199.0
-offset_bottom = 686.0
-metadata/_edit_lock_ = true
-
-[node name="Panel3" type="Panel" parent="."]
-offset_left = 602.0
-offset_top = 167.0
-offset_right = 701.0
-offset_bottom = 300.0
-theme = SubResource("Theme_b5yic")
-
-[node name="Panel2" type="Panel" parent="."]
-offset_left = 501.0
-offset_top = 299.0
-offset_right = 600.0
-offset_bottom = 432.0
-theme = SubResource("Theme_b5yic")
-
 [node name="CardDropArea" type="Area2D" parent="."]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
-position = Vector2(600, 298)
+position = Vector2(594.5, 297.5)
 shape = SubResource("RectangleShape2D_1eyib")
 
 [node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand")]
@@ -59,8 +32,10 @@ script = ExtResource("1_ms70h")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -141.0
-offset_right = 702.0
+offset_left = 2.0
+offset_top = -91.0
+offset_right = 571.0
+offset_bottom = 50.0
 grow_vertical = 0
 alignment = 1
 script = ExtResource("1_1eyib")
