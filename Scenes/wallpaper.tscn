@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://y0mdsrckbwoj"]
+
+[ext_resource type="PackedScene" uid="uid://cb75jkgby3ycu" path="res://Scenes/1_Zone_De_Jeu/parallax/montagne_parallax_zd_j.tscn" id="1_1tjul"]
+[ext_resource type="PackedScene" uid="uid://fhhfggb0v272" path="res://Scenes/1_Zone_De_Jeu/decors/plateforme_pj.tscn" id="2_7y4oh"]
+[ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="3_72p6m"]
+
+[node name="Wallpaper" type="Node2D"]
+
+[node name="ParallaxZdJMtg" parent="." instance=ExtResource("1_1tjul")]
+
+[node name="Plateforme_PJ" parent="." instance=ExtResource("2_7y4oh")]
+
+[node name="PjL3S4ge" parent="." instance=ExtResource("3_72p6m")]
+position = Vector2(-10, 60)
