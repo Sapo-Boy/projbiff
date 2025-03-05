@@ -405,6 +405,7 @@ position = Vector2(850, 104)
 scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Tmp/Zone_Main_PNJ1"]
+visible = false
 tile_map_data = PackedByteArray(0, 0, 1, 0, 250, 255, 0, 0, 4, 0, 4, 0, 0, 0, 34, 0, 250, 255, 0, 0, 6, 0, 4, 0, 0, 0)
 tile_set = SubResource("TileSet_hj4qm")
 
@@ -417,6 +418,7 @@ position = Vector2(850, 314)
 scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Tmp/Zone_Main_PNJ2"]
+visible = false
 tile_map_data = PackedByteArray(0, 0, 1, 0, 250, 255, 0, 0, 4, 0, 4, 0, 0, 0, 34, 0, 250, 255, 0, 0, 6, 0, 4, 0, 0, 0)
 tile_set = SubResource("TileSet_hj4qm")
 
@@ -429,6 +431,7 @@ position = Vector2(850, 530)
 scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Tmp/Zone_Main_PNJ3"]
+visible = false
 tile_map_data = PackedByteArray(0, 0, 1, 0, 250, 255, 0, 0, 4, 0, 4, 0, 0, 0, 34, 0, 250, 255, 0, 0, 6, 0, 4, 0, 0, 0)
 tile_set = SubResource("TileSet_hj4qm")
 
