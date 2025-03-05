@@ -19,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_b7ks2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="CaptureD\'écran2025-03-05102336" type="Sprite2D" parent="CanvasLayer"]
 visible = false

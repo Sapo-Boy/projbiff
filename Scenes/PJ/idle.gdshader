@@ -5,12 +5,14 @@ void fragment() {
 	
 	float frequency = 5.0;
 	float amplitude = 0.01;
-	float speed = 0.4;
+	float speed = 1.4;
 	float idle = sin(uv.y * frequency + TIME * speed) * amplitude;
 	
-	uv.x += idle;
+	uv.y += idle;
 	
 	COLOR = texture(TEXTURE, uv);
+	COLOR.b = 0.7;
+	COLOR.a = 0.1;
 }
 
 //void light() {

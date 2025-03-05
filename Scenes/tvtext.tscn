@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbkhhnim2yeba"]
+
+[ext_resource type="Shader" uid="uid://betklt3pnxm25" path="res://Scenes/PJ/idle.gdshader" id="1_a7n6g"]
+[ext_resource type="Texture2D" uid="uid://7jhnfi1oek68" path="res://Assets/Img/Untitled.png" id="2_85rd8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d4qhh"]
+shader = ExtResource("1_a7n6g")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TVtexture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_d4qhh")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_85rd8")
+centered = false
