@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("1_l0d3u")
-id = "TestCard"
+id = "TestCard3"
 typeCardat = 5
 typeColorat = 3
 target = 0

@@ -10,7 +10,7 @@ signal card_drag_ended(card_ui : CardUI)
 
 
 #Player-related event
-#signal player_hand_drawn
+signal player_hand_drawn
 #signal player_hand_discarded
 #signal player_turn_ended
 #signal player_died
