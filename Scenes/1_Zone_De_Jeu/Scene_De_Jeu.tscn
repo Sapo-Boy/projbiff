@@ -49,3 +49,5 @@ metadata/_edit_lock_ = true
 
 [node name="CardScene" parent="." instance=ExtResource("9_u2043")]
 position = Vector2(-24, 27)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
