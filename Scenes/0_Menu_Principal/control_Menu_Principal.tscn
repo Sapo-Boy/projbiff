@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://0406wrykmpew"]
+[gd_scene load_steps=8 format=3 uid="uid://0406wrykmpew"]
 
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="1_rhdce"]
 [ext_resource type="Script" uid="uid://jruvrxrrfjtr" path="res://Scenes/0_Menu_Principal/control_menu_principal.gd" id="2_12x3r"]
 [ext_resource type="Texture2D" uid="uid://d6w83scej6h" path="res://Assets/UI/Sprites/UI - Words15.png" id="2_griwm"]
 [ext_resource type="PackedScene" uid="uid://c5o4gal7wowqx" path="res://Scenes/0_Menu_Principal/Scene_Menu_Principal.tscn" id="3_griwm"]
+[ext_resource type="AudioStream" uid="uid://dwvsw3krmikox" path="res://Assets/Musiques/Dystopian.wav" id="5_6a634"]
+[ext_resource type="AudioStream" uid="uid://b0ibwhewuhse3" path="res://Assets/Musiques/The Protagonist.wav" id="6_itvo5"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_w2l4v"]
+shuffle = true
+stream_count = 2
+stream_0 = ExtResource("5_6a634")
+stream_1 = ExtResource("6_itvo5")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -41,6 +49,13 @@ layout_mode = 2
 text = "Quitter"
 icon = ExtResource("2_griwm")
 icon_alignment = 1
+
+[node name="AudioStreamMenu" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_w2l4v")
+volume_db = -15.0
+autoplay = true
+
+[node name="AudioStreamPJ" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
