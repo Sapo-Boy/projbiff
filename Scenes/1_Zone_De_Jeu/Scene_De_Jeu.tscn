@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bpri1ymqpycjc" path="res://Scenes/ui/ui_menu_ig.tscn" id="6_knkcy"]
 
 [node name="SceneDeJeu" type="Node2D"]
+metadata/_edit_vertical_guides_ = [850.0]
+metadata/_edit_horizontal_guides_ = [100.0, 314.0, 530.0]
 
 [node name="Decor" type="Node2D" parent="."]
 
@@ -33,6 +35,8 @@ position = Vector2(0, 456)
 position = Vector2(0, 24)
 
 [node name="Zone_Jeu" parent="." instance=ExtResource("5_oge7d")]
+metadata/_edit_vertical_guides_ = [576.0]
+metadata/_edit_horizontal_guides_ = [324.0]
 
 [node name="UI_Menu_IG" parent="." instance=ExtResource("6_knkcy")]
 offset_left = 8.0

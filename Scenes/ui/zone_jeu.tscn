@@ -359,8 +359,8 @@ radius = 61.94
 height = 123.88
 
 [node name="Zone_Jeu" type="Node2D"]
-metadata/_edit_vertical_guides_ = [576.0]
-metadata/_edit_horizontal_guides_ = [324.0]
+metadata/_edit_vertical_guides_ = [850.0]
+metadata/_edit_horizontal_guides_ = [100.0, 309.0, 530.0]
 
 [node name="Zone_Pose" type="Area2D" parent="."]
 position = Vector2(576, 324)
@@ -397,3 +397,41 @@ frame_progress = 0.0214063
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone_Deck"]
 position = Vector2(0, -45)
 shape = SubResource("CapsuleShape2D_50w3k")
+
+[node name="Tmp" type="Node2D" parent="."]
+
+[node name="Zone_Main_PNJ1" type="Area2D" parent="Tmp"]
+position = Vector2(850, 104)
+scale = Vector2(0.5, 0.5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Tmp/Zone_Main_PNJ1"]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 250, 255, 0, 0, 4, 0, 4, 0, 0, 0, 34, 0, 250, 255, 0, 0, 6, 0, 4, 0, 0, 0)
+tile_set = SubResource("TileSet_hj4qm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmp/Zone_Main_PNJ1"]
+position = Vector2(288, -45)
+shape = SubResource("RectangleShape2D_2cv1y")
+
+[node name="Zone_Main_PNJ2" type="Area2D" parent="Tmp"]
+position = Vector2(850, 314)
+scale = Vector2(0.5, 0.5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Tmp/Zone_Main_PNJ2"]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 250, 255, 0, 0, 4, 0, 4, 0, 0, 0, 34, 0, 250, 255, 0, 0, 6, 0, 4, 0, 0, 0)
+tile_set = SubResource("TileSet_hj4qm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmp/Zone_Main_PNJ2"]
+position = Vector2(288, -45)
+shape = SubResource("RectangleShape2D_2cv1y")
+
+[node name="Zone_Main_PNJ3" type="Area2D" parent="Tmp"]
+position = Vector2(850, 530)
+scale = Vector2(0.5, 0.5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Tmp/Zone_Main_PNJ3"]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 250, 255, 0, 0, 4, 0, 4, 0, 0, 0, 34, 0, 250, 255, 0, 0, 6, 0, 4, 0, 0, 0)
+tile_set = SubResource("TileSet_hj4qm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmp/Zone_Main_PNJ3"]
+position = Vector2(288, -45)
+shape = SubResource("RectangleShape2D_2cv1y")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5o4gal7wowqx"]
+
+[ext_resource type="PackedScene" uid="uid://tu4tueygrji" path="res://Scenes/1_Zone_De_Jeu/parallax/ville_mtgne_parallax_zd_j.tscn" id="1_d0ri6"]
+[ext_resource type="PackedScene" uid="uid://fhhfggb0v272" path="res://Scenes/1_Zone_De_Jeu/decors/plateforme_pj.tscn" id="2_ehecc"]
+[ext_resource type="Texture2D" uid="uid://bfwg5wmoxc0su" path="res://Assets/Img/Sprites/Sprite18.png" id="3_d0ri6"]
+
+[node name="SceneMenuPrincipal" type="Node2D"]
+
+[node name="ParallaxZdJMtg" parent="." instance=ExtResource("1_d0ri6")]
+
+[node name="Plateforme_PJ" parent="." instance=ExtResource("2_ehecc")]
+
+[node name="Sprite18" type="Sprite2D" parent="."]
+position = Vector2(180, 402)
+scale = Vector2(4, 4)
+texture = ExtResource("3_d0ri6")
