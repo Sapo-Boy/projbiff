@@ -10,6 +10,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eyib"]
 
 [node name="CardScene" type="Node2D"]
+z_index = -1
+z_as_relative = false
 script = ExtResource("1_1mmgb")
 char_stats = ExtResource("2_55aab")
 metadata/_edit_lock_ = true
@@ -29,6 +31,7 @@ hand = NodePath("../BattleUI/Hand")
 script = ExtResource("1_ms70h")
 
 [node name="Hand" type="HBoxContainer" parent="BattleUI"]
+z_index = -1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0

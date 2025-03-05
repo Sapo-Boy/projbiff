@@ -20,6 +20,7 @@ default_font_size = 80
 Label/fonts/font = ExtResource("3_ugrrg")
 
 [node name="CardUI" type="Control"]
+z_as_relative = false
 texture_filter = 3
 custom_minimum_size = Vector2(25, 30)
 layout_mode = 3

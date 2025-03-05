@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="7_iepd1"]
 
 [node name="UI_Menu_IG" type="Control"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,47 +18,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b7ks2")
 
-[node name="CaptureD\'écran2025-03-05102336" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CaptureD\'écran2025-03-05102336" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(576.14, 324)
 scale = Vector2(0.450109, 0.45)
 texture = ExtResource("2_iepd1")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 136.0
 offset_bottom = 48.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 
-[node name="Quitter" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="Quitter" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 icon = ExtResource("2_itemj")
 
-[node name="Option" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="Option" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 icon = ExtResource("2_wvs3j")
 
-[node name="Musique" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="Musique" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 icon = ExtResource("3_itemj")
 
-[node name="Instruction" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="Instruction" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 icon = ExtResource("5_iepd1")
 icon_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 visible = false
-layout_mode = 1
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -65,11 +67,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Panel" type="Panel" parent="PanelContainer"]
+[node name="Panel" type="Panel" parent="CanvasLayer/PanelContainer"]
+z_index = 1
 layout_mode = 2
-mouse_filter = 1
 
-[node name="Label" type="Label" parent="PanelContainer/Panel"]
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel"]
 layout_mode = 0
 offset_left = 485.0
 offset_top = 320.0
@@ -80,7 +82,8 @@ theme = ExtResource("7_iepd1")
 text = "Depose des cartes"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/Panel"]
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/Panel"]
+layout_mode = 0
 offset_left = 180.0
 offset_top = 605.0
 offset_right = 555.0
@@ -90,7 +93,8 @@ theme = ExtResource("7_iepd1")
 text = "Votre main"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="PanelContainer/Panel"]
+[node name="Label3" type="Label" parent="CanvasLayer/PanelContainer/Panel"]
+layout_mode = 0
 offset_left = 428.0
 offset_top = 37.0
 offset_right = 1025.0
@@ -100,7 +104,7 @@ theme = ExtResource("7_iepd1")
 text = "Prototype de jeu de UNO \"RPG\""
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer/Panel"]
 layout_mode = 0
 offset_left = 397.0
 offset_top = 385.0
@@ -110,7 +114,8 @@ theme_override_font_sizes/normal_font_size = 16
 text = "Si vous êtes premier joueur ou joueuse, sélectionner une carte à mettre dans la zone de \"Dépose des cartes\".
 Ensuite, vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre."
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="PanelContainer/Panel"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/PanelContainer/Panel"]
+layout_mode = 0
 offset_left = 385.0
 offset_top = 68.0
 offset_right = 769.0
@@ -119,7 +124,7 @@ theme_override_font_sizes/normal_font_size = 16
 text = "Les fonctions du type rpg et les adversaires \"IA\" ne sont pas encore implémentés.
 De plus amples informations sont contenues dans le document accompagnant cette démo."
 
-[node name="Retour" type="Button" parent="PanelContainer/Panel"]
+[node name="Retour" type="Button" parent="CanvasLayer/PanelContainer/Panel"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
@@ -127,12 +132,12 @@ offset_right = 48.0
 offset_bottom = 48.0
 icon = ExtResource("2_itemj")
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Option" to="." method="_on_option_pressed"]
-[connection signal="toggled" from="MarginContainer/HBoxContainer/Musique" to="." method="_on_musique_toggled"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Instruction" to="MarginContainer" method="hide"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Instruction" to="PanelContainer" method="show"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Instruction" to="PanelContainer" method="set_mouse_filter" binds= [0]]
-[connection signal="pressed" from="PanelContainer/Panel/Retour" to="MarginContainer" method="show"]
-[connection signal="pressed" from="PanelContainer/Panel/Retour" to="PanelContainer" method="hide"]
-[connection signal="pressed" from="PanelContainer/Panel/Retour" to="PanelContainer" method="set_mouse_filter" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="toggled" from="CanvasLayer/MarginContainer/HBoxContainer/Musique" to="." method="_on_musique_toggled"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Instruction" to="CanvasLayer/MarginContainer" method="hide"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="show"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/MarginContainer" method="show"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/PanelContainer" method="hide"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [2]]
