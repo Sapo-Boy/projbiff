@@ -1,16 +1,34 @@
-[gd_scene load_steps=14 format=3 uid="uid://to3v4txm3p7r"]
+[gd_scene load_steps=18 format=3 uid="uid://to3v4txm3p7r"]
 
+[ext_resource type="Shader" uid="uid://exgbguanwotn" path="res://Scenes/card_ui/dissolve.gdshader" id="1_iiw4v"]
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="2_edgis"]
 [ext_resource type="Script" uid="uid://yvq45v0s7q4c" path="res://Scenes/card_ui/card_ui.gd" id="2_vxv2n"]
 [ext_resource type="Texture2D" uid="uid://bfskyvi6njjv" path="res://Assets/Img/Symboles/Bonus/icon_time.png" id="3_6v2lc"]
 [ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="3_ugrrg"]
 [ext_resource type="Script" uid="uid://bb18oyy2kehrl" path="res://Scenes/card_ui/card_states/card_base_state.gd" id="4_6fbe4"]
 [ext_resource type="Script" uid="uid://b6w47hnh6nrbx" path="res://Scenes/card_ui/card_states/card_clicked_state.gd" id="5_cq5hw"]
-[ext_resource type="Script" uid="uid://1p50m7s644bp" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
+[ext_resource type="Script" uid="uid://c515x35jut4f5" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
 [ext_resource type="Script" uid="uid://dumiotxuteo3y" path="res://Scenes/card_ui/card_states/card_dragging_state.gd" id="6_ybjgx"]
 [ext_resource type="Script" uid="uid://e8yaa778cuxi" path="res://Scenes/card_ui/card_states/card_released_state.gd" id="7_ev7j6"]
 [ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="10_4jrdu"]
 [ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="11_vtrov"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4jrdu"]
+noise_type = 4
+seed = 3
+frequency = 0.0128
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6qphx"]
+width = 106
+height = 138
+noise = SubResource("FastNoiseLite_4jrdu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj616"]
+shader = ExtResource("1_iiw4v")
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_6qphx")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.16
+shader_parameter/burn_color = Color(0.494118, 0.74902, 0.776471, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn07p"]
 size = Vector2(106, 138)
@@ -22,6 +40,7 @@ Label/fonts/font = ExtResource("3_ugrrg")
 [node name="CardUI" type="Control"]
 z_as_relative = false
 texture_filter = 3
+material = SubResource("ShaderMaterial_bj616")
 custom_minimum_size = Vector2(25, 30)
 layout_mode = 3
 anchors_preset = 15
@@ -34,12 +53,14 @@ grow_vertical = 2
 script = ExtResource("2_vxv2n")
 
 [node name="BackCard" type="TextureRect" parent="."]
+use_parent_material = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_edgis")
 
 [node name="TypeCard" type="TextureRect" parent="."]
+use_parent_material = true
 layout_mode = 0
 offset_left = 7.0
 offset_top = 8.0
@@ -48,6 +69,7 @@ offset_bottom = 24.0
 texture = ExtResource("3_6v2lc")
 
 [node name="CostTexture" type="TextureRect" parent="."]
+use_parent_material = true
 layout_mode = 0
 offset_left = 2.0
 offset_top = 35.0
@@ -56,6 +78,7 @@ offset_bottom = 58.0
 texture = ExtResource("11_vtrov")
 
 [node name="IconeMid" type="TextureRect" parent="."]
+use_parent_material = true
 layout_mode = 0
 offset_left = 21.0
 offset_top = 43.0
@@ -92,6 +115,7 @@ script = ExtResource("7_ev7j6")
 state = 3
 
 [node name="Symbole1" type="TextureRect" parent="."]
+use_parent_material = true
 layout_direction = 1
 layout_mode = 0
 offset_left = 25.0
@@ -101,6 +125,7 @@ offset_bottom = 29.0
 texture = ExtResource("10_4jrdu")
 
 [node name="Symbole2" type="TextureRect" parent="."]
+use_parent_material = true
 layout_mode = 0
 offset_left = 15.0
 offset_top = 28.0
@@ -109,6 +134,7 @@ offset_bottom = 37.0
 texture = ExtResource("10_4jrdu")
 
 [node name="LabelMid" type="Label" parent="."]
+use_parent_material = true
 layout_mode = 0
 offset_left = 6.0
 offset_top = 19.0
