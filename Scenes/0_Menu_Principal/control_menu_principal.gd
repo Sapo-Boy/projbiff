@@ -4,8 +4,7 @@ extends Control
 @export var bibliothequeMusiques: AudioStreamPlayer
 
 func _ready() -> void:
-	bibliothequeMusiques.play()
-	bibliothequeMusiques["parameters/switch_to_clip"] = "MenuPrinicpal"
+	bibliothequeMusiques.MusiqueMenuPrincipal()
 	
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/1_Zone_De_Jeu/Scene_De_Jeu.tscn")

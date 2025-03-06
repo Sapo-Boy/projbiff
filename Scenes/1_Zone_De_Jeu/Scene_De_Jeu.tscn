@@ -61,7 +61,8 @@ metadata/_edit_lock_ = true
 show_behind_parent = true
 position = Vector2(-24, 27)
 
-[node name="UI_Menu_IG" parent="." instance=ExtResource("6_knkcy")]
+[node name="UI_Menu_IG" parent="." node_paths=PackedStringArray("bibliothequeSons") instance=ExtResource("6_knkcy")]
+bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
 
 [node name="Card_Start" parent="." instance=ExtResource("15_oq34y")]
 offset_left = 519.0
