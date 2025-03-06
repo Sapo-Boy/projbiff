@@ -2,6 +2,7 @@ extends Node
 
 enum TypeColor{Yellow,Black,Purple,Cyan}
 var rng = RandomNumberGenerator.new()
+var playerturn
 #Card Related Events
 signal card_aim_started(card_ui : CardUI)
 signal card_aim_ended(card_ui: CardUI)
@@ -31,3 +32,4 @@ func _ready() -> void:
 	print(oldcardnmb)
 	oldcardcolor = rng.randi_range(0, 3)
 	print(oldcardcolor)
+	playerturn = 0

@@ -4,6 +4,8 @@ extends Node
 const HAND_DRAW_INTERVAL := 0.25
 
 @export var hand: Hand
+@export var hand2: Hand
+
 
 var character: CharacterStats
 
@@ -20,6 +22,7 @@ func start_turn() -> void:
 
 func draw_card() -> void:
 	hand.add_card(character.draw_pile.draw_card())
+	hand2.add_card(character.draw_pile.draw_card())
 
 func draw_cards(amount: int) -> void:
 	var tween := create_tween()
