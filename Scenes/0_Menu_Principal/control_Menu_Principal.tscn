@@ -1,19 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://btk2v15jc6t6e"]
+[gd_scene load_steps=7 format=3 uid="uid://btk2v15jc6t6e"]
 
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="1_rhdce"]
 [ext_resource type="Script" uid="uid://jruvrxrrfjtr" path="res://Scenes/0_Menu_Principal/control_menu_principal.gd" id="2_12x3r"]
-[ext_resource type="Texture2D" uid="uid://d6w83scej6h" path="res://Assets/UI/Sprites/UI - Words15.png" id="2_griwm"]
 [ext_resource type="PackedScene" uid="uid://c5o4gal7wowqx" path="res://Scenes/0_Menu_Principal/Scene_Menu_Principal.tscn" id="3_griwm"]
-[ext_resource type="AudioStream" uid="uid://dwvsw3krmikox" path="res://Assets/Musiques/Dystopian.wav" id="5_6a634"]
-[ext_resource type="AudioStream" uid="uid://b0ibwhewuhse3" path="res://Assets/Musiques/The Protagonist.wav" id="6_itvo5"]
+[ext_resource type="PackedScene" uid="uid://bjxki3cbau1q6" path="res://Scenes/GestionSon/BibliSons.tscn" id="3_itvo5"]
+[ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="4_6a634"]
+[ext_resource type="PackedScene" uid="uid://c1nn12h2pi0up" path="res://Scenes/GestionSon/BibliMusiques.tscn" id="4_w2l4v"]
 
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_w2l4v"]
-shuffle = true
-stream_count = 2
-stream_0 = ExtResource("5_6a634")
-stream_1 = ExtResource("6_itvo5")
-
-[node name="Control" type="Control"]
+[node name="Control" type="Control" node_paths=PackedStringArray("bibliothequeSons", "bibliothequeMusiques")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +16,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rhdce")
 script = ExtResource("2_12x3r")
+bibliothequeSons = NodePath("GestionAudio/BibliothequeSons")
+bibliothequeMusiques = NodePath("GestionAudio/BibliMusiques")
+
+[node name="GestionAudio" type="Node" parent="."]
+
+[node name="BibliothequeSons" parent="GestionAudio" instance=ExtResource("3_itvo5")]
+
+[node name="BibliMusiques" parent="GestionAudio" instance=ExtResource("4_w2l4v")]
 
 [node name="SceneMenuPrincipal" parent="." instance=ExtResource("3_griwm")]
 
@@ -37,25 +39,25 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
+theme = ExtResource("4_6a634")
 
 [node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_6a634")
 text = "start"
-icon = ExtResource("2_griwm")
 icon_alignment = 1
+
+[node name="Option" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_6a634")
+text = "Option"
 
 [node name="Quitter" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_6a634")
 text = "Quitter"
-icon = ExtResource("2_griwm")
 icon_alignment = 1
 
-[node name="AudioStreamMenu" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPlaylist_w2l4v")
-volume_db = -15.0
-autoplay = true
-
-[node name="AudioStreamPJ" type="AudioStreamPlayer" parent="."]
-
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjxki3cbau1q6"]
+
+[ext_resource type="AudioStream" uid="uid://bwb0sjm27mncb" path="res://Assets/Son/UI/Minimalist3.wav" id="1_fde8c"]
+[ext_resource type="AudioStream" uid="uid://bx6wh12fxqt0m" path="res://Assets/Son/Cartes/GP_PutDown_2.wav" id="2_7xbsl"]
+[ext_resource type="AudioStream" uid="uid://b4f4q8sywgmw1" path="res://Assets/Son/Cartes/GP_Select_3.wav" id="3_5ym4y"]
+[ext_resource type="AudioStream" uid="uid://b8ske7riw2s2x" path="res://Assets/Son/Cartes/Tone1C_TritoneOctaveDown.wav" id="4_eltai"]
+[ext_resource type="Script" uid="uid://7nd5ytubehy2" path="res://Scenes/GestionSon/fonction_sons.gd" id="5_afueh"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_gjvnh"]
+clip_count = 4
+clip_0/name = &"PresseBouton"
+clip_0/stream = ExtResource("1_fde8c")
+clip_0/auto_advance = 0
+clip_1/name = &"CartesDepose"
+clip_1/stream = ExtResource("2_7xbsl")
+clip_1/auto_advance = 0
+clip_2/name = &"CarteSelection"
+clip_2/stream = ExtResource("3_5ym4y")
+clip_2/auto_advance = 0
+clip_3/name = &"CarteErreur"
+clip_3/stream = ExtResource("4_eltai")
+clip_3/auto_advance = 0
+
+[node name="BibliothequeSons" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamInteractive_gjvnh")
+bus = &"Sfx"
+script = ExtResource("5_afueh")

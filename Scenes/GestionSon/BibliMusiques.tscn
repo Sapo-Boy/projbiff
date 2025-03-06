@@ -1,0 +1,36 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1nn12h2pi0up"]
+
+[ext_resource type="AudioStream" uid="uid://dwvsw3krmikox" path="res://Assets/Musiques/Dystopian.wav" id="1_k4d4u"]
+[ext_resource type="AudioStream" uid="uid://b0ibwhewuhse3" path="res://Assets/Musiques/The Protagonist.wav" id="2_84ncg"]
+[ext_resource type="AudioStream" uid="uid://x8x72xr8p8me" path="res://Assets/Musiques/508002__rokzroom__otherworlds-4.wav" id="3_3jnld"]
+[ext_resource type="AudioStream" uid="uid://53fksssp8uer" path="res://Assets/Musiques/508003__rokzroom__otherworlds-3.wav" id="4_3co8a"]
+[ext_resource type="AudioStream" uid="uid://djj88l5xg72kr" path="res://Assets/Musiques/508004__rokzroom__otherworlds-2.wav" id="5_hmt6e"]
+[ext_resource type="AudioStream" uid="uid://daqb7v8o7ytcq" path="res://Assets/Musiques/508005__rokzroom__otherworlds-1.wav" id="6_lg8xg"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_iil27"]
+shuffle = true
+stream_count = 2
+stream_0 = ExtResource("1_k4d4u")
+stream_1 = ExtResource("2_84ncg")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_hpf4e"]
+shuffle = true
+stream_count = 4
+stream_0 = ExtResource("3_3jnld")
+stream_1 = ExtResource("4_3co8a")
+stream_2 = ExtResource("5_hmt6e")
+stream_3 = ExtResource("6_lg8xg")
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qyc2j"]
+clip_count = 2
+clip_0/name = &"MenuPrinicpal"
+clip_0/stream = SubResource("AudioStreamPlaylist_iil27")
+clip_0/auto_advance = 0
+clip_1/name = &"ZoneDeJeu"
+clip_1/stream = SubResource("AudioStreamPlaylist_hpf4e")
+clip_1/auto_advance = 0
+
+[node name="BibliMusiques" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamInteractive_qyc2j")
+volume_db = -15.0
+bus = &"Musique"

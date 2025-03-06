@@ -7,5 +7,5 @@ func _on_quitter_pressed() -> void:
 func _on_option_pressed() -> void:
 	pass # Replace with function body.
 
-func _on_musique_toggled(toggled_on: bool) -> void:
+func _on_mute_pressed() -> void:
 	pass # Replace with function body.

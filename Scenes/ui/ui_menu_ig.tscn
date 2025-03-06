@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpri1ymqpycjc"]
+[gd_scene load_steps=9 format=3 uid="uid://bpri1ymqpycjc"]
 
 [ext_resource type="Script" uid="uid://5c5jo0eoca8f" path="res://ui_menu_ig.gd" id="1_b7ks2"]
 [ext_resource type="Texture2D" uid="uid://deg8h0trxydaj" path="res://Assets/Img/Tmp/Capture d'écran 2025-03-05 102336.png" id="2_iepd1"]
 [ext_resource type="Texture2D" uid="uid://dhc7sasdd6ix7" path="res://Assets/Img/Symboles/UI/UI - Icons16.png" id="2_itemj"]
 [ext_resource type="Texture2D" uid="uid://y2xtqg3psmpd" path="res://Assets/Img/Symboles/UI/UI - Icons1.png" id="2_wvs3j"]
 [ext_resource type="Texture2D" uid="uid://c8iqphwmy7f8i" path="res://Assets/Img/Symboles/UI/UI - Icons18.png" id="3_itemj"]
+[ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="3_wrbov"]
 [ext_resource type="Texture2D" uid="uid://cfkpfjlc3sylr" path="res://Assets/Img/Symboles/UI/icon_parchment.png" id="5_iepd1"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="7_iepd1"]
 
@@ -33,28 +34,40 @@ offset_top = 8.0
 offset_right = 136.0
 offset_bottom = 48.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
-layout_mode = 2
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 48.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_wrbov")
+alignment = 1
 
-[node name="Quitter" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+[node name="Quitter" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme = ExtResource("3_wrbov")
 icon = ExtResource("2_itemj")
+icon_alignment = 1
 
-[node name="Option" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+[node name="Option" type="Button" parent="CanvasLayer/HBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 0
+theme = ExtResource("3_wrbov")
 icon = ExtResource("2_wvs3j")
 
-[node name="Musique" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+[node name="Mute" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("3_wrbov")
 icon = ExtResource("3_itemj")
 
-[node name="Instruction" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+[node name="Instruction" type="Button" parent="CanvasLayer/HBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+theme = ExtResource("3_wrbov")
 icon = ExtResource("5_iepd1")
 icon_alignment = 1
 
@@ -71,6 +84,20 @@ mouse_filter = 2
 [node name="Panel" type="Panel" parent="CanvasLayer/PanelContainer"]
 z_index = 1
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 154.0
+offset_bottom = 48.0
+theme = ExtResource("3_wrbov")
+
+[node name="Retour" type="Button" parent="CanvasLayer/PanelContainer/Panel/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_wrbov")
+icon = ExtResource("2_itemj")
+icon_alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel"]
 layout_mode = 0
@@ -125,20 +152,12 @@ theme_override_font_sizes/normal_font_size = 16
 text = "Les fonctions du type rpg et les adversaires \"IA\" ne sont pas encore implémentés.
 De plus amples informations sont contenues dans le document accompagnant cette démo."
 
-[node name="Retour" type="Button" parent="CanvasLayer/PanelContainer/Panel"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 48.0
-offset_bottom = 48.0
-icon = ExtResource("2_itemj")
-
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Option" to="." method="_on_option_pressed"]
-[connection signal="toggled" from="CanvasLayer/MarginContainer/HBoxContainer/Musique" to="." method="_on_musique_toggled"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Instruction" to="CanvasLayer/MarginContainer" method="hide"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="show"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [0]]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/MarginContainer" method="show"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/PanelContainer" method="hide"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Instruction" to="CanvasLayer/MarginContainer" method="hide"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="show"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/HBoxContainer/Retour" to="CanvasLayer/MarginContainer" method="show"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/HBoxContainer/Retour" to="CanvasLayer/PanelContainer" method="hide"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/HBoxContainer/Retour" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [2]]

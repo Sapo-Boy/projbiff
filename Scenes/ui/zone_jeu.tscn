@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dlbjq713gisqq"]
+[gd_scene load_steps=40 format=3 uid="uid://dlbjq713gisqq"]
 
 [ext_resource type="Texture2D" uid="uid://cihyynk1if1bv" path="res://Assets/Img/Sprites/Animation/Portail/Ancient Tech Portal.png" id="1_jbvy6"]
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="2_2cv1y"]
@@ -274,6 +274,34 @@ region = Rect2(4158, 0, 189, 90)
 atlas = ExtResource("1_jbvy6")
 region = Rect2(4347, 0, 189, 90)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdpf2"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(0, 180, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpstt"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(189, 180, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1078w"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(378, 180, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfve4"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(567, 180, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5wth"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(756, 180, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp1f6"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(945, 180, 189, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgb7i"]
+atlas = ExtResource("1_jbvy6")
+region = Rect2(1134, 180, 189, 90)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdpf2"]
 animations = [{
 "frames": [{
@@ -352,6 +380,32 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdpf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpstt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1078w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfve4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5wth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp1f6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgb7i")
+}],
+"loop": false,
+"name": &"tp",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_50w3k"]
@@ -391,8 +445,6 @@ rotation = -3.14159
 sprite_frames = SubResource("SpriteFrames_wdpf2")
 animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.0214063
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone_Deck"]
 position = Vector2(0, -45)

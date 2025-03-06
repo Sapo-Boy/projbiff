@@ -1,32 +1,32 @@
-[gd_scene load_steps=17 format=3 uid="uid://c1snqs13umdid"]
+[gd_scene load_steps=15 format=3 uid="uid://c1snqs13umdid"]
 
+[ext_resource type="Script" uid="uid://d8bbpur8uwx" path="res://Scenes/1_Zone_De_Jeu/scene_de_jeu.gd" id="1_0gekj"]
 [ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="1_7yxsl"]
 [ext_resource type="PackedScene" uid="uid://cb75jkgby3ycu" path="res://Scenes/1_Zone_De_Jeu/parallax/montagne_parallax_zd_j.tscn" id="1_jnskn"]
 [ext_resource type="PackedScene" uid="uid://fhhfggb0v272" path="res://Scenes/1_Zone_De_Jeu/decors/plateforme_pj.tscn" id="2_57tcf"]
 [ext_resource type="PackedScene" uid="uid://bm1yjh71xswve" path="res://Scenes/PNJ/PNJ_Kadaki_V1.tscn" id="2_jnskn"]
+[ext_resource type="PackedScene" uid="uid://c1nn12h2pi0up" path="res://Scenes/GestionSon/BibliMusiques.tscn" id="2_sbofg"]
 [ext_resource type="PackedScene" uid="uid://db1saqkuhfbp2" path="res://Scenes/PNJ/PNJ_Le_Duc.tscn" id="3_57tcf"]
+[ext_resource type="PackedScene" uid="uid://bjxki3cbau1q6" path="res://Scenes/GestionSon/BibliSons.tscn" id="3_oq34y"]
 [ext_resource type="PackedScene" uid="uid://beevh3pg6kg5i" path="res://Scenes/PNJ/PNJ_Triclop.tscn" id="4_u2043"]
 [ext_resource type="PackedScene" uid="uid://dlbjq713gisqq" path="res://Scenes/ui/zone_jeu.tscn" id="5_oge7d"]
 [ext_resource type="PackedScene" uid="uid://bpri1ymqpycjc" path="res://Scenes/ui/ui_menu_ig.tscn" id="6_knkcy"]
-[ext_resource type="AudioStream" uid="uid://x8x72xr8p8me" path="res://Assets/Musiques/508002__rokzroom__otherworlds-4.wav" id="9_0py56"]
 [ext_resource type="PackedScene" uid="uid://dul20wyoebdy1" path="res://Scenes/card_scene.tscn" id="9_u2043"]
-[ext_resource type="AudioStream" uid="uid://53fksssp8uer" path="res://Assets/Musiques/508003__rokzroom__otherworlds-3.wav" id="10_jkyc8"]
-[ext_resource type="AudioStream" uid="uid://djj88l5xg72kr" path="res://Assets/Musiques/508004__rokzroom__otherworlds-2.wav" id="11_sbofg"]
-[ext_resource type="AudioStream" uid="uid://daqb7v8o7ytcq" path="res://Assets/Musiques/508005__rokzroom__otherworlds-1.wav" id="12_oq34y"]
 [ext_resource type="PackedScene" uid="uid://cbkhhnim2yeba" path="res://Scenes/tvtext.tscn" id="14_sbofg"]
 [ext_resource type="PackedScene" uid="uid://cs77q2uvu5li8" path="res://Scenes/card_ui/card_start.tscn" id="15_oq34y"]
 
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_jkyc8"]
-shuffle = true
-stream_count = 4
-stream_0 = ExtResource("9_0py56")
-stream_1 = ExtResource("10_jkyc8")
-stream_2 = ExtResource("11_sbofg")
-stream_3 = ExtResource("12_oq34y")
-
-[node name="SceneDeJeu" type="Node2D"]
+[node name="SceneDeJeu" type="Node2D" node_paths=PackedStringArray("bibliothequeSons", "bibliothequeMusiques")]
+script = ExtResource("1_0gekj")
+bibliothequeSons = NodePath("GestionAudio/BibliothequeSons")
+bibliothequeMusiques = NodePath("GestionAudio/BibliMusiques")
 metadata/_edit_vertical_guides_ = [850.0, 25.0]
 metadata/_edit_horizontal_guides_ = [100.0, 314.0, 530.0, 558.0, 241.0, 458.0]
+
+[node name="GestionAudio" type="Node" parent="."]
+
+[node name="BibliMusiques" parent="GestionAudio" instance=ExtResource("2_sbofg")]
+
+[node name="BibliothequeSons" parent="GestionAudio" instance=ExtResource("3_oq34y")]
 
 [node name="Decor" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -63,29 +63,26 @@ position = Vector2(-24, 27)
 
 [node name="UI_Menu_IG" parent="." instance=ExtResource("6_knkcy")]
 
-[node name="AudioStreamJDJ" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPlaylist_jkyc8")
-volume_db = -15.0
-autoplay = true
-
-[node name="Node2D" parent="." instance=ExtResource("14_sbofg")]
-position = Vector2(851, 26)
-scale = Vector2(0.8, 0.8)
-metadata/_edit_lock_ = true
-
-[node name="Node2D2" parent="." instance=ExtResource("14_sbofg")]
-position = Vector2(851, 241)
-scale = Vector2(0.8, 0.8)
-metadata/_edit_lock_ = true
-
-[node name="Node2D3" parent="." instance=ExtResource("14_sbofg")]
-position = Vector2(851, 458)
-scale = Vector2(0.8, 0.8)
-metadata/_edit_lock_ = true
-
 [node name="Card_Start" parent="." instance=ExtResource("15_oq34y")]
 offset_left = 519.0
 offset_top = 261.0
 offset_right = 519.0
 offset_bottom = 261.0
+metadata/_edit_lock_ = true
+
+[node name="effet_portrait" type="Node2D" parent="."]
+
+[node name="Node2D" parent="effet_portrait" instance=ExtResource("14_sbofg")]
+position = Vector2(851, 26)
+scale = Vector2(0.8, 0.8)
+metadata/_edit_lock_ = true
+
+[node name="Node2D2" parent="effet_portrait" instance=ExtResource("14_sbofg")]
+position = Vector2(851, 241)
+scale = Vector2(0.8, 0.8)
+metadata/_edit_lock_ = true
+
+[node name="Node2D3" parent="effet_portrait" instance=ExtResource("14_sbofg")]
+position = Vector2(851, 458)
+scale = Vector2(0.8, 0.8)
 metadata/_edit_lock_ = true
