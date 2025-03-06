@@ -1,6 +1,7 @@
 extends Node
 
 enum TypeColor{Yellow,Black,Purple,Cyan}
+var rng = RandomNumberGenerator.new()
 #Card Related Events
 signal card_aim_started(card_ui : CardUI)
 signal card_aim_ended(card_ui: CardUI)
@@ -25,5 +26,8 @@ var oldcardnmb : int
 var oldcardcolor: TypeColor
 
 func _ready() -> void:
-	oldcardnmb = 5
-	oldcardcolor = Events.TypeColor.Cyan
+	 #RNG pour la carte du début
+	oldcardnmb = rng.randi_range(0.0, 9)
+	print(oldcardnmb)
+	oldcardcolor = rng.randi_range(0, 3)
+	print(oldcardcolor)
