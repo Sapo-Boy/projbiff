@@ -19,17 +19,31 @@ func start_battle(char_stats: CharacterStats) -> void:
 func start_turn() -> void:
 	character.reset_mana()
 	draw_cards(character.cards_per_turn)
+	draw_cardsbot(character.cards_per_turn)
 
 func draw_card() -> void:
-	hand.add_card(character.draw_pile.draw_card())
-	hand2.add_card(character.draw_pile.draw_card())
+	if character.draw_pile:
+		hand.add_card(character.draw_pile.draw_card())
 
 func draw_cards(amount: int) -> void:
 	var tween := create_tween()
 	for i in range(amount):
 		tween.tween_callback(draw_card)
 		tween.tween_interval(HAND_DRAW_INTERVAL)
+		
+func draw_cardbot() -> void:
+	hand2.add_card(character.draw_pile.draw_card())
+
+func draw_cardsbot(amount: int) -> void:
+	var tween := create_tween()
+	for i in range(amount):
+		tween.tween_callback(draw_cardbot)
+		tween.tween_interval(HAND_DRAW_INTERVAL)
 	
 	tween.finished.connect(
 		func() : Events.player_hand_drawn.emit()
 	)
+
+
+func _on_button_pressed() -> void:
+	draw_card()

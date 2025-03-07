@@ -18,11 +18,13 @@ grow_vertical = 2
 script = ExtResource("1_8uofe")
 
 [node name="BackCard" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_om1ig")
 
 [node name="LabelMid" type="Label" parent="."]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 19.0
 offset_right = 114.0
