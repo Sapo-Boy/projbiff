@@ -60,12 +60,19 @@ theme = ExtResource("4_6a634")
 text = "Quitter"
 icon_alignment = 1
 
-[node name="MenuOption" parent="." node_paths=PackedStringArray("bibliothequeSons") instance=ExtResource("7_itvo5")]
+[node name="MenuOption" parent="." node_paths=PackedStringArray("bibliothequeSons", "BoutonMenuZdJ") instance=ExtResource("7_itvo5")]
 layout_mode = 1
 bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
+BoutonMenuZdJ = NodePath("../BoutonMenuZdJVirtuel")
+
+[node name="BoutonMenuZdJVirtuel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Menu/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="MenuOption" method="show"]
+[connection signal="pressed" from="Menu/VBoxContainer/Option" to="BoutonMenuZdJVirtuel" method="hide"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="MenuOption" method="set_mouse_filter" binds= [0]]
 [connection signal="pressed" from="Menu/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

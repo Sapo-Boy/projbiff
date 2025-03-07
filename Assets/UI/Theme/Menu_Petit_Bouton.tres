@@ -54,4 +54,6 @@ Button/styles/focus = SubResource("StyleBoxFlat_xyqdn")
 Button/styles/hover = SubResource("StyleBoxFlat_v40tn")
 Button/styles/normal = SubResource("StyleBoxFlat_1drbw")
 HBoxContainer/constants/separation = 16
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_gdefw")
 VBoxContainer/constants/separation = 10

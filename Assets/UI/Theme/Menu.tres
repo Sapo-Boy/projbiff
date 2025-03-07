@@ -53,5 +53,7 @@ Button/fonts/font = ExtResource("1_1drbw")
 Button/styles/focus = SubResource("StyleBoxFlat_xyqdn")
 Button/styles/hover = SubResource("StyleBoxFlat_v40tn")
 Button/styles/normal = SubResource("StyleBoxFlat_1drbw")
+CheckButton/fonts/font = ExtResource("1_1drbw")
 HBoxContainer/constants/separation = 16
+Label/fonts/font = ExtResource("1_1drbw")
 VBoxContainer/constants/separation = 10

@@ -26,11 +26,6 @@ bibliothequeSons = NodePath("GestionAudio/BibliothequeSons")
 
 [node name="BibliothequeSons" parent="GestionAudio" instance=ExtResource("2_ced7o")]
 
-[node name="MenuOption" parent="." node_paths=PackedStringArray("bibliothequeSons") instance=ExtResource("2_g14jk")]
-layout_mode = 2
-anchors_preset = 0
-bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
 
@@ -40,7 +35,7 @@ position = Vector2(576.14, 324)
 scale = Vector2(0.450109, 0.45)
 texture = ExtResource("2_iepd1")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="BoutonMenuZdJ" type="HBoxContainer" parent="CanvasLayer"]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 100.0
@@ -52,15 +47,14 @@ theme = ExtResource("3_wrbov")
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="Quitter" type="Button" parent="CanvasLayer/HBoxContainer"]
-visible = false
+[node name="Quitter" type="Button" parent="CanvasLayer/BoutonMenuZdJ"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("3_wrbov")
 icon = ExtResource("2_itemj")
 icon_alignment = 1
 
-[node name="Option" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="Option" type="Button" parent="CanvasLayer/BoutonMenuZdJ"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -68,7 +62,7 @@ theme = ExtResource("3_wrbov")
 icon = ExtResource("2_wvs3j")
 icon_alignment = 1
 
-[node name="Instruction" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="Instruction" type="Button" parent="CanvasLayer/BoutonMenuZdJ"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme = ExtResource("3_wrbov")
@@ -90,6 +84,7 @@ z_index = 1
 layout_mode = 2
 
 [node name="Retour" type="Button" parent="CanvasLayer/PanelContainer/Panel"]
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -159,13 +154,18 @@ theme_override_font_sizes/normal_font_size = 16
 text = "Les fonctions du type rpg et les adversaires \"IA\" ne sont pas encore implémentés.
 De plus amples informations sont contenues dans le document accompagnant cette démo."
 
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Option" to="." method="_on_option_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Option" to="MenuOption" method="show"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Option" to="MenuOption" method="set_mouse_filter" binds= [0]]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Instruction" to="." method="_on_instruction_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="show"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Instruction" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [0]]
+[node name="MenuOption" parent="CanvasLayer" node_paths=PackedStringArray("bibliothequeSons", "BoutonMenuZdJ") instance=ExtResource("2_g14jk")]
+bibliothequeSons = NodePath("../../GestionAudio/BibliothequeSons")
+BoutonMenuZdJ = NodePath("../BoutonMenuZdJ")
+
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Option" to="CanvasLayer/BoutonMenuZdJ" method="hide"]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Option" to="CanvasLayer/MenuOption" method="show"]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Option" to="CanvasLayer/MenuOption" method="set_mouse_filter" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Instruction" to="." method="_on_instruction_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Instruction" to="CanvasLayer/PanelContainer" method="show"]
+[connection signal="pressed" from="CanvasLayer/BoutonMenuZdJ/Instruction" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [0]]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="." method="_on_retour_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/PanelContainer" method="hide"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/Panel/Retour" to="CanvasLayer/PanelContainer" method="set_mouse_filter" binds= [2]]
