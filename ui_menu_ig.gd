@@ -9,9 +9,6 @@ func _on_quitter_pressed() -> void:
 func _on_option_pressed() -> void:
 	bibliothequeSons.SonPresseBouton()
 
-func _on_mute_pressed() -> void:
-	bibliothequeSons.SonPresseBouton()
-
 func _on_instruction_pressed() -> void:
 	bibliothequeSons.SonPresseBouton()
 

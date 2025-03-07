@@ -1,6 +1,7 @@
 extends Control
 
 @export var bibliothequeSons: AudioStreamPlayer
+@export var boutonOption: HBoxContainer
  
 @onready var MUSIQUE_BUS_ID = AudioServer.get_bus_index("Musique")
 @onready var SFX_BUS_ID = AudioServer.get_bus_index("Sfx")
@@ -17,6 +18,7 @@ func _on_sons_slider_value_changed(value: float) -> void:
 
 func _on_retour_pressed() -> void:
 	bibliothequeSons.SonPresseBouton()
+	#boutonOption.
 
 func _on_check_button_pressed() -> void:
 	bibliothequeSons.SonPresseBouton()

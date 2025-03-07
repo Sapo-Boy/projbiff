@@ -21,10 +21,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 288.0
-offset_top = 162.0
-offset_right = -288.0
-offset_bottom = -162.0
+offset_left = 426.0
+offset_top = 199.0
+offset_right = -426.0
+offset_bottom = -199.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.8, 0.8, 0.8, 1)
@@ -47,17 +47,18 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 326.0
-offset_top = 162.0
-offset_right = -326.0
-offset_bottom = -162.0
+offset_left = 426.0
+offset_top = 199.0
+offset_right = -426.0
+offset_bottom = -199.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_right = 64
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="GridContainer2" type="GridContainer" parent="MarginContainer/VBoxContainer"]
@@ -66,14 +67,14 @@ theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 8
 columns = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GridContainer2"]
+[node name="PleinEcran" type="Label" parent="MarginContainer/VBoxContainer/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("3_25jo3")
 theme_override_font_sizes/font_size = 12
 text = "Plein ecran"
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer/GridContainer2"]
+[node name="PleinEcranCheck" type="CheckButton" parent="MarginContainer/VBoxContainer/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
@@ -115,7 +116,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 value = 100.0
 
-[node name="Retour" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Retour" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -123,9 +128,9 @@ theme = ExtResource("3_25jo3")
 text = "continuer"
 icon_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer2/CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer2/PleinEcranCheck" to="." method="_on_check_button_pressed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusiqueSlider" to="." method="_on_musique_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/SonsSlider" to="." method="_on_sons_slider_value_changed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Retour" to="." method="_on_retour_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Retour" to="." method="hide"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Retour" to="." method="set_mouse_filter" binds= [2]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="_on_retour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="hide"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="set_mouse_filter" binds= [2]]

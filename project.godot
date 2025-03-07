@@ -19,6 +19,7 @@ run/snap/snap_2d_transforms_to_pixel=false
 [autoload]
 
 Events="*res://Scenes/global/events.gd"
+MenuOption="*res://Scenes/ui/MenuOption/menu_option.gd"
 
 [display]
 
