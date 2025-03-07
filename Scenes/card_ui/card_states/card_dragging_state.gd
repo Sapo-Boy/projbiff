@@ -25,4 +25,5 @@ func on_input(event: InputEvent) -> void:
 			print(Events.oldcardcolor)
 			get_viewport().set_input_as_handled()
 			Events.playerturn = 1
+			Events.turnchange.emit()
 			transition_requested.emit(self, CardState.State.RELEASED)

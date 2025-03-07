@@ -6,7 +6,6 @@ const HAND_DRAW_INTERVAL := 0.25
 @export var hand: Hand
 @export var hand2: Hand
 
-
 var character: CharacterStats
 
 func start_battle(char_stats: CharacterStats) -> void:
@@ -22,7 +21,10 @@ func start_turn() -> void:
 	draw_cardsbot(character.cards_per_turn)
 
 func draw_card() -> void:
-	if character.draw_pile:
+	if !character.draw_pile.empty():
+		hand.add_card(character.draw_pile.draw_card())
+	else:
+		character.draw_pile = character.deck.duplicate(true)
 		hand.add_card(character.draw_pile.draw_card())
 
 func draw_cards(amount: int) -> void:
@@ -32,7 +34,11 @@ func draw_cards(amount: int) -> void:
 		tween.tween_interval(HAND_DRAW_INTERVAL)
 		
 func draw_cardbot() -> void:
-	hand2.add_card(character.draw_pile.draw_card())
+	if !character.draw_pile.empty():
+		hand2.add_card(character.draw_pile.draw_card())
+	else:
+		character.draw_pile = character.deck.duplicate(true)
+		hand2.add_card(character.draw_pile.draw_card())
 
 func draw_cardsbot(amount: int) -> void:
 	var tween := create_tween()
