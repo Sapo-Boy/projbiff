@@ -18,6 +18,7 @@ func on_input(event: InputEvent) -> void:
 	elif confirm:
 		if Events.oldcardnmb != card_ui.card.typeCardat and Events.oldcardcolor != card_ui.card.typeColorat or Events.playerturn != 0:
 			transition_requested.emit(self, CardState.State.BASE)
+			print_debug('Wrong Card')
 		else:
 			print(Events.oldcardcolor)
 			Events.oldcardnmb = card_ui.card.typeCardat
