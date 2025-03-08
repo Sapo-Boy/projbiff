@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dul20wyoebdy1"]
+[gd_scene load_steps=10 format=3 uid="uid://dul20wyoebdy1"]
 
 [ext_resource type="Script" uid="uid://bfs2ukfwhou4e" path="res://Scenes/ui/hand.gd" id="1_1eyib"]
 [ext_resource type="Script" uid="uid://h7i7axfis4mc" path="res://Scenes/ui/battle.gd" id="1_1mmgb"]
 [ext_resource type="Script" uid="uid://ba3r5tfg5idda" path="res://Scenes/ui/battle_ui.gd" id="1_ms70h"]
 [ext_resource type="Resource" uid="uid://ct8a16hidlaao" path="res://Char/characters/warrior/L3_S4GE.tres" id="2_55aab"]
 [ext_resource type="Script" uid="uid://bmmqsfrmg6g5o" path="res://Scenes/player/player_handler.gd" id="3_so5b3"]
+[ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="7_1mmgb"]
 [ext_resource type="Script" uid="uid://7gwo2cug21t2" path="res://Scenes/PNJ/bots_ai.gd" id="7_ms70h"]
 [ext_resource type="PackedScene" uid="uid://q8llcklo5on8" path="res://Scenes/ui/mana_ui.tscn" id="9_8uc1c"]
 
@@ -64,10 +65,12 @@ alignment = 1
 script = ExtResource("1_1eyib")
 
 [node name="Draw" type="Button" parent="BattleUI"]
-offset_left = 417.0
-offset_top = 1.0
-offset_right = 467.0
-offset_bottom = 32.0
+offset_left = 430.0
+offset_top = 8.0
+offset_right = 480.0
+offset_bottom = 39.0
+scale = Vector2(0.7, 0.7)
+theme = ExtResource("7_1mmgb")
 text = "Draw"
 
 [node name="BotsAI" type="Node" parent="."]
