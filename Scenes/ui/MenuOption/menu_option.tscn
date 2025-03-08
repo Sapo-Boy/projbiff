@@ -176,7 +176,6 @@ texture = ExtResource("3_5f046")
 sources/0 = SubResource("TileSetAtlasSource_mbac1")
 
 [node name="MenuOption" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -237,7 +236,7 @@ vertical = true
 [node name="Node2D" type="Node2D" parent="MarginContainer/BoxContainer"]
 position = Vector2(6, 0)
 
-[node name="Label" type="Label" parent="MarginContainer/BoxContainer/Node2D"]
+[node name="TitreOptions" type="Label" parent="MarginContainer/BoxContainer/Node2D"]
 offset_left = 77.0
 offset_top = 4.0
 offset_right = 150.0
@@ -275,6 +274,13 @@ size_flags_horizontal = 10
 size_flags_vertical = 4
 button_pressed = true
 icon_alignment = 1
+
+[node name="GridContainer3" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 8
+columns = 2
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

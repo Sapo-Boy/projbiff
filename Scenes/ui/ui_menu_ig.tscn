@@ -822,6 +822,7 @@ tile_map_data = PackedByteArray("AAAeAA4AAAAQAAQAAAApAA4AAAASAAQAAAApABkAAAASAAY
 tile_set = SubResource("TileSet_2cm7s")
 
 [node name="MenuOption" parent="CanvasLayer" node_paths=PackedStringArray("bibliothequeSons", "BoutonMenuZdJ") instance=ExtResource("2_g14jk")]
+visible = false
 bibliothequeSons = NodePath("../../GestionAudio/BibliothequeSons")
 BoutonMenuZdJ = NodePath("../BoutonMenuZdJ")
 

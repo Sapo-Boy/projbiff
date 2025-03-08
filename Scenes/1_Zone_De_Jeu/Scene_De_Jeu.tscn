@@ -71,19 +71,19 @@ offset_right = 519.0
 offset_bottom = 261.0
 metadata/_edit_lock_ = true
 
-[node name="effet_portrait" type="Node2D" parent="."]
+[node name="Crt_Portraits" type="Node2D" parent="."]
 
-[node name="Node2D" parent="effet_portrait" instance=ExtResource("14_sbofg")]
+[node name="Node2D" parent="Crt_Portraits" instance=ExtResource("14_sbofg")]
 position = Vector2(851, 26)
 scale = Vector2(0.8, 0.8)
 metadata/_edit_lock_ = true
 
-[node name="Node2D2" parent="effet_portrait" instance=ExtResource("14_sbofg")]
+[node name="Node2D2" parent="Crt_Portraits" instance=ExtResource("14_sbofg")]
 position = Vector2(851, 241)
 scale = Vector2(0.8, 0.8)
 metadata/_edit_lock_ = true
 
-[node name="Node2D3" parent="effet_portrait" instance=ExtResource("14_sbofg")]
+[node name="Node2D3" parent="Crt_Portraits" instance=ExtResource("14_sbofg")]
 position = Vector2(851, 458)
 scale = Vector2(0.8, 0.8)
 metadata/_edit_lock_ = true
