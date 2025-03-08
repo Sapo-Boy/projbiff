@@ -327,5 +327,5 @@ icon_alignment = 1
 [connection signal="toggled" from="MarginContainer/VBoxContainer/GridContainer2/PleinEcranCheck" to="." method="_on_plein_ecran_check_toggled"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusiqueSlider" to="." method="_on_musique_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/SonsSlider" to="." method="_on_sons_slider_value_changed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="_on_retour_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="hide"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="_on_retour_pressed"]
