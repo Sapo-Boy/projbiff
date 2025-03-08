@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CardPile" load_steps=7 format=3 uid="uid://dpxbwva7621ph"]
+[gd_resource type="Resource" script_class="CardPile" load_steps=8 format=3 uid="uid://dpxbwva7621ph"]
 
 [ext_resource type="Script" uid="uid://7xiqly7igio7" path="res://Char/custom_ressourcces/card.gd" id="1_e5p4p"]
 [ext_resource type="Resource" uid="uid://72jdr1hrwg5y" path="res://Char/characters/warrior/cards/Red/UNOREDCARD.tres" id="2_70crk"]
@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://7a2inkypgje" path="res://Char/characters/warrior/cards/Cyan/UNOCYANCARD.tres" id="3_a0l4r"]
 [ext_resource type="Resource" uid="uid://coq3klfxiq4ms" path="res://Char/characters/warrior/cards/Black/UNOBLACKCARD.tres" id="4_n8r33"]
 [ext_resource type="Resource" uid="uid://dk8p1rqa6vp5" path="res://Char/characters/warrior/cards/Cyan/UNOCYANCARD2.tres" id="5_pdqct"]
+[ext_resource type="Resource" uid="uid://voxty2l3gb6p" path="res://Char/characters/warrior/cards/Yellow/UNOYELLOWCARD.tres" id="6_pdqct"]
 
 [resource]
 script = ExtResource("2_btjnl")
-cards = Array[ExtResource("1_e5p4p")]([ExtResource("2_70crk"), ExtResource("3_a0l4r"), ExtResource("5_pdqct"), ExtResource("4_n8r33"), ExtResource("4_n8r33"), ExtResource("2_70crk"), ExtResource("3_a0l4r"), ExtResource("4_n8r33"), ExtResource("2_70crk")])
+cards = Array[ExtResource("1_e5p4p")]([ExtResource("2_70crk"), ExtResource("3_a0l4r"), ExtResource("5_pdqct"), ExtResource("4_n8r33"), ExtResource("4_n8r33"), ExtResource("2_70crk"), ExtResource("3_a0l4r"), ExtResource("4_n8r33"), ExtResource("2_70crk"), ExtResource("6_pdqct")])
