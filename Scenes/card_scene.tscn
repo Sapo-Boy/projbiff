@@ -16,6 +16,8 @@ z_as_relative = false
 script = ExtResource("1_1mmgb")
 char_stats = ExtResource("2_55aab")
 metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [300.0, 1.0]
+metadata/_edit_vertical_guides_ = [594.0]
 
 [node name="CardDropArea" type="Area2D" parent="."]
 collision_layer = 2
