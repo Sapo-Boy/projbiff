@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://to3v4txm3p7r"]
+[gd_scene load_steps=19 format=3 uid="uid://to3v4txm3p7r"]
 
 [ext_resource type="Shader" uid="uid://exgbguanwotn" path="res://Scenes/card_ui/dissolve.gdshader" id="1_iiw4v"]
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="2_edgis"]
@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="3_ugrrg"]
 [ext_resource type="Script" uid="uid://bb18oyy2kehrl" path="res://Scenes/card_ui/card_states/card_base_state.gd" id="4_6fbe4"]
 [ext_resource type="Script" uid="uid://b6w47hnh6nrbx" path="res://Scenes/card_ui/card_states/card_clicked_state.gd" id="5_cq5hw"]
-[ext_resource type="Script" uid="uid://1p50m7s644bp" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
+[ext_resource type="Script" uid="uid://c515x35jut4f5" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
 [ext_resource type="Script" uid="uid://dumiotxuteo3y" path="res://Scenes/card_ui/card_states/card_dragging_state.gd" id="6_ybjgx"]
 [ext_resource type="Script" uid="uid://e8yaa778cuxi" path="res://Scenes/card_ui/card_states/card_released_state.gd" id="7_ev7j6"]
 [ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="10_4jrdu"]
@@ -36,6 +36,9 @@ size = Vector2(106, 138)
 [sub_resource type="Theme" id="Theme_nmb7a"]
 default_font_size = 80
 Label/fonts/font = ExtResource("3_ugrrg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiw4v"]
+size = Vector2(106, 138)
 
 [node name="CardUI" type="Control"]
 z_as_relative = false
@@ -145,6 +148,12 @@ text = "9"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+
+[node name="VelocityCaptor" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShapeCarte" type="CollisionShape2D" parent="VelocityCaptor"]
+position = Vector2(53, 69)
+shape = SubResource("RectangleShape2D_iiw4v")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

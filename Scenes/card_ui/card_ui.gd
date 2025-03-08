@@ -25,7 +25,6 @@ var tween: Tween
 var disabled := false
 var original_index := 0
 
-
 func _ready() -> void:
 	card_state_machine.init(self)
 	
@@ -57,7 +56,6 @@ func _set_card(value: Card) -> void:
 func _on_drop_point_detector_area_entered(area: Area2D) -> void:
 	if not targets.has(area):
 		targets.append(area)
-
 
 func _on_drop_point_detector_area_exited(area: Area2D) -> void:
 	targets.erase(area)
