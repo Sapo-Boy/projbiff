@@ -61,7 +61,6 @@ text = "Quitter"
 icon_alignment = 1
 
 [node name="MenuOption" parent="." node_paths=PackedStringArray("bibliothequeSons", "BoutonMenuZdJ") instance=ExtResource("7_itvo5")]
-visible = false
 layout_mode = 1
 bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
 BoutonMenuZdJ = NodePath("../BoutonMenuZdJVirtuel")
