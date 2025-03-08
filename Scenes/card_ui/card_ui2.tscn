@@ -1,17 +1,17 @@
-[gd_scene load_steps=19 format=3 uid="uid://to3v4txm3p7r"]
+[gd_scene load_steps=19 format=3 uid="uid://uwtme5mtkte0"]
 
-[ext_resource type="Shader" uid="uid://exgbguanwotn" path="res://Scenes/card_ui/dissolve.gdshader" id="1_iiw4v"]
-[ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="2_edgis"]
-[ext_resource type="Script" uid="uid://yvq45v0s7q4c" path="res://Scenes/card_ui/card_ui.gd" id="2_vxv2n"]
-[ext_resource type="Texture2D" uid="uid://bfskyvi6njjv" path="res://Assets/Img/Symboles/Bonus/icon_time.png" id="3_6v2lc"]
-[ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="3_ugrrg"]
-[ext_resource type="Script" uid="uid://bb18oyy2kehrl" path="res://Scenes/card_ui/card_states/card_base_state.gd" id="4_6fbe4"]
-[ext_resource type="Script" uid="uid://b6w47hnh6nrbx" path="res://Scenes/card_ui/card_states/card_clicked_state.gd" id="5_cq5hw"]
-[ext_resource type="Script" uid="uid://c515x35jut4f5" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
-[ext_resource type="Script" uid="uid://dumiotxuteo3y" path="res://Scenes/card_ui/card_states/card_dragging_state.gd" id="6_ybjgx"]
-[ext_resource type="Script" uid="uid://e8yaa778cuxi" path="res://Scenes/card_ui/card_states/card_released_state.gd" id="7_ev7j6"]
-[ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="10_4jrdu"]
-[ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="11_vtrov"]
+[ext_resource type="Shader" uid="uid://exgbguanwotn" path="res://Scenes/card_ui/dissolve.gdshader" id="1_15b8r"]
+[ext_resource type="Script" uid="uid://yvq45v0s7q4c" path="res://Scenes/card_ui/card_ui.gd" id="2_1cs0r"]
+[ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="3_femc5"]
+[ext_resource type="Texture2D" uid="uid://bfskyvi6njjv" path="res://Assets/Img/Symboles/Bonus/icon_time.png" id="4_08ea0"]
+[ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="5_mevcw"]
+[ext_resource type="Script" uid="uid://c515x35jut4f5" path="res://Scenes/card_ui/Card_State_Machine.gd" id="6_6g0ld"]
+[ext_resource type="Script" uid="uid://bb18oyy2kehrl" path="res://Scenes/card_ui/card_states/card_base_state.gd" id="7_7gprw"]
+[ext_resource type="Script" uid="uid://b6w47hnh6nrbx" path="res://Scenes/card_ui/card_states/card_clicked_state.gd" id="8_q4pk5"]
+[ext_resource type="Script" uid="uid://dumiotxuteo3y" path="res://Scenes/card_ui/card_states/card_dragging_state.gd" id="9_1rk1f"]
+[ext_resource type="Script" uid="uid://e8yaa778cuxi" path="res://Scenes/card_ui/card_states/card_released_state.gd" id="10_yqve3"]
+[ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="11_wpm3f"]
+[ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="12_27dho"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4jrdu"]
 noise_type = 4
@@ -24,7 +24,7 @@ height = 138
 noise = SubResource("FastNoiseLite_4jrdu")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj616"]
-shader = ExtResource("1_iiw4v")
+shader = ExtResource("1_15b8r")
 shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_6qphx")
 shader_parameter/dissolve_value = 1.0
 shader_parameter/burn_size = 0.16
@@ -35,7 +35,7 @@ size = Vector2(106, 138)
 
 [sub_resource type="Theme" id="Theme_nmb7a"]
 default_font_size = 80
-Label/fonts/font = ExtResource("3_ugrrg")
+Label/fonts/font = ExtResource("12_27dho")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iiw4v"]
 size = Vector2(106, 138)
@@ -53,37 +53,41 @@ offset_right = -854.0
 offset_bottom = -402.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_vxv2n")
+script = ExtResource("2_1cs0r")
 
 [node name="BackCard" type="TextureRect" parent="."]
 use_parent_material = true
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_edgis")
+texture = ExtResource("3_femc5")
 
 [node name="TypeCard" type="TextureRect" parent="."]
 use_parent_material = true
+layout_mode = 0
 offset_left = 7.0
 offset_top = 8.0
 offset_right = 23.0
 offset_bottom = 24.0
-texture = ExtResource("3_6v2lc")
+texture = ExtResource("4_08ea0")
 
 [node name="CostTexture" type="TextureRect" parent="."]
 use_parent_material = true
+layout_mode = 0
 offset_left = 2.0
 offset_top = 35.0
 offset_right = 9.0
 offset_bottom = 58.0
-texture = ExtResource("11_vtrov")
+texture = ExtResource("5_mevcw")
 
 [node name="IconeMid" type="TextureRect" parent="."]
 use_parent_material = true
+layout_mode = 0
 offset_left = 21.0
 offset_top = 43.0
 offset_right = 85.0
 offset_bottom = 107.0
-texture = ExtResource("3_6v2lc")
+texture = ExtResource("4_08ea0")
 
 [node name="DropPointDetector" type="Area2D" parent="."]
 visible = false
@@ -95,43 +99,46 @@ position = Vector2(53, 69)
 shape = SubResource("RectangleShape2D_cn07p")
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("5_iiw4v")
+script = ExtResource("6_6g0ld")
 initial_state = NodePath("CardBaseState")
 
 [node name="CardBaseState" type="Node" parent="CardStateMachine"]
-script = ExtResource("4_6fbe4")
+script = ExtResource("7_7gprw")
 
 [node name="CardClickedState" type="Node" parent="CardStateMachine"]
-script = ExtResource("5_cq5hw")
+script = ExtResource("8_q4pk5")
 state = 1
 
 [node name="CardDraggingState" type="Node" parent="CardStateMachine"]
-script = ExtResource("6_ybjgx")
+script = ExtResource("9_1rk1f")
 state = 2
 
 [node name="CardReleasedState" type="Node" parent="CardStateMachine"]
-script = ExtResource("7_ev7j6")
+script = ExtResource("10_yqve3")
 state = 3
 
 [node name="Symbole1" type="TextureRect" parent="."]
 use_parent_material = true
 layout_direction = 1
+layout_mode = 0
 offset_left = 25.0
 offset_top = 20.0
 offset_right = 34.0
 offset_bottom = 29.0
-texture = ExtResource("10_4jrdu")
+texture = ExtResource("11_wpm3f")
 
 [node name="Symbole2" type="TextureRect" parent="."]
 use_parent_material = true
+layout_mode = 0
 offset_left = 15.0
 offset_top = 28.0
 offset_right = 24.0
 offset_bottom = 37.0
-texture = ExtResource("10_4jrdu")
+texture = ExtResource("11_wpm3f")
 
 [node name="LabelMid" type="Label" parent="."]
 use_parent_material = true
+layout_mode = 0
 offset_left = 6.0
 offset_top = 19.0
 offset_right = 114.0

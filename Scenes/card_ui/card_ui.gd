@@ -2,6 +2,7 @@ class_name CardUI
 extends Control
 
 signal reparent_requested(which_card_ui: CardUI)
+signal velocityCardSignal(vector2Value: bool)
 
 @export var card: Card : set = _set_card
 @export var char_stats: CharacterStats : set = _set_char_stats
@@ -24,6 +25,7 @@ var parent: Control
 var tween: Tween
 var disabled := false
 var original_index := 0
+var velocityCard = false
 
 func _ready() -> void:
 	card_state_machine.init(self)
@@ -67,3 +69,11 @@ func _set_char_stats(value: CharacterStats) -> void:
 
 func _on_char_stats_changed() -> void:
 	self.playable = char_stats.can_play_card(card)
+
+func CardStop() -> void:
+	if $VelocityCaptor.get_velocity() == 0:
+		velocityCard = true
+		velocityCardSignal.emit()
+	else:
+		velocityCard = false
+		velocityCardSignal.emit()
