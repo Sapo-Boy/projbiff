@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpri1ymqpycjc"]
+[gd_scene load_steps=21 format=4 uid="uid://bpri1ymqpycjc"]
 
 [ext_resource type="Script" uid="uid://5c5jo0eoca8f" path="res://ui_menu_ig.gd" id="1_b7ks2"]
 [ext_resource type="PackedScene" uid="uid://bjxki3cbau1q6" path="res://Scenes/GestionSon/BibliSons.tscn" id="2_ced7o"]
@@ -10,6 +10,520 @@
 [ext_resource type="Texture2D" uid="uid://cfkpfjlc3sylr" path="res://Assets/Img/Symboles/UI/icon_parchment.png" id="5_iepd1"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="7_iepd1"]
 [ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="7_wrbov"]
+[ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="10_5ohiq"]
+[ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="11_vcv1w"]
+[ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="12_klxa5"]
+[ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="13_ogy55"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ohiq"]
+texture = ExtResource("13_ogy55")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+18:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+2:8/0 = 0
+6:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+6:9/0 = 0
+11:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+11:10/0 = 0
+15:10/0 = 0
+2:11/0 = 0
+6:11/0 = 0
+11:11/0 = 0
+15:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+2:12/0 = 0
+6:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+2:13/0 = 0
+6:13/0 = 0
+11:13/0 = 0
+15:13/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+11:14/0 = 0
+15:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+2:15/0 = 0
+6:15/0 = 0
+11:15/0 = 0
+15:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vcv1w"]
+sources/0 = SubResource("TileSetAtlasSource_5ohiq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klxa5"]
+texture = ExtResource("13_ogy55")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+18:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+2:8/0 = 0
+6:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+6:9/0 = 0
+11:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+11:10/0 = 0
+15:10/0 = 0
+2:11/0 = 0
+6:11/0 = 0
+11:11/0 = 0
+15:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+2:12/0 = 0
+6:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+2:13/0 = 0
+6:13/0 = 0
+11:13/0 = 0
+15:13/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+11:14/0 = 0
+15:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+2:15/0 = 0
+6:15/0 = 0
+11:15/0 = 0
+15:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ogy55"]
+sources/0 = SubResource("TileSetAtlasSource_klxa5")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1f0es"]
+texture = ExtResource("13_ogy55")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+18:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+2:8/0 = 0
+6:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+6:9/0 = 0
+11:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+11:10/0 = 0
+15:10/0 = 0
+2:11/0 = 0
+6:11/0 = 0
+11:11/0 = 0
+15:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+2:12/0 = 0
+6:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+2:13/0 = 0
+6:13/0 = 0
+11:13/0 = 0
+15:13/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+11:14/0 = 0
+15:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+2:15/0 = 0
+6:15/0 = 0
+11:15/0 = 0
+15:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2cm7s"]
+sources/0 = SubResource("TileSetAtlasSource_1f0es")
 
 [node name="UI_Menu_IG" type="Control" node_paths=PackedStringArray("bibliothequeSons")]
 z_index = 1
@@ -135,14 +649,20 @@ text = "Prototype de jeu de UNO \"RPG\""
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer/Panel"]
-layout_mode = 0
-offset_left = 397.0
-offset_top = 385.0
-offset_right = 781.0
-offset_bottom = 609.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -441.0
+offset_top = -41.0
+offset_right = -57.0
+offset_bottom = 183.0
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 16
-text = "Si vous êtes premier joueur ou joueuse, sélectionner une carte à mettre dans la zone de \"Dépose des cartes\".
-Ensuite, vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre."
+text = "Vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre."
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/PanelContainer/Panel"]
 layout_mode = 0
@@ -151,8 +671,155 @@ offset_top = 68.0
 offset_right = 769.0
 offset_bottom = 292.0
 theme_override_font_sizes/normal_font_size = 16
-text = "Les fonctions du type rpg et les adversaires \"IA\" ne sont pas encore implémentés.
-De plus amples informations sont contenues dans le document accompagnant cette démo."
+text = "A"
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer/PanelContainer/Panel"]
+position = Vector2(1, 6)
+
+[node name="PJ" type="Node2D" parent="CanvasLayer/PanelContainer/Panel/Node2D"]
+
+[node name="UI_Vie_Energie" type="Node2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ"]
+position = Vector2(229, 134)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Vie_Energie"]
+visible = false
+tile_map_data = PackedByteArray("AAAAAAAAAAAQAAQAAAAAAAEAAAAQAAUAAAAAAAIAAAAQAAUAAAAAAAMAAAAQAAUAAAAAAAQAAAAQAAUAAAAAAAUAAAAQAAYAAAABAAAAAAALAAQAAAACAAAAAAALAAQAAAADAAAAAAALAAQAAAAEAAAAAAALAAQAAAAFAAAAAAALAAQAAAAGAAAAAAASAAQAAAABAAUAAAALAAYAAAACAAUAAAALAAYAAAADAAUAAAALAAYAAAAEAAUAAAALAAYAAAAFAAUAAAALAAYAAAAGAAUAAAASAAYAAAAGAAEAAAASAAUAAAAGAAIAAAASAAUAAAAGAAMAAAASAAUAAAAGAAQAAAASAAUAAAA=")
+tile_set = SubResource("TileSet_vcv1w")
+
+[node name="IconHeart" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Vie_Energie"]
+position = Vector2(36, 28)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_vcv1w")
+
+[node name="UI_PV" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Vie_Energie/IconHeart"]
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 85.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+text = "Vos points de vie"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="IconHand" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Vie_Energie"]
+position = Vector2(36, 66)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_klxa5")
+
+[node name="UI_Energie" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Vie_Energie/IconHand"]
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 391.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+text = "Vos points d'action"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="UI_Modif_Cartes" type="Node2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ"]
+position = Vector2(39, 374)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes"]
+visible = false
+tile_map_data = PackedByteArray("AAAAAAAAAAAQAAQAAAAAAAEAAAAQAAUAAAAAAAIAAAAQAAUAAAAAAAMAAAAQAAUAAAAAAAQAAAAQAAUAAAAAAAUAAAAQAAYAAAABAAAAAAALAAQAAAACAAAAAAALAAQAAAADAAAAAAALAAQAAAAEAAAAAAALAAQAAAAFAAAAAAALAAQAAAAGAAAAAAALAAQAAAABAAUAAAALAAYAAAACAAUAAAALAAYAAAADAAUAAAALAAYAAAAEAAUAAAALAAYAAAAFAAUAAAALAAYAAAAGAAUAAAALAAYAAAAHAAAAAAASAAQAAAAHAAEAAAASAAUAAAAHAAIAAAASAAUAAAAHAAMAAAASAAUAAAAHAAQAAAASAAUAAAAHAAUAAAASAAYAAAA=")
+tile_set = SubResource("TileSet_ogy55")
+
+[node name="IconCard" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes"]
+position = Vector2(48, 28)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_5ohiq")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes/IconCard"]
+offset_left = -16.6667
+offset_top = -7.33333
+offset_right = 23.3333
+offset_bottom = 26.6667
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_iepd1")
+text = "+"
+
+[node name="UI_Ajout_Carte" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes/IconCard"]
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 444.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+text = "Cartes ajoutées quand vous poser une carte action \"+X\""
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="IconCard2" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes"]
+position = Vector2(48, 66)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_5ohiq")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes/IconCard2"]
+offset_left = -16.6667
+offset_top = -7.33333
+offset_right = 23.3333
+offset_bottom = 26.6667
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_iepd1")
+text = "-"
+
+[node name="UI_Retrait_Carte" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes/IconCard2"]
+offset_left = 15.0
+offset_top = -8.0
+offset_right = 85.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+text = "Cartes retirées quand vous subissez une carte action \"+X\""
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PnJ" type="Node2D" parent="CanvasLayer/PanelContainer/Panel/Node2D"]
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ"]
+offset_left = 910.0
+offset_top = 25.0
+offset_right = 1032.0
+offset_bottom = 48.0
+text = "Vos adversaires"
+
+[node name="IconCard" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ"]
+position = Vector2(871, 170)
+texture = ExtResource("10_5ohiq")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ/IconCard"]
+offset_left = 20.0
+offset_top = -12.0
+offset_right = 299.0
+offset_bottom = 11.0
+size_flags_horizontal = 8
+text = "Cartes en main"
+
+[node name="IconHeart" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ"]
+position = Vector2(871, 106)
+texture = ExtResource("11_vcv1w")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ/IconHeart"]
+offset_left = 20.0
+offset_top = -12.0
+offset_right = 299.0
+offset_bottom = 11.0
+size_flags_horizontal = 8
+text = "Points de vie"
+
+[node name="IconHand" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ"]
+position = Vector2(871, 138)
+texture = ExtResource("12_klxa5")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ/IconHand"]
+offset_left = 20.0
+offset_top = -12.0
+offset_right = 299.0
+offset_bottom = 11.0
+size_flags_horizontal = 8
+text = "Points d'action"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer/PanelContainer/Panel/Node2D"]
+tile_map_data = PackedByteArray("AAAeAA4AAAAQAAQAAAApAA4AAAASAAQAAAApABkAAAASAAYAAAAeABkAAAAQAAYAAAABACIAAAAQAAQAAAAiACIAAAASAAQAAAA=")
+tile_set = SubResource("TileSet_2cm7s")
 
 [node name="MenuOption" parent="CanvasLayer" node_paths=PackedStringArray("bibliothequeSons", "BoutonMenuZdJ") instance=ExtResource("2_g14jk")]
 bibliothequeSons = NodePath("../../GestionAudio/BibliothequeSons")
