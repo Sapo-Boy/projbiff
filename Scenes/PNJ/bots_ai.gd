@@ -1,5 +1,5 @@
 extends Node
-
+@export var bibliothequeSons: AudioStreamPlayer
 @onready var hand2 = $"../BattleUI/Hand2"
 @onready var hand3 = $"../BattleUI/Hand3"
 @onready var hand4 = $"../BattleUI/Hand4"
@@ -115,8 +115,10 @@ func _bot1play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot() # draw
+		bibliothequeSons.SonCarteErreur()
 		return
 	else:
+		bibliothequeSons.SonCarteDepose()
 		ACardUi = playable_card
 		Events.oldcardcolor = playable_card.card.typeColorat
 		Events.oldcardnmb = playable_card.card.typeCardat
@@ -165,8 +167,10 @@ func _bot2play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot2() # draw
+		bibliothequeSons.SonCarteErreur()
 		return
 	else:
+		bibliothequeSons.SonCarteDepose()
 		ACardUi = playable_card
 		Events.oldcardcolor = ACardUi.card.typeColorat
 		Events.oldcardnmb = ACardUi.card.typeCardat
@@ -216,13 +220,15 @@ func _bot3play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot3() # draw
-		plswork == 1
+		plswork = 1
+		bibliothequeSons.SonCarteErreur()
 		return
 	else:
+		bibliothequeSons.SonCarteDepose()
 		ACardUi = playable_card
 		Events.oldcardcolor = ACardUi.card.typeColorat
 		Events.oldcardnmb = ACardUi.card.typeCardat
-		plswork == 0
+		plswork = 0
 		_movecard()
 		print_debug(Events.playerturn)
 

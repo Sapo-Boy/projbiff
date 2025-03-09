@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://to3v4txm3p7r"]
+[gd_scene load_steps=20 format=3 uid="uid://to3v4txm3p7r"]
 
 [ext_resource type="Shader" uid="uid://exgbguanwotn" path="res://Scenes/card_ui/dissolve.gdshader" id="1_iiw4v"]
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="2_edgis"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="10_4jrdu"]
 [ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="11_vtrov"]
 [ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="13_4jrdu"]
+[ext_resource type="PackedScene" uid="uid://bjxki3cbau1q6" path="res://Scenes/GestionSon/BibliSons.tscn" id="14_6qphx"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4jrdu"]
 noise_type = 4
@@ -107,8 +108,9 @@ script = ExtResource("4_6fbe4")
 script = ExtResource("5_cq5hw")
 state = 1
 
-[node name="CardDraggingState" type="Node" parent="CardStateMachine"]
+[node name="CardDraggingState" type="Node" parent="CardStateMachine" node_paths=PackedStringArray("bibliothequeSons")]
 script = ExtResource("6_ybjgx")
+bibliothequeSons = NodePath("../../Node/BibliothequeSons")
 state = 2
 
 [node name="CardReleasedState" type="Node" parent="CardStateMachine"]
@@ -155,6 +157,11 @@ offset_right = 50.0
 offset_bottom = 30.0
 theme = ExtResource("13_4jrdu")
 text = "5"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BibliothequeSons" parent="Node" instance=ExtResource("14_6qphx")]
+volume_db = 0.0
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
