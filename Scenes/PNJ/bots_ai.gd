@@ -37,16 +37,35 @@ func _botsplay():
 		_bot1play()
 		print("Turn ", Events.playerturn)
 		await get_tree().create_timer(1.2).timeout
+		if !hand2.get_children().is_empty():
+			print("handexist")
+			print(hand2.get_children())
+		else:
+			print("bot 1 wins")
+			return
 	elif Events.playerturn == 2:
 		_bot2play()
 		print("Turn ", Events.playerturn)
 		await get_tree().create_timer(1.2).timeout
+		if !hand3.get_children().is_empty():
+			print("handexist")
+			print(hand2.get_children())
+		else:
+			print("bot 2 wins")
+			return
 	elif Events.playerturn == 3:
 		_bot3play()
 		print("Turn ", Events.playerturn)
 		Events.playerturn = 3
 		await get_tree().create_timer(1.2).timeout
-		Events.playerturn= 0
+		if !hand2.get_children().is_empty():
+			print("handexist")
+			print(hand4.get_children())
+			Events.playerturn = 0
+		else:
+			print("bot3 wins")
+			return
+		
 		
 	if Events.playerturn != 0:
 		Events.turnchange.emit()
