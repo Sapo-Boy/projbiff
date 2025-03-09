@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://to3v4txm3p7r"]
+[gd_scene load_steps=18 format=3 uid="uid://to3v4txm3p7r"]
 
 [ext_resource type="Shader" uid="uid://exgbguanwotn" path="res://Scenes/card_ui/dissolve.gdshader" id="1_iiw4v"]
 [ext_resource type="Texture2D" uid="uid://b3phel5jrh7ry" path="res://Assets/Img/Cartes_Vides/carte_fond_bleu1.png" id="2_edgis"]
@@ -36,9 +36,6 @@ size = Vector2(106, 138)
 [sub_resource type="Theme" id="Theme_nmb7a"]
 default_font_size = 80
 Label/fonts/font = ExtResource("3_ugrrg")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiw4v"]
-size = Vector2(106, 138)
 
 [node name="CardUI" type="Control"]
 z_as_relative = false
@@ -148,12 +145,6 @@ text = "9"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
-
-[node name="VelocityCaptor" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShapeCarte" type="CollisionShape2D" parent="VelocityCaptor"]
-position = Vector2(53, 69)
-shape = SubResource("RectangleShape2D_iiw4v")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

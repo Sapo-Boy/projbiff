@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://7a2inkypgje"]
+[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://ddwkxok0ykyw4"]
 
 [ext_resource type="Texture2D" uid="uid://bjx7j1v3bm1ho" path="res://Assets/Img/Cartes_Vides/carte_fond__cyan.png" id="1_bxkb3"]
 [ext_resource type="Script" uid="uid://7xiqly7igio7" path="res://Char/custom_ressourcces/card.gd" id="1_l0d3u"]
@@ -8,11 +8,11 @@
 [resource]
 script = ExtResource("1_l0d3u")
 id = "TestCard"
-typeCardat = 0
+typeCardat = 5
 typeColorat = 3
 target = 0
 cost = 0
 BackCard = ExtResource("1_bxkb3")
 CardType = ExtResource("2_y0685")
 costTexture = ExtResource("4_fkgu1")
-LabelMid = "0"
+LabelMid = "5"

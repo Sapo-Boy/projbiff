@@ -54,40 +54,43 @@ script = ExtResource("1_1eyib")
 visible = false
 
 [node name="Hand2" type="HBoxContainer" parent="BattleUI"]
+visible = false
 z_index = -1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 552.0
-offset_top = -734.0
-offset_right = 614.0
-offset_bottom = -593.0
+offset_left = 560.0
+offset_top = -798.0
+offset_right = 622.0
+offset_bottom = -657.0
 grow_vertical = 0
 alignment = 1
 script = ExtResource("1_1eyib")
 
 [node name="Hand3" type="HBoxContainer" parent="BattleUI"]
+visible = false
 z_index = -1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 685.0
-offset_top = -728.0
-offset_right = 747.0
-offset_bottom = -587.0
+offset_left = 855.0
+offset_top = -792.0
+offset_right = 917.0
+offset_bottom = -651.0
 grow_vertical = 0
 alignment = 1
 script = ExtResource("1_1eyib")
 
 [node name="Hand4" type="HBoxContainer" parent="BattleUI"]
+visible = false
 z_index = -1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 804.0
-offset_top = -738.0
-offset_right = 866.0
-offset_bottom = -597.0
+offset_left = 358.0
+offset_top = -804.0
+offset_right = 420.0
+offset_bottom = -663.0
 grow_vertical = 0
 alignment = 1
 script = ExtResource("1_1eyib")

@@ -1,21 +1,18 @@
-[gd_resource type="Resource" script_class="Card" load_steps=6 format=3 uid="uid://72jdr1hrwg5y"]
+[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://72jdr1hrwg5y"]
 
 [ext_resource type="Texture2D" uid="uid://btei81dgo6dxr" path="res://Assets/Img/Cartes_Vides/carte_fond_violet1.png" id="1_amqdn"]
 [ext_resource type="Script" uid="uid://7xiqly7igio7" path="res://Char/custom_ressourcces/card.gd" id="1_l0d3u"]
 [ext_resource type="Texture2D" uid="uid://bfskyvi6njjv" path="res://Assets/Img/Symboles/Bonus/icon_time.png" id="2_y0685"]
-[ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="3_q5nyh"]
 [ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="4_fkgu1"]
 
 [resource]
 script = ExtResource("1_l0d3u")
 id = "TestCard"
-typeCardat = 5
+typeCardat = 0
 typeColorat = 2
 target = 0
 cost = 0
 BackCard = ExtResource("1_amqdn")
 CardType = ExtResource("2_y0685")
 costTexture = ExtResource("4_fkgu1")
-Symbole1 = ExtResource("3_q5nyh")
-Symbole2 = ExtResource("3_q5nyh")
-LabelMid = "5"
+LabelMid = "0"

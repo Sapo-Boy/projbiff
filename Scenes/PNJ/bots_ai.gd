@@ -34,6 +34,7 @@ func _emitNpcTurn(playerturn) -> void:
 func _botsplay(): 
 	_emitNpcTurn(Events.playerturn)
 	if Events.playerturn == 1:
+		await get_tree().create_timer(1.2).timeout
 		_bot1play()
 		print("Turn ", Events.playerturn)
 		await get_tree().create_timer(1.2).timeout
@@ -44,6 +45,7 @@ func _botsplay():
 			print("bot 1 wins")
 			return
 	elif Events.playerturn == 2:
+		await get_tree().create_timer(1.2).timeout
 		_bot2play()
 		print("Turn ", Events.playerturn)
 		await get_tree().create_timer(1.2).timeout
@@ -54,6 +56,7 @@ func _botsplay():
 			print("bot 2 wins")
 			return
 	elif Events.playerturn == 3:
+		await get_tree().create_timer(1.2).timeout
 		_bot3play()
 		print("Turn ", Events.playerturn)
 		Events.playerturn = 3
