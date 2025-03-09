@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c1snqs13umdid"]
+[gd_scene load_steps=16 format=3 uid="uid://c1snqs13umdid"]
 
 [ext_resource type="Script" uid="uid://d8bbpur8uwx" path="res://Scenes/1_Zone_De_Jeu/scene_de_jeu.gd" id="1_0gekj"]
 [ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="1_7yxsl"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dlbjq713gisqq" path="res://Scenes/ui/zone_jeu.tscn" id="5_oge7d"]
 [ext_resource type="PackedScene" uid="uid://bpri1ymqpycjc" path="res://Scenes/ui/ui_menu_ig.tscn" id="6_knkcy"]
 [ext_resource type="PackedScene" uid="uid://dul20wyoebdy1" path="res://Scenes/card_scene.tscn" id="9_u2043"]
+[ext_resource type="PackedScene" uid="uid://btn57woai64sn" path="res://Scenes/ui/npc/marqueur_tour.tscn" id="10_oq34y"]
 [ext_resource type="PackedScene" uid="uid://cbkhhnim2yeba" path="res://Scenes/tvtext.tscn" id="14_sbofg"]
 [ext_resource type="PackedScene" uid="uid://cs77q2uvu5li8" path="res://Scenes/card_ui/card_start.tscn" id="15_oq34y"]
 
@@ -39,6 +40,13 @@ metadata/_edit_lock_ = true
 position = Vector2(-10, 60)
 metadata/_edit_lock_ = true
 
+[node name="MarqueurTour" parent="PjL3S4ge" instance=ExtResource("10_oq34y")]
+offset_left = 345.0
+offset_top = 183.0
+offset_right = 345.0
+offset_bottom = 183.0
+txt_npc = "Mon tour"
+
 [node name="PNJ" type="Node2D" parent="."]
 position = Vector2(850, 0)
 metadata/_edit_lock_ = true
@@ -46,11 +54,32 @@ metadata/_edit_lock_ = true
 [node name="Kadaki_V1" parent="PNJ" instance=ExtResource("2_jnskn")]
 position = Vector2(0, 240)
 
+[node name="MarqueurTour" parent="PNJ/Kadaki_V1" instance=ExtResource("10_oq34y")]
+offset_left = -150.0
+offset_top = 265.0
+offset_right = -150.0
+offset_bottom = 265.0
+txt_npc = "INSERT STRING"
+
 [node name="Le_Duc" parent="PNJ" instance=ExtResource("3_57tcf")]
 position = Vector2(0, 456)
 
+[node name="MarqueurTour" parent="PNJ/Le_Duc" instance=ExtResource("10_oq34y")]
+offset_left = -80.0
+offset_top = -165.0
+offset_right = -80.0
+offset_bottom = -165.0
+txt_npc = "Bon..."
+
 [node name="Triclop" parent="PNJ" instance=ExtResource("4_u2043")]
 position = Vector2(0, 24)
+
+[node name="MarqueurTour" parent="PNJ/Triclop" instance=ExtResource("10_oq34y")]
+offset_left = -120.0
+offset_top = 50.0
+offset_right = -120.0
+offset_bottom = 50.0
+txt_npc = "Reponse 42"
 
 [node name="Zone_Jeu" parent="." instance=ExtResource("5_oge7d")]
 metadata/_edit_vertical_guides_ = [576.0]
