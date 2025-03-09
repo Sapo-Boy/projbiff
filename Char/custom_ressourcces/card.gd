@@ -19,7 +19,7 @@ enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE}
 @export var Symbole1: Texture
 @export var Symbole2: Texture
 @export var LabelMid: String
-
+@export var LabelNb: String
 
 func is_single_targeted() -> bool:
 	return target == Target.SINGLE_ENEMY
