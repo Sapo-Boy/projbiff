@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_bsl5t")
 starting_deck = ExtResource("3_rutqs")
-cards_per_turn = 3
+cards_per_turn = 7
 max_mana = 1
 max_health = 1

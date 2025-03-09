@@ -27,10 +27,12 @@ collision_layer = 2
 position = Vector2(594.5, 297.5)
 shape = SubResource("RectangleShape2D_1eyib")
 
-[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand", "hand2")]
+[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand", "hand2", "hand3", "hand4")]
 script = ExtResource("3_so5b3")
 hand = NodePath("../BattleUI/Hand")
 hand2 = NodePath("../BattleUI/Hand2")
+hand3 = NodePath("../BattleUI/Hand3")
+hand4 = NodePath("../BattleUI/Hand4")
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 script = ExtResource("1_ms70h")
@@ -60,6 +62,32 @@ offset_left = 552.0
 offset_top = -734.0
 offset_right = 614.0
 offset_bottom = -593.0
+grow_vertical = 0
+alignment = 1
+script = ExtResource("1_1eyib")
+
+[node name="Hand3" type="HBoxContainer" parent="BattleUI"]
+z_index = -1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 685.0
+offset_top = -728.0
+offset_right = 747.0
+offset_bottom = -587.0
+grow_vertical = 0
+alignment = 1
+script = ExtResource("1_1eyib")
+
+[node name="Hand4" type="HBoxContainer" parent="BattleUI"]
+z_index = -1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 804.0
+offset_top = -738.0
+offset_right = 866.0
+offset_bottom = -597.0
 grow_vertical = 0
 alignment = 1
 script = ExtResource("1_1eyib")
