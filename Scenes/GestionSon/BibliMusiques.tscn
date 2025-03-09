@@ -33,5 +33,6 @@ clip_1/auto_advance = 0
 
 [node name="BibliMusiques" type="AudioStreamPlayer"]
 stream = SubResource("AudioStreamInteractive_qyc2j")
+volume_db = -10.0
 bus = &"Musique"
 script = ExtResource("7_84ncg")

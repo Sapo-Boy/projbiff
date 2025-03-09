@@ -23,5 +23,6 @@ clip_3/auto_advance = 0
 
 [node name="BibliothequeSons" type="AudioStreamPlayer"]
 stream = SubResource("AudioStreamInteractive_gjvnh")
+volume_db = -5.0
 bus = &"Sfx"
 script = ExtResource("5_afueh")
