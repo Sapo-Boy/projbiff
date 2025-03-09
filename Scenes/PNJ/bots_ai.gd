@@ -112,6 +112,7 @@ func _bot1play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot() # draw
+		return
 	else:
 		ACardUi = playable_card
 		Events.oldcardcolor = playable_card.card.typeColorat
@@ -161,6 +162,7 @@ func _bot2play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot2() # draw
+		return
 	else:
 		ACardUi = playable_card
 		Events.oldcardcolor = ACardUi.card.typeColorat
@@ -210,6 +212,7 @@ func _bot3play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot3() # draw
+		return
 	else:
 		ACardUi = playable_card
 		Events.oldcardcolor = ACardUi.card.typeColorat

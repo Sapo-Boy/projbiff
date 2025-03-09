@@ -13,6 +13,7 @@ signal reparent_requested(which_card_ui: CardUI)
 @onready var symbole_1: TextureRect = $Symbole1
 @onready var symbole_2: TextureRect = $Symbole2
 @onready var label_mid: Label = $LabelMid
+@onready var labelNb: Label = $LabelNb
 
 
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
@@ -53,6 +54,7 @@ func _set_card(value: Card) -> void:
 	symbole_1.texture = card.Symbole1
 	symbole_2.texture = card.Symbole2
 	label_mid.text = str(card.LabelMid)
+	labelNb.text = str(card.LabelNb)
 
 func _on_drop_point_detector_area_entered(area: Area2D) -> void:
 	if not targets.has(area):

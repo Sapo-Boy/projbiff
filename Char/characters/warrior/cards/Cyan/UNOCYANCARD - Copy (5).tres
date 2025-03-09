@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://br46mt3lrll8w"]
+[gd_resource type="Resource" script_class="Card" load_steps=4 format=3 uid="uid://br46mt3lrll8w"]
 
 [ext_resource type="Texture2D" uid="uid://bjx7j1v3bm1ho" path="res://Assets/Img/Cartes_Vides/carte_fond__cyan.png" id="1_bxkb3"]
 [ext_resource type="Script" uid="uid://7xiqly7igio7" path="res://Char/custom_ressourcces/card.gd" id="1_l0d3u"]
-[ext_resource type="Texture2D" uid="uid://bfskyvi6njjv" path="res://Assets/Img/Symboles/Bonus/icon_time.png" id="2_y0685"]
 [ext_resource type="Texture2D" uid="uid://cpmpxsh55ty6k" path="res://Assets/Img/Symboles/Energie/Long Icons3.png" id="4_fkgu1"]
 
 [resource]
@@ -13,6 +12,6 @@ typeColorat = 3
 target = 0
 cost = 0
 BackCard = ExtResource("1_bxkb3")
-CardType = ExtResource("2_y0685")
 costTexture = ExtResource("4_fkgu1")
 LabelMid = "6"
+LabelNb = "6"
