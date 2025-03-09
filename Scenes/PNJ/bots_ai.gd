@@ -30,16 +30,16 @@ func _botsplay():
 	if Events.playerturn == 1:
 		_bot1play()
 		print("Turn ", Events.playerturn)
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.2).timeout
 	elif Events.playerturn == 2:
 		_bot2play()
 		print("Turn ", Events.playerturn)
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.2).timeout
 	elif Events.playerturn == 3:
 		_bot3play()
 		print("Turn ", Events.playerturn)
-		Events.playerturn = 2
-		await get_tree().create_timer(2.0).timeout
+		Events.playerturn = 3
+		await get_tree().create_timer(1.2).timeout
 		Events.playerturn= 0
 		
 	if Events.playerturn != 0:
@@ -50,42 +50,43 @@ func _botsplay():
 func _bot1play():
 	#1 Find a playable card
 	var playable_card : CardUI
-	nbchild = 0 + nbchildf
+	nbchild = 0
 	#print(hand2.get_children())
 	#print(nbchild)
+	finish = 0
 	for child in hand2.get_children():
-		thecard = hand2.get_child(nbchild)
-		if thecard.card.typeCardat == Events.oldcardnmb and thecard.card.typeColorat == Events.oldcardcolor: # is this card playable?
-			playable_card = thecard # found a card
-			nbchildf += 1
-			finish = 1
-			break # exit the loop, you found a card
-		nbchild += 1
-	if finish == 0:
-		nbchild = 0 + nbchildf
-		for child in hand2.get_children():
+		if hand2.get_child(nbchild).get_index() != null:
 			thecard = hand2.get_child(nbchild)
 			if thecard.card.typeColorat == Events.oldcardcolor:
 				playable_card = thecard # found a card
-				nbchildf += 1
 				finish = 1
 				break # exit the loop, you found a card
 			nbchild += 1
+		else:
+			while hand2.get_child(nbchild).get_index() != null:
+				nbchild += 1
+	#endfor
+	print("endforcol")
 	if finish == 0:
-		nbchild = 0 + nbchildf
+		nbchild = 0
 		for child in hand2.get_children():
-			thecard = hand2.get_child(nbchild)
-			if thecard.card.typeCardat == Events.oldcardnmb:
-				playable_card = thecard # found a card
-				nbchildf += 1
-				finish = 1
-				break # exit the loop, you found a card
-			nbchild += 1
+			if hand2.get_child(nbchild).get_index() != null:
+				thecard = hand2.get_child(nbchild)
+				if thecard.card.typeCardat == Events.oldcardnmb:
+					playable_card = thecard # found a card
+					finish = 1
+					break # exit the loop, you found a card
+				nbchild += 1
+			else:
+				while hand2.get_child(nbchild).get_index() != null:
+					nbchild += 1
+	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot() # draw
 	else:
-		print(hand2.new_card_ui.card.typeColorat)
 		ACardUi = playable_card
+		Events.oldcardcolor = playable_card.card.typeColorat
+		Events.oldcardnmb = playable_card.card.typeCardat
 		_movecard()
 		print_debug(Events.playerturn)
 
@@ -96,22 +97,45 @@ func _bot1play():
 	return
 
 func _bot2play():
-	#1 Find a playable card
+#1 Find a playable card
 	var playable_card : CardUI
-	nbchild = 0 + nbchildf2
+	nbchild = 0
+	#print(hand3.get_children())
+	#print(nbchild)
+	finish = 0
 	for child in hand3.get_children():
-		#print_debug(hand2.new_card_ui.card)
-		thecard = hand3.get_child(nbchild)
-		if thecard.card.typeCardat == Events.oldcardnmb: # is this card playable?
-			playable_card = thecard # found a card
-			nbchildf2 += 1
-			break # exit the loop, you found a card
-		nbchild += 1
+		if hand3.get_child(nbchild).get_index() != null:
+			thecard = hand3.get_child(nbchild)
+			if thecard.card.typeColorat == Events.oldcardcolor:
+				playable_card = thecard # found a card
+				finish = 1
+				break # exit the loop, you found a card
+			nbchild += 1
+		else:
+			while hand3.get_child(nbchild).get_index() != null:
+				nbchild += 1
+	#endfor
+	print("endforcol")
+	if finish == 0:
+		nbchild = 0
+		for child in hand3.get_children():
+			if hand3.get_child(nbchild).get_index() != null:
+				thecard = hand3.get_child(nbchild)
+				if thecard.card.typeCardat == Events.oldcardnmb:
+					playable_card = thecard # found a card
+					finish = 1
+					break # exit the loop, you found a card
+				nbchild += 1
+			else:
+				while hand3.get_child(nbchild).get_index() != null:
+					nbchild += 1
+	print("endfornb")
 	if playable_card == null: # did not find a card
-		PH.draw_cardbot() # draw
+		PH.draw_cardbot2() # draw
 	else:
-		print(hand3.new_card_ui.card.typeColorat)
 		ACardUi = playable_card
+		Events.oldcardcolor = ACardUi.card.typeColorat
+		Events.oldcardnmb = ACardUi.card.typeCardat
 		_movecard()
 		print_debug(Events.playerturn)
 
@@ -122,11 +146,54 @@ func _bot2play():
 	return
 	
 func _bot3play():
-	print_debug(Events.playerturn)
+#1 Find a playable card
+	var playable_card : CardUI
+	nbchild = 0
+	#print(hand4.get_children())
+	#print(nbchild)
+	finish = 0
+	for child in hand4.get_children():
+		if hand4.get_child(nbchild).get_index() != null:
+			thecard = hand4.get_child(nbchild)
+			if thecard.card.typeColorat == Events.oldcardcolor:
+				playable_card = thecard # found a card
+				finish = 1
+				break # exit the loop, you found a card
+			nbchild += 1
+		else:
+			while hand4.get_child(nbchild).get_index() != null:
+				nbchild += 1
+	#endfor
+	print("endforcol")
+	if finish == 0:
+		nbchild = 0
+		for child in hand4.get_children():
+			if hand4.get_child(nbchild).get_index() != null:
+				thecard = hand4.get_child(nbchild)
+				if thecard.card.typeCardat == Events.oldcardnmb:
+					playable_card = thecard # found a card
+					finish = 1
+					break # exit the loop, you found a card
+				nbchild += 1
+			else:
+				while hand4.get_child(nbchild).get_index() != null:
+					nbchild += 1
+	print("endfornb")
+	if playable_card == null: # did not find a card
+		PH.draw_cardbot3() # draw
+	else:
+		ACardUi = playable_card
+		Events.oldcardcolor = ACardUi.card.typeColorat
+		Events.oldcardnmb = ACardUi.card.typeCardat
+		_movecard()
+		print_debug(Events.playerturn)
+
+	# end your turn
 	Events.playerturn += 1
 	if Events.playerturn > 3:
 		Events.playerturn = 0
 	return
+
 
 func _movecard():
 	AnewCardUi = ACardUi.duplicate(true)
@@ -142,4 +209,4 @@ func _movecard():
 	
 func _process(delta):
 	if check == 1:
-		AnewCardUi.position = AnewCardUi.position.move_toward(coordcard.position + Vector2(rngx,rngy),5.0)
+		AnewCardUi.position = AnewCardUi.position.move_toward(coordcard.position + Vector2(rngx,rngy),25.0)
