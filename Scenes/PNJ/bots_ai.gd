@@ -15,6 +15,7 @@ var nbchildf2
 var nbchildf3
 var finish
 var thecard
+var plswork
 var rng = RandomNumberGenerator.new()
 var rngx
 var rngy
@@ -61,13 +62,15 @@ func _botsplay():
 		print("Turn ", Events.playerturn)
 		Events.playerturn = 3
 		await get_tree().create_timer(1.2).timeout
-		if !hand2.get_children().is_empty():
-			print("handexist")
-			print(hand4.get_children())
-			Events.playerturn = 0
-		else:
-			print("bot3 wins")
-			return
+		print(plswork)
+		if plswork == 0:
+			if !hand2.get_children().is_empty():
+				print("handexist")
+				print(hand4.get_children())
+				Events.playerturn = 0
+			else:
+				print("bot3 wins")
+				return
 		
 		
 	if Events.playerturn != 0:
@@ -180,6 +183,7 @@ func _bot3play():
 #1 Find a playable card
 	var playable_card : CardUI
 	nbchild = 0
+	plswork = 0
 	#print(hand4.get_children())
 	#print(nbchild)
 	finish = 0
@@ -212,11 +216,13 @@ func _bot3play():
 	print("endfornb")
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot3() # draw
+		plswork == 1
 		return
 	else:
 		ACardUi = playable_card
 		Events.oldcardcolor = ACardUi.card.typeColorat
 		Events.oldcardnmb = ACardUi.card.typeCardat
+		plswork == 0
 		_movecard()
 		print_debug(Events.playerturn)
 
