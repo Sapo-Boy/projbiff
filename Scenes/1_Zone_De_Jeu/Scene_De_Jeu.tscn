@@ -87,3 +87,5 @@ metadata/_edit_lock_ = true
 position = Vector2(851, 458)
 scale = Vector2(0.8, 0.8)
 metadata/_edit_lock_ = true
+
+[connection signal="emitNpcTurn" from="CardScene" to="." method="_on_card_scene_emit_npc_turn"]

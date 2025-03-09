@@ -18,6 +18,8 @@ var thecard
 var rng = RandomNumberGenerator.new()
 var rngx
 var rngy
+signal npc_turn(nb: int)
+
 func _ready()-> void:
 	var turnchang = get_node("/root/Events")
 	#var trba = get_node("res://Scenes/card_ui/card_states/card_dragging_state.gd")
@@ -25,8 +27,12 @@ func _ready()-> void:
 	nbchildf = 0
 	nbchildf2 = 0
 	
+func _emitNpcTurn(playerturn) -> void:
+	print("went into emit, valuer act:", playerturn)
+	npc_turn.emit(playerturn)
 	
 func _botsplay(): 
+	_emitNpcTurn(Events.playerturn)
 	if Events.playerturn == 1:
 		_bot1play()
 		print("Turn ", Events.playerturn)
@@ -44,7 +50,8 @@ func _botsplay():
 		
 	if Events.playerturn != 0:
 		Events.turnchange.emit()
-			
+	else:
+		_emitNpcTurn(Events.playerturn)
 			
 
 func _bot1play():

@@ -105,3 +105,4 @@ text = "Draw"
 script = ExtResource("7_ms70h")
 
 [connection signal="pressed" from="BattleUI/Draw" to="PlayerHandler" method="_on_button_pressed"]
+[connection signal="npc_turn" from="BotsAI" to="." method="_on_bots_ai_npc_turn"]
