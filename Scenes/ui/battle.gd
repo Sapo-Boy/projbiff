@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var char_stats: CharacterStats
+@export var VictoryScreen: Control
 
 @onready var battle_ui: BattleUI = $BattleUI as BattleUI
 @onready var player_handler: PlayerHandler = $PlayerHandler as PlayerHandler
@@ -20,3 +21,7 @@ func start_battle(stats: CharacterStats) -> void:
 func _on_bots_ai_npc_turn(nb: int) -> void:
 	print("le tour de: ",nb)
 	emitNpcTurn.emit(nb)
+
+
+func _on_bots_ai_gameover() -> void:
+	VictoryScreen._ongameend()

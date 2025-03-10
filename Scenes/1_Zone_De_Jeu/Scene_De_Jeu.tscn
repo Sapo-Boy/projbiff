@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1snqs13umdid"]
+[gd_scene load_steps=17 format=3 uid="uid://c1snqs13umdid"]
 
 [ext_resource type="Script" uid="uid://d8bbpur8uwx" path="res://Scenes/1_Zone_De_Jeu/scene_de_jeu.gd" id="1_0gekj"]
 [ext_resource type="PackedScene" uid="uid://cfby4smcgpmpl" path="res://Scenes/PJ/PJ_L3_S4GE.tscn" id="1_7yxsl"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://btn57woai64sn" path="res://Scenes/ui/npc/marqueur_tour.tscn" id="10_oq34y"]
 [ext_resource type="PackedScene" uid="uid://cbkhhnim2yeba" path="res://Scenes/tvtext.tscn" id="14_sbofg"]
 [ext_resource type="PackedScene" uid="uid://cs77q2uvu5li8" path="res://Scenes/card_ui/card_start.tscn" id="15_oq34y"]
+[ext_resource type="PackedScene" uid="uid://df2turtomacoq" path="res://Scenes/ui/victory_screen.tscn" id="16_0gekj"]
 
 [node name="SceneDeJeu" type="Node2D" node_paths=PackedStringArray("bibliothequeSons", "bibliothequeMusiques")]
 script = ExtResource("1_0gekj")
@@ -87,9 +88,10 @@ metadata/_edit_vertical_guides_ = [576.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 metadata/_edit_lock_ = true
 
-[node name="CardScene" parent="." instance=ExtResource("9_u2043")]
+[node name="CardScene" parent="." node_paths=PackedStringArray("VictoryScreen") instance=ExtResource("9_u2043")]
 show_behind_parent = true
 position = Vector2(-24, 27)
+VictoryScreen = NodePath("../VictoryScreen")
 
 [node name="UI_Menu_IG" parent="." node_paths=PackedStringArray("bibliothequeSons") instance=ExtResource("6_knkcy")]
 bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
@@ -117,5 +119,14 @@ metadata/_edit_lock_ = true
 position = Vector2(851, 458)
 scale = Vector2(0.8, 0.8)
 metadata/_edit_lock_ = true
+
+[node name="VictoryScreen" parent="." instance=ExtResource("16_0gekj")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="emitNpcTurn" from="CardScene" to="." method="_on_card_scene_emit_npc_turn"]

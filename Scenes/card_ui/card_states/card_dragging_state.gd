@@ -22,12 +22,17 @@ func on_input(event: InputEvent) -> void:
 			transition_requested.emit(self, CardState.State.BASE)
 			print_debug('Wrong Card')
 		else:
-			print(Events.oldcardcolor)
-			Events.oldcardnmb = card_ui.card.typeCardat
-			Events.oldcardcolor = card_ui.card.typeColorat
-			print(Events.oldcardcolor)
-			bibliothequeSons.SonCarteDepose()
-			get_viewport().set_input_as_handled()
-			Events.playerturn = 1
-			Events.turnchange.emit()
-			transition_requested.emit(self, CardState.State.RELEASED)
+			if !card_ui.targets.is_empty():
+				print(Events.oldcardcolor)
+				Events.oldcardnmb = card_ui.card.typeCardat
+				Events.oldcardcolor = card_ui.card.typeColorat
+				print(Events.oldcardcolor)
+				bibliothequeSons.SonCarteDepose()
+				get_viewport().set_input_as_handled()
+				Events.playerturn = 1
+				Events.turnchange.emit()
+				transition_requested.emit(self, CardState.State.RELEASED)
+			else:
+				bibliothequeSons.SonCarteErreur()
+				transition_requested.emit(self, CardState.State.BASE)
+				print_debug('Wrong Drop')

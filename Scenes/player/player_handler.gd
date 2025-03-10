@@ -29,6 +29,7 @@ func draw_card() -> void:
 		hand.add_card(character.draw_pile.draw_card())
 	else:
 		character.draw_pile = character.deck.duplicate(true)
+		character.draw_pile.shuffle()
 		hand.add_card(character.draw_pile.draw_card())
 
 func draw_cards(amount: int) -> void:
@@ -42,6 +43,7 @@ func draw_cardbot() -> void:
 		hand2.add_card(character.draw_pile.draw_card())
 	else:
 		character.draw_pile = character.deck.duplicate(true)
+		character.draw_pile.shuffle()
 		hand2.add_card(character.draw_pile.draw_card())
 
 func draw_cardsbot(amount: int) -> void:
@@ -59,6 +61,7 @@ func draw_cardbot2() -> void:
 		hand3.add_card(character.draw_pile.draw_card())
 	else:
 		character.draw_pile = character.deck.duplicate(true)
+		character.draw_pile.shuffle()
 		hand3.add_card(character.draw_pile.draw_card())
 
 func draw_cardsbot2(amount: int) -> void:
@@ -75,6 +78,7 @@ func draw_cardbot3() -> void:
 		hand4.add_card(character.draw_pile.draw_card())
 	else:
 		character.draw_pile = character.deck.duplicate(true)
+		character.draw_pile.shuffle()
 		hand4.add_card(character.draw_pile.draw_card())
 
 func draw_cardsbot3(amount: int) -> void:

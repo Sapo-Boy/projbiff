@@ -89,7 +89,6 @@ offset_bottom = 107.0
 texture = ExtResource("3_6v2lc")
 
 [node name="DropPointDetector" type="Area2D" parent="."]
-visible = false
 collision_mask = 2
 monitorable = false
 

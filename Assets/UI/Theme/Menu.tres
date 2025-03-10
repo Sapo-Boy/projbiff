@@ -56,4 +56,5 @@ Button/styles/normal = SubResource("StyleBoxFlat_1drbw")
 CheckButton/fonts/font = ExtResource("1_1drbw")
 HBoxContainer/constants/separation = 16
 Label/fonts/font = ExtResource("1_1drbw")
+RichTextLabel/fonts/normal_font = ExtResource("1_1drbw")
 VBoxContainer/constants/separation = 10
