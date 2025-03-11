@@ -1,5 +1,6 @@
 extends Node
 @export var bibliothequeSons: AudioStreamPlayer
+@onready var hand = $"../BattleUI/Hand"
 @onready var hand2 = $"../BattleUI/Hand2"
 @onready var hand3 = $"../BattleUI/Hand3"
 @onready var hand4 = $"../BattleUI/Hand4"
@@ -20,6 +21,7 @@ var rng = RandomNumberGenerator.new()
 var rngx
 var rngy
 signal npc_turn(nb: int)
+signal gameover()
 
 func _ready()-> void:
 	var turnchang = get_node("/root/Events")
@@ -33,50 +35,62 @@ func _emitNpcTurn(playerturn) -> void:
 	npc_turn.emit(playerturn)
 	
 func _botsplay(): 
-	_emitNpcTurn(Events.playerturn)
-	if Events.playerturn == 1:
-		await get_tree().create_timer(1.2).timeout
-		_bot1play()
-		print("Turn ", Events.playerturn)
-		await get_tree().create_timer(1.2).timeout
-		if !hand2.get_children().is_empty():
-			print("handexist")
-			print(hand2.get_children())
-		else:
-			print("bot 1 wins")
-			return
-	elif Events.playerturn == 2:
-		await get_tree().create_timer(1.2).timeout
-		_bot2play()
-		print("Turn ", Events.playerturn)
-		await get_tree().create_timer(1.2).timeout
-		if !hand3.get_children().is_empty():
-			print("handexist")
-			print(hand2.get_children())
-		else:
-			print("bot 2 wins")
-			return
-	elif Events.playerturn == 3:
-		await get_tree().create_timer(1.2).timeout
-		_bot3play()
-		print("Turn ", Events.playerturn)
-		Events.playerturn = 3
-		await get_tree().create_timer(1.2).timeout
-		print(plswork)
-		if plswork == 0:
+	if !hand.get_children().is_empty():
+		_emitNpcTurn(Events.playerturn)
+		if Events.playerturn == 1:
+			await get_tree().create_timer(1.2).timeout
+			_bot1play()
+			print("Turn ", Events.playerturn)
+			await get_tree().create_timer(1.2).timeout
+			Events.cardbot1 = hand2.get_child_count()
 			if !hand2.get_children().is_empty():
 				print("handexist")
-				print(hand4.get_children())
-				Events.playerturn = 0
+				print(hand2.get_children())
 			else:
-				print("bot3 wins")
+				Events.playerturn = 1
+				gameover.emit()
+				print("bot 1 wins")
 				return
-		
-		
-	if Events.playerturn != 0:
-		Events.turnchange.emit()
+		elif Events.playerturn == 2:
+			await get_tree().create_timer(1.2).timeout
+			_bot2play()
+			print("Turn ", Events.playerturn)
+			await get_tree().create_timer(1.2).timeout
+			Events.cardbot2 = hand3.get_child_count()
+			if !hand3.get_children().is_empty():
+				print("handexist")
+				print(hand2.get_children())
+			else:
+				Events.playerturn = 2
+				gameover.emit()
+				print("bot 2 wins")
+				return
+		elif Events.playerturn == 3:
+			await get_tree().create_timer(1.2).timeout
+			_bot3play()
+			print("Turn ", Events.playerturn)
+			Events.playerturn = 3
+			await get_tree().create_timer(1.2).timeout
+			Events.cardbot3 = hand4.get_child_count()
+			print(plswork)
+			if plswork == 0:
+				if !hand2.get_children().is_empty():
+					print("handexist")
+					print(hand4.get_children())
+					Events.playerturn = 0
+				else:
+					Events.playerturn = 3
+					gameover.emit()
+					print("bot3 wins")
+					return
+		if Events.playerturn != 0:
+			Events.turnchange.emit()
+		else:
+			_emitNpcTurn(Events.playerturn)
 	else:
-		_emitNpcTurn(Events.playerturn)
+		Events.playerturn = 0
+		print("player1 wins")
+		gameover.emit()
 			
 
 func _bot1play():
@@ -116,6 +130,7 @@ func _bot1play():
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot() # draw
 		bibliothequeSons.SonCarteErreur()
+		Events.cardbot1 = hand2.get_child_count()
 		return
 	else:
 		bibliothequeSons.SonCarteDepose()
@@ -168,6 +183,7 @@ func _bot2play():
 	if playable_card == null: # did not find a card
 		PH.draw_cardbot2() # draw
 		bibliothequeSons.SonCarteErreur()
+		Events.cardbot2 = hand3.get_child_count()
 		return
 	else:
 		bibliothequeSons.SonCarteDepose()
@@ -222,6 +238,7 @@ func _bot3play():
 		PH.draw_cardbot3() # draw
 		plswork = 1
 		bibliothequeSons.SonCarteErreur()
+		Events.cardbot3 = hand4.get_child_count()
 		return
 	else:
 		bibliothequeSons.SonCarteDepose()
@@ -251,6 +268,6 @@ func _movecard():
 	print_debug(AnewCardUi.position)
 	return
 	
-func _process(delta):
+func _process(_delta):
 	if check == 1:
 		AnewCardUi.position = AnewCardUi.position.move_toward(coordcard.position + Vector2(rngx,rngy),25.0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://db1saqkuhfbp2"]
+[gd_scene load_steps=15 format=4 uid="uid://db1saqkuhfbp2"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkp1o15bhkv" path="res://Assets/Img/Parallax/Victorian/layer 1.png" id="1_tdgdg"]
 [ext_resource type="Texture2D" uid="uid://n1ptn1ejrp6u" path="res://Assets/Img/Parallax/Victorian/layer 2.png" id="2_jgyd3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="8_ywkuv"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="9_1xalq"]
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
+[ext_resource type="Script" uid="uid://8jhxo5rghqjl" path="res://Scenes/PNJ/uiDuc.gd" id="12_soqyv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
 texture = ExtResource("10_km0d0")
@@ -309,3 +310,4 @@ scale = Vector2(0.5, 0.5)
 theme = ExtResource("9_1xalq")
 text = "1"
 horizontal_alignment = 2
+script = ExtResource("12_soqyv")
