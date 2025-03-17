@@ -52,7 +52,7 @@ icon_alignment = 1
 [node name="Option" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_6a634")
-text = "Option"
+text = "Options"
 
 [node name="Quitter" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
