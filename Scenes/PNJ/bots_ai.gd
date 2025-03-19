@@ -24,6 +24,7 @@ var tween_portal: Tween
 signal npc_turn(nb: int)
 signal gameover()
 
+
 func _ready()-> void:
 	var turnchang = get_node("/root/Events")
 	#var trba = get_node("res://Scenes/card_ui/card_states/card_dragging_state.gd")
@@ -276,3 +277,7 @@ func _process(_delta):
 	if check == 1:
 		AnewCardUi.position = AnewCardUi.position.move_toward(coordcard.position + Vector2(rngx,rngy),25.0)
 		#AnewCardUi.material.set_shader_parameter("dissolve_value",_delta)
+	if hand.get_children().is_empty():
+		Events.playerturn = 0
+		print("player1 wins")
+		gameover.emit()
