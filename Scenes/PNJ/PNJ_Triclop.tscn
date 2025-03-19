@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://beevh3pg6kg5i"]
+[gd_scene load_steps=28 format=4 uid="uid://beevh3pg6kg5i"]
 
 [ext_resource type="Texture2D" uid="uid://dv2o6yakn534g" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/BG1.png" id="1_7tfqe"]
 [ext_resource type="Texture2D" uid="uid://cpkui8r1sglwu" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Sun1.png" id="2_qjnkq"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_ypmdf"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="13_titlx"]
 [ext_resource type="Script" uid="uid://c3ak8uy5ot17w" path="res://Scenes/PNJ/uiTri.gd" id="14_5s5tt"]
+[ext_resource type="Texture2D" uid="uid://yb0cr0b566pu" path="res://Assets/Img/Sprites/Animation/FX/All.png" id="15_iabbf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
 texture = ExtResource("10_ypmdf")
@@ -185,6 +186,77 @@ texture = ExtResource("10_ypmdf")
 [sub_resource type="TileSet" id="TileSet_rf4jb"]
 sources/0 = SubResource("TileSetAtlasSource_ug51b")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_iabbf"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(656, 0, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_livl5"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(0, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o3fc"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(82, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28dg5"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(164, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbcq3"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(246, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exr50"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(328, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dknhr"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(410, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18ehw"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(492, 195, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb3xq"]
+atlas = ExtResource("15_iabbf")
+region = Rect2(574, 195, 82, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6e5gb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iabbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_livl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o3fc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28dg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbcq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exr50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dknhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18ehw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb3xq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Triclop" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
@@ -327,3 +399,10 @@ theme = ExtResource("13_titlx")
 text = "1"
 horizontal_alignment = 2
 script = ExtResource("14_5s5tt")
+
+[node name="Fx" type="Node2D" parent="."]
+
+[node name="Flash1" type="AnimatedSprite2D" parent="Fx"]
+position = Vector2(110, 58)
+sprite_frames = SubResource("SpriteFrames_6e5gb")
+centered = false

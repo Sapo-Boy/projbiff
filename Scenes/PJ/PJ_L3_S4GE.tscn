@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="4_3kuic"]
 [ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="4_hj41r"]
 [ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="5_3kuic"]
-[ext_resource type="Script" uid="uid://dllbf6rhoflvd" path="res://Scripts/ui_energie.gd" id="7_3kuic"]
+[ext_resource type="Script" path="res://Scripts/ui_energie.gd" id="7_3kuic"]
 
 [sub_resource type="Animation" id="Animation_3kuic"]
 length = 0.001

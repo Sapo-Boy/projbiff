@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bm1yjh71xswve"]
+[gd_scene load_steps=31 format=4 uid="uid://bm1yjh71xswve"]
 
 [ext_resource type="Texture2D" uid="uid://cw4jrairkoi55" path="res://Assets/Img/Parallax/Epee/Couleur1/BG2.png" id="1_6mihd"]
 [ext_resource type="Texture2D" uid="uid://bgqkw7vujuu4t" path="res://Assets/Img/Parallax/Epee/Couleur1/Sun2.png" id="2_derb7"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="13_xrc2a"]
 [ext_resource type="Script" uid="uid://cgkh6rtewm1ci" path="res://Scenes/PNJ/uiKada.gd" id="14_8rgqm"]
+[ext_resource type="Texture2D" uid="uid://yb0cr0b566pu" path="res://Assets/Img/Sprites/Animation/FX/All.png" id="15_pvq81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
 texture = ExtResource("10_km0d0")
@@ -185,6 +186,99 @@ texture = ExtResource("10_km0d0")
 [sub_resource type="TileSet" id="TileSet_rf4jb"]
 sources/0 = SubResource("TileSetAtlasSource_ug51b")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt5t0"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(328, 260, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onb2h"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(0, 260, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xk61"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(82, 260, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0usnt"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(164, 260, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v87hj"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(246, 260, 82, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhb2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt5t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onb2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xk61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0usnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v87hj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1uep"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(410, 325, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dub6"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(0, 325, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edjyt"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(82, 325, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c8bf"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(164, 325, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rupd"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(246, 325, 82, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gnug"]
+atlas = ExtResource("15_pvq81")
+region = Rect2(328, 325, 82, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ev42f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1uep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dub6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edjyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0c8bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rupd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gnug")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Kadaki_V1" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [100.0]
 
@@ -318,3 +412,26 @@ theme = ExtResource("13_xrc2a")
 text = "1"
 horizontal_alignment = 2
 script = ExtResource("14_8rgqm")
+
+[node name="Fx" type="Node2D" parent="."]
+
+[node name="Flash1" type="AnimatedSprite2D" parent="Fx"]
+position = Vector2(142, 15)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fhb2k")
+centered = false
+flip_h = true
+
+[node name="Flash2" type="AnimatedSprite2D" parent="Fx"]
+position = Vector2(178, 106)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ev42f")
+centered = false
+flip_h = true
+
+[node name="Flash3" type="AnimatedSprite2D" parent="Fx"]
+position = Vector2(94, 105)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_fhb2k")
+centered = false
+flip_h = true
