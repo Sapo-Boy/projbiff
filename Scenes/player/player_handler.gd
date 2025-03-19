@@ -3,6 +3,7 @@ extends Node
 
 const HAND_DRAW_INTERVAL := 0.25
 
+@export var bibliothequeSons: AudioStreamPlayer
 @export var hand: Hand
 @export var hand2: Hand
 @export var hand3: Hand
@@ -92,4 +93,5 @@ func draw_cardsbot3(amount: int) -> void:
 	)
 
 func _on_button_pressed() -> void:
+	bibliothequeSons.SonCarteErreur()
 	draw_card()

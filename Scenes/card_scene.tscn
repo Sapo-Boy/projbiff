@@ -29,8 +29,9 @@ collision_layer = 2
 position = Vector2(594.5, 297.5)
 shape = SubResource("RectangleShape2D_1eyib")
 
-[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand", "hand2", "hand3", "hand4")]
+[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("bibliothequeSons", "hand", "hand2", "hand3", "hand4")]
 script = ExtResource("3_so5b3")
+bibliothequeSons = NodePath("../Node/BibliothequeSons")
 hand = NodePath("../BattleUI/Hand")
 hand2 = NodePath("../BattleUI/Hand2")
 hand3 = NodePath("../BattleUI/Hand3")
