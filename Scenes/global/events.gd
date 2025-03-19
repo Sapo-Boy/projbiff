@@ -26,3 +26,4 @@ var cardbot2
 var cardbot3
 var nbcardplayed
 var extraschmove
+var checkempty = 0

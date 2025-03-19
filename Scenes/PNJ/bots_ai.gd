@@ -277,7 +277,8 @@ func _process(_delta):
 	if check == 1:
 		AnewCardUi.position = AnewCardUi.position.move_toward(coordcard.position + Vector2(rngx,rngy),25.0)
 		#AnewCardUi.material.set_shader_parameter("dissolve_value",_delta)
-	if hand.get_children().is_empty():
+	if (hand.get_children().is_empty() and Events.checkempty == 0):
 		Events.playerturn = 0
 		print("player1 wins")
 		gameover.emit()
+	Events.checkempty = 1

@@ -37,10 +37,12 @@ func on_input(event: InputEvent) -> void:
 					Events.emitButtonColor.emit()
 					Events.turnchange.emit()
 					transition_requested.emit(self, CardState.State.RELEASED)
+					Events.checkempty = 0
 					
 				else:
 					Events.extraschmove = Events.extraschmove - 1
 					Events.emitButtonColor.emit()
+					Events.checkempty = 0
 					transition_requested.emit(self, CardState.State.RELEASED)
 			else:
 				bibliothequeSons.SonCarteErreur()
