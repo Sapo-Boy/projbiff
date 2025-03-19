@@ -91,7 +91,8 @@ offset_right = -120.0
 offset_bottom = 50.0
 txt_npc = "Reponse 42"
 
-[node name="Zone_Jeu" parent="." instance=ExtResource("5_oge7d")]
+[node name="Zone_Jeu" parent="." node_paths=PackedStringArray("bibliothequeSons") instance=ExtResource("5_oge7d")]
+bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
 metadata/_edit_vertical_guides_ = [576.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 metadata/_edit_lock_ = true

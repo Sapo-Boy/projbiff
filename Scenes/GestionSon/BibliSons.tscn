@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjxki3cbau1q6"]
+[gd_scene load_steps=9 format=3 uid="uid://bjxki3cbau1q6"]
 
 [ext_resource type="AudioStream" uid="uid://bwb0sjm27mncb" path="res://Assets/Son/UI/Minimalist3.wav" id="1_fde8c"]
 [ext_resource type="AudioStream" uid="uid://bx6wh12fxqt0m" path="res://Assets/Son/Cartes/GP_PutDown_2.wav" id="2_7xbsl"]
@@ -6,9 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://b8ske7riw2s2x" path="res://Assets/Son/Cartes/Tone1C_TritoneOctaveDown.wav" id="4_eltai"]
 [ext_resource type="AudioStream" uid="uid://b2ik3n2hnnyt" path="res://Assets/Son/UI/GP_Heal_1.wav" id="5_5ym4y"]
 [ext_resource type="Script" uid="uid://7nd5ytubehy2" path="res://Scenes/GestionSon/fonction_sons.gd" id="5_afueh"]
+[ext_resource type="AudioStream" uid="uid://dync0k11i43ev" path="res://Assets/Son/Cartes/185849__lloydevans09__warping.wav" id="6_eltai"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_gjvnh"]
-clip_count = 5
+clip_count = 6
 clip_0/name = &"PresseBouton"
 clip_0/stream = ExtResource("1_fde8c")
 clip_0/auto_advance = 0
@@ -24,6 +25,9 @@ clip_3/auto_advance = 0
 clip_4/name = &"Gp Heal 1"
 clip_4/stream = ExtResource("5_5ym4y")
 clip_4/auto_advance = 0
+clip_5/name = &"Warping"
+clip_5/stream = ExtResource("6_eltai")
+clip_5/auto_advance = 0
 
 [node name="BibliothequeSons" type="AudioStreamPlayer"]
 stream = SubResource("AudioStreamInteractive_gjvnh")
