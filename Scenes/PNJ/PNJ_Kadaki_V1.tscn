@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bm1yjh71xswve"]
+[gd_scene load_steps=32 format=4 uid="uid://bm1yjh71xswve"]
 
 [ext_resource type="Texture2D" uid="uid://cw4jrairkoi55" path="res://Assets/Img/Parallax/Epee/Couleur1/BG2.png" id="1_6mihd"]
 [ext_resource type="Texture2D" uid="uid://bgqkw7vujuu4t" path="res://Assets/Img/Parallax/Epee/Couleur1/Sun2.png" id="2_derb7"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="13_xrc2a"]
 [ext_resource type="Script" uid="uid://cgkh6rtewm1ci" path="res://Scenes/PNJ/uiKada.gd" id="14_8rgqm"]
+[ext_resource type="Script" uid="uid://dwvsgodj8tds8" path="res://Scripts/fxKadaki.gd" id="15_jt5t0"]
 [ext_resource type="Texture2D" uid="uid://yb0cr0b566pu" path="res://Assets/Img/Sprites/Animation/FX/All.png" id="15_pvq81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
@@ -414,6 +415,7 @@ horizontal_alignment = 2
 script = ExtResource("14_8rgqm")
 
 [node name="Fx" type="Node2D" parent="."]
+script = ExtResource("15_jt5t0")
 
 [node name="Flash1" type="AnimatedSprite2D" parent="Fx"]
 position = Vector2(142, 15)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://db1saqkuhfbp2"]
+[gd_scene load_steps=26 format=4 uid="uid://db1saqkuhfbp2"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkp1o15bhkv" path="res://Assets/Img/Parallax/Victorian/layer 1.png" id="1_tdgdg"]
 [ext_resource type="Texture2D" uid="uid://n1ptn1ejrp6u" path="res://Assets/Img/Parallax/Victorian/layer 2.png" id="2_jgyd3"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="10_km0d0"]
 [ext_resource type="Script" uid="uid://8jhxo5rghqjl" path="res://Scenes/PNJ/uiDuc.gd" id="12_soqyv"]
 [ext_resource type="Texture2D" uid="uid://yb0cr0b566pu" path="res://Assets/Img/Sprites/Animation/FX/All.png" id="13_44a8u"]
+[ext_resource type="Script" uid="uid://csuj3syrmxl6q" path="res://Scripts/fxDuc.gd" id="13_85ifr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
 texture = ExtResource("10_km0d0")
@@ -378,6 +379,7 @@ horizontal_alignment = 2
 script = ExtResource("12_soqyv")
 
 [node name="Fx" type="Node2D" parent="."]
+script = ExtResource("13_85ifr")
 
 [node name="Flash1" type="AnimatedSprite2D" parent="Fx"]
 position = Vector2(147, 31)

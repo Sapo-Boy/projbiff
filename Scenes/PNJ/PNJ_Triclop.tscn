@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://beevh3pg6kg5i"]
+[gd_scene load_steps=29 format=4 uid="uid://beevh3pg6kg5i"]
 
 [ext_resource type="Texture2D" uid="uid://dv2o6yakn534g" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/BG1.png" id="1_7tfqe"]
 [ext_resource type="Texture2D" uid="uid://cpkui8r1sglwu" path="res://Assets/Img/Parallax/Village_Montagne/Couleur1/Sun1.png" id="2_qjnkq"]
@@ -15,6 +15,7 @@
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="13_titlx"]
 [ext_resource type="Script" uid="uid://c3ak8uy5ot17w" path="res://Scenes/PNJ/uiTri.gd" id="14_5s5tt"]
 [ext_resource type="Texture2D" uid="uid://yb0cr0b566pu" path="res://Assets/Img/Sprites/Animation/FX/All.png" id="15_iabbf"]
+[ext_resource type="Script" uid="uid://diymgu3ix18wi" path="res://Scripts/fxTri.gd" id="15_livl5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug51b"]
 texture = ExtResource("10_ypmdf")
@@ -401,8 +402,11 @@ horizontal_alignment = 2
 script = ExtResource("14_5s5tt")
 
 [node name="Fx" type="Node2D" parent="."]
+script = ExtResource("15_livl5")
 
 [node name="Flash1" type="AnimatedSprite2D" parent="Fx"]
 position = Vector2(110, 58)
 sprite_frames = SubResource("SpriteFrames_6e5gb")
+frame = 8
+frame_progress = 1.0
 centered = false
