@@ -43,6 +43,13 @@ metadata/_edit_lock_ = true
 position = Vector2(-10, 60)
 metadata/_edit_lock_ = true
 
+[node name="GainBonus" parent="PjL3S4ge" instance=ExtResource("10_oq34y")]
+offset_left = 551.0
+offset_top = 100.0
+offset_right = 651.0
+offset_bottom = 130.0
+txt_npc = "+ 1 Energie !"
+
 [node name="MarqueurTour" parent="PjL3S4ge" instance=ExtResource("10_oq34y")]
 offset_left = 345.0
 offset_top = 183.0
