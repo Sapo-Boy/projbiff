@@ -334,6 +334,7 @@ tile_set = SubResource("TileSet_rf4jb")
 [node name="UI2" type="Node2D" parent="."]
 
 [node name="IconHeart" type="Sprite2D" parent="UI2"]
+visible = false
 position = Vector2(22, 88)
 texture = ExtResource("6_7kuhl")
 
@@ -349,6 +350,7 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="IconHand" type="Sprite2D" parent="UI2"]
+visible = false
 position = Vector2(22, 120)
 texture = ExtResource("7_4lbgu")
 

@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="4_3kuic"]
 [ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="4_hj41r"]
 [ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="5_3kuic"]
-[ext_resource type="Script" path="res://Scripts/ui_energie.gd" id="7_3kuic"]
+[ext_resource type="Script" uid="uid://dllbf6rhoflvd" path="res://Scripts/ui_energie.gd" id="7_3kuic"]
 
 [sub_resource type="Animation" id="Animation_3kuic"]
 length = 0.001
@@ -256,6 +256,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="UI_Modif_Cartes" type="Node2D" parent="."]
+visible = false
 position = Vector2(50, 320)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="UI_Modif_Cartes"]
@@ -314,10 +315,12 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(240, 80)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="UI_Vie_Energie"]
+visible = false
 tile_map_data = PackedByteArray("AAAAAAAAAAAQAAQAAAAAAAEAAAAQAAUAAAAAAAIAAAAQAAUAAAAAAAMAAAAQAAUAAAAAAAQAAAAQAAUAAAAAAAUAAAAQAAYAAAABAAAAAAALAAQAAAACAAAAAAALAAQAAAADAAAAAAALAAQAAAAEAAAAAAALAAQAAAAFAAAAAAALAAQAAAAGAAAAAAASAAQAAAABAAUAAAALAAYAAAACAAUAAAALAAYAAAADAAUAAAALAAYAAAAEAAUAAAALAAYAAAAFAAUAAAALAAYAAAAGAAUAAAASAAYAAAAGAAEAAAASAAUAAAAGAAIAAAASAAUAAAAGAAMAAAASAAUAAAAGAAQAAAASAAUAAAA=")
 tile_set = SubResource("TileSet_q6ey5")
 
 [node name="IconHeart" type="Sprite2D" parent="UI_Vie_Energie"]
+visible = false
 position = Vector2(36, 28)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_hj41r")

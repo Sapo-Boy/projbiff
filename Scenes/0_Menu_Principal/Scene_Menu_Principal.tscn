@@ -1,8 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5o4gal7wowqx"]
+[gd_scene load_steps=8 format=3 uid="uid://c5o4gal7wowqx"]
 
 [ext_resource type="PackedScene" uid="uid://tu4tueygrji" path="res://Scenes/1_Zone_De_Jeu/parallax/ville_mtgne_parallax_zd_j.tscn" id="1_d0ri6"]
 [ext_resource type="PackedScene" uid="uid://fhhfggb0v272" path="res://Scenes/1_Zone_De_Jeu/decors/plateforme_pj.tscn" id="2_ehecc"]
 [ext_resource type="Texture2D" uid="uid://bfwg5wmoxc0su" path="res://Assets/Img/Sprites/Sprite18.png" id="3_d0ri6"]
+[ext_resource type="Texture2D" uid="uid://d2j047iot46hw" path="res://Assets/Img/Sprites/Sprite22.png" id="4_ehecc"]
+
+[sub_resource type="Animation" id="Animation_2fyt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(278, 360)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_ehecc"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(278, 360), Vector2(278, 358)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(4, 4.05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ablsl"]
+_data = {
+&"RESET": SubResource("Animation_2fyt5"),
+&"idle": SubResource("Animation_ehecc")
+}
 
 [node name="SceneMenuPrincipal" type="Node2D"]
 
@@ -11,6 +74,18 @@
 [node name="Plateforme_PJ" parent="." instance=ExtResource("2_ehecc")]
 
 [node name="Sprite18" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(180, 402)
 scale = Vector2(4, 4)
 texture = ExtResource("3_d0ri6")
+
+[node name="Sprite22" type="Sprite2D" parent="."]
+position = Vector2(278, 360)
+scale = Vector2(4, 4)
+texture = ExtResource("4_ehecc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite22"]
+libraries = {
+&"": SubResource("AnimationLibrary_ablsl")
+}
+autoplay = "idle"

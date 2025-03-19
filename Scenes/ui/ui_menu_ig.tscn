@@ -645,7 +645,7 @@ offset_right = 1025.0
 offset_bottom = 81.0
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("7_iepd1")
-text = "Prototype de jeu de UNO \"RPG\""
+text = "Prototype du jeu Unknown "
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer/Panel"]
@@ -664,15 +664,6 @@ grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 16
 text = "Vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre."
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/PanelContainer/Panel"]
-layout_mode = 0
-offset_left = 385.0
-offset_top = 68.0
-offset_right = 769.0
-offset_bottom = 292.0
-theme_override_font_sizes/normal_font_size = 16
-text = "A"
-
 [node name="Node2D" type="Node2D" parent="CanvasLayer/PanelContainer/Panel"]
 position = Vector2(1, 6)
 
@@ -687,6 +678,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAQAAQAAAAAAAEAAAAQAAUAAAAAAAIAAAAQAAU
 tile_set = SubResource("TileSet_vcv1w")
 
 [node name="IconHeart" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Vie_Energie"]
+visible = false
 position = Vector2(36, 28)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("11_vcv1w")
@@ -717,6 +709,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="UI_Modif_Cartes" type="Node2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ"]
+visible = false
 position = Vector2(39, 374)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer/PanelContainer/Panel/Node2D/PJ/UI_Modif_Cartes"]
@@ -794,6 +787,7 @@ size_flags_horizontal = 8
 text = "Cartes en main"
 
 [node name="IconHeart" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ"]
+visible = false
 position = Vector2(871, 106)
 texture = ExtResource("11_vcv1w")
 
@@ -806,6 +800,7 @@ size_flags_horizontal = 8
 text = "Points de vie"
 
 [node name="IconHand" type="Sprite2D" parent="CanvasLayer/PanelContainer/Panel/Node2D/PnJ"]
+visible = false
 position = Vector2(871, 138)
 texture = ExtResource("12_klxa5")
 
