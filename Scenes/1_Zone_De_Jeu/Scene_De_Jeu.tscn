@@ -27,6 +27,7 @@ metadata/_edit_horizontal_guides_ = [100.0, 314.0, 530.0, 558.0, 241.0, 458.0]
 [node name="GestionAudio" type="Node" parent="."]
 
 [node name="BibliMusiques" parent="GestionAudio" instance=ExtResource("2_sbofg")]
+volume_db = -20.0
 
 [node name="BibliothequeSons" parent="GestionAudio" instance=ExtResource("3_oq34y")]
 volume_db = 0.0

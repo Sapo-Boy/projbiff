@@ -14,3 +14,6 @@ func _on_quitter_pressed() -> void:
 
 func _on_option_pressed() -> void:
 	bibliothequeSons.SonPresseBouton()
+
+func _on_credits_pressed() -> void:
+	bibliothequeSons.SonPresseBouton()

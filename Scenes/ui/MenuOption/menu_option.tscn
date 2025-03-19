@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnk08ve485nw" path="res://Assets/UI/Tileset/UI - 16x16 UI Tileset.png" id="3_5f046"]
 [ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="3_25jo3"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbac1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5f046"]
 texture = ExtResource("3_5f046")
 1:0/0 = 0
 2:0/0 = 0
@@ -173,7 +173,7 @@ texture = ExtResource("3_5f046")
 19:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pkpb1"]
-sources/0 = SubResource("TileSetAtlasSource_mbac1")
+sources/0 = SubResource("TileSetAtlasSource_5f046")
 
 [node name="MenuOption" type="Control"]
 layout_mode = 3
@@ -333,5 +333,5 @@ icon_alignment = 1
 [connection signal="toggled" from="MarginContainer/VBoxContainer/GridContainer2/PleinEcranCheck" to="." method="_on_plein_ecran_check_toggled"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusiqueSlider" to="." method="_on_musique_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/SonsSlider" to="." method="_on_sons_slider_value_changed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="hide"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="_on_retour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Retour" to="." method="hide"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://btk2v15jc6t6e"]
+[gd_scene load_steps=11 format=3 uid="uid://btk2v15jc6t6e"]
 
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="1_rhdce"]
 [ext_resource type="Script" uid="uid://jruvrxrrfjtr" path="res://Scenes/0_Menu_Principal/control_menu_principal.gd" id="2_12x3r"]
@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bjxki3cbau1q6" path="res://Scenes/GestionSon/BibliSons.tscn" id="3_itvo5"]
 [ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="4_6a634"]
 [ext_resource type="PackedScene" uid="uid://c1nn12h2pi0up" path="res://Scenes/GestionSon/BibliMusiques.tscn" id="4_w2l4v"]
+[ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="6_d3cyd"]
 [ext_resource type="Theme" uid="uid://jo403re8lvp5" path="res://Assets/UI/Theme/Menu_Petit_Bouton.tres" id="6_itvo5"]
 [ext_resource type="PackedScene" uid="uid://ct6nhk22uaow7" path="res://Scenes/ui/MenuOption/menu_option.tscn" id="7_itvo5"]
+[ext_resource type="PackedScene" uid="uid://e30jtguy82t4" path="res://Scenes/0_Menu_Principal/panneau_credits.tscn" id="9_bmmgj"]
 
 [node name="MenuPrincipal" type="Control" node_paths=PackedStringArray("bibliothequeSons", "bibliothequeMusiques")]
 layout_mode = 3
@@ -26,6 +28,7 @@ bibliothequeMusiques = NodePath("GestionAudio/BibliMusiques")
 [node name="BibliothequeSons" parent="GestionAudio" instance=ExtResource("3_itvo5")]
 
 [node name="BibliMusiques" parent="GestionAudio" instance=ExtResource("4_w2l4v")]
+volume_db = -15.0
 
 [node name="SceneMenuPrincipal" parent="." instance=ExtResource("3_griwm")]
 
@@ -54,6 +57,13 @@ layout_mode = 2
 theme = ExtResource("4_6a634")
 text = "Options"
 
+[node name="Credits" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_6a634")
+text = "Credits
+"
+icon_alignment = 1
+
 [node name="Quitter" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_6a634")
@@ -71,9 +81,62 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="PanneauCredits" parent="." node_paths=PackedStringArray("bibliothequeSons", "BoutonMenuZdJ") instance=ExtResource("9_bmmgj")]
+visible = false
+layout_mode = 1
+bibliothequeSons = NodePath("../GestionAudio/BibliothequeSons")
+BoutonMenuZdJ = NodePath("../BoutonMenuZdJVirtuel")
+
+[node name="MenuTitre" type="CanvasLayer" parent="."]
+offset = Vector2(576, 0)
+transform = Transform2D(1, 0, 0, 1, 576, 0)
+
+[node name="BoxContainer" type="BoxContainer" parent="MenuTitre"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1152.0
+offset_right = -576.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuTitre/BoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_bottom = 450
+
+[node name="TitreUnknown" type="Label" parent="MenuTitre/BoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_d3cyd")
+theme_override_font_sizes/font_size = 64
+text = "Unkn0wn"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuTitre/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MenuTitre/BoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 12
+text = "Alpha / Presentation BIFF 2025"
+
 [connection signal="pressed" from="Menu/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="MenuOption" method="show"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="BoutonMenuZdJVirtuel" method="hide"]
 [connection signal="pressed" from="Menu/VBoxContainer/Option" to="MenuOption" method="set_mouse_filter" binds= [0]]
+[connection signal="pressed" from="Menu/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Credits" to="BoutonMenuZdJVirtuel" method="hide"]
+[connection signal="pressed" from="Menu/VBoxContainer/Credits" to="PanneauCredits" method="show"]
+[connection signal="pressed" from="Menu/VBoxContainer/Credits" to="PanneauCredits" method="set_mouse_filter" binds= [0]]
 [connection signal="pressed" from="Menu/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
