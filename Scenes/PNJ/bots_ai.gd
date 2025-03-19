@@ -74,7 +74,7 @@ func _botsplay():
 			Events.cardbot3 = hand4.get_child_count()
 			print(plswork)
 			if plswork == 0:
-				if !hand2.get_children().is_empty():
+				if !hand4.get_children().is_empty():
 					print("handexist")
 					print(hand4.get_children())
 					Events.playerturn = 0

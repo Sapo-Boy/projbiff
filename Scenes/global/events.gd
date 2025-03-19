@@ -8,6 +8,7 @@ signal card_aim_ended(card_ui: CardUI)
 signal card_played(card: Card)
 signal card_drag_started(card_ui : CardUI)
 signal card_drag_ended(card_ui : CardUI)
+signal emitButtonColor
 
 
 #Player-related event
@@ -21,3 +22,5 @@ var oldcardcolor: TypeColor
 var cardbot1
 var cardbot2
 var cardbot3
+var nbcardplayed
+var extraschmove

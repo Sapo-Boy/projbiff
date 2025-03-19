@@ -12,6 +12,7 @@ func  _ready() -> void:
 	Events.cardbot1 = 7
 	Events.cardbot2 = 7
 	Events.cardbot3 = 7
+	Events.nbcardplayed = 0
 	if not is_node_ready():
 		await ready
 	match Events.oldcardcolor: #Change couleur carte début
