@@ -1,5 +1,6 @@
 extends CardState
 @export var bibliothequeSons: AudioStreamPlayer
+
 func enter() -> void:
 	var ui_layer := get_tree().get_first_node_in_group("ui_layer")
 	bibliothequeSons.SonCarteDepose()
@@ -29,9 +30,17 @@ func on_input(event: InputEvent) -> void:
 				print(Events.oldcardcolor)
 				bibliothequeSons.SonCarteDepose()
 				get_viewport().set_input_as_handled()
-				Events.playerturn = 1
-				Events.turnchange.emit()
-				transition_requested.emit(self, CardState.State.RELEASED)
+				if (Events.extraschmove == 0) or (Events.nbcardplayed < 5):
+					Events.playerturn = 1
+					Events.turnchange.emit()
+					Events.extraschmove = 1
+					Events.emitButtonColor.emit()
+					Events.nbcardplayed = Events.nbcardplayed + 1
+					transition_requested.emit(self, CardState.State.RELEASED)
+				else:
+					Events.extraschmove = 0
+					Events.emitButtonColor.emit()
+					transition_requested.emit(self, CardState.State.RELEASED)
 			else:
 				bibliothequeSons.SonCarteErreur()
 				transition_requested.emit(self, CardState.State.BASE)

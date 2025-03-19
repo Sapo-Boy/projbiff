@@ -12,11 +12,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eyib"]
 
-[node name="CardScene" type="Node2D"]
+[node name="CardScene" type="Node2D" node_paths=PackedStringArray("bibliothequeSons")]
 z_index = -1
 z_as_relative = false
 script = ExtResource("1_1mmgb")
 char_stats = ExtResource("2_55aab")
+bibliothequeSons = NodePath("Node/BibliothequeSons")
 metadata/_edit_lock_ = true
 metadata/_edit_horizontal_guides_ = [300.0, 1.0]
 metadata/_edit_vertical_guides_ = [594.0]
@@ -105,6 +106,16 @@ scale = Vector2(0.7, 0.7)
 theme = ExtResource("7_1mmgb")
 text = "Draw"
 
+[node name="PassTurn" type="Button" parent="BattleUI"]
+modulate = Color(1, 1, 1, 0.7)
+offset_left = 355.0
+offset_top = 12.0
+offset_right = 404.0
+offset_bottom = 33.0
+scale = Vector2(0.7, 0.7)
+theme = ExtResource("7_1mmgb")
+text = "Pass"
+
 [node name="BotsAI" type="Node" parent="." node_paths=PackedStringArray("bibliothequeSons")]
 script = ExtResource("7_ms70h")
 bibliothequeSons = NodePath("../Node/BibliothequeSons")
@@ -114,5 +125,6 @@ bibliothequeSons = NodePath("../Node/BibliothequeSons")
 [node name="BibliothequeSons" parent="Node" instance=ExtResource("9_55aab")]
 
 [connection signal="pressed" from="BattleUI/Draw" to="PlayerHandler" method="_on_button_pressed"]
+[connection signal="pressed" from="BattleUI/PassTurn" to="." method="_on_button_pressed"]
 [connection signal="gameover" from="BotsAI" to="." method="_on_bots_ai_gameover"]
 [connection signal="npc_turn" from="BotsAI" to="." method="_on_bots_ai_npc_turn"]
