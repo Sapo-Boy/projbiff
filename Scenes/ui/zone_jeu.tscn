@@ -405,7 +405,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"tp",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_50w3k"]
@@ -445,6 +445,7 @@ rotation = -3.14159
 sprite_frames = SubResource("SpriteFrames_wdpf2")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.201462
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone_Deck"]
 position = Vector2(0, -45)

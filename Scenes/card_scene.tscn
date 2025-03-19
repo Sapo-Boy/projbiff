@@ -101,17 +101,17 @@ script = ExtResource("1_1eyib")
 offset_left = 430.0
 offset_top = 8.0
 offset_right = 480.0
-offset_bottom = 39.0
+offset_bottom = 38.0
 scale = Vector2(0.7, 0.7)
 theme = ExtResource("7_1mmgb")
 text = "Draw"
 
 [node name="PassTurn" type="Button" parent="BattleUI"]
 modulate = Color(1, 1, 1, 0.7)
-offset_left = 355.0
-offset_top = 12.0
-offset_right = 404.0
-offset_bottom = 33.0
+offset_left = 360.0
+offset_top = 8.0
+offset_right = 410.0
+offset_bottom = 38.0
 scale = Vector2(0.7, 0.7)
 theme = ExtResource("7_1mmgb")
 text = "Pass"
