@@ -5,4 +5,4 @@ func _ready() -> void:
 
 func _changenb() -> void:
 	if Events.nbcardplayed > 4:
-		self.text = '2'
+		self.text = str((Events.nbcardplayed / 5) + 1)

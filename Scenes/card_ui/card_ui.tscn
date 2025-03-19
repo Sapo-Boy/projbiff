@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cvaqwdff30bl" path="res://Assets/UI/Fonts/CyberpunkCraftpixPixel.otf" id="3_ugrrg"]
 [ext_resource type="Script" uid="uid://bb18oyy2kehrl" path="res://Scenes/card_ui/card_states/card_base_state.gd" id="4_6fbe4"]
 [ext_resource type="Script" uid="uid://b6w47hnh6nrbx" path="res://Scenes/card_ui/card_states/card_clicked_state.gd" id="5_cq5hw"]
-[ext_resource type="Script" uid="uid://c515x35jut4f5" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
+[ext_resource type="Script" uid="uid://1p50m7s644bp" path="res://Scenes/card_ui/Card_State_Machine.gd" id="5_iiw4v"]
 [ext_resource type="Script" uid="uid://dumiotxuteo3y" path="res://Scenes/card_ui/card_states/card_dragging_state.gd" id="6_ybjgx"]
 [ext_resource type="Script" uid="uid://e8yaa778cuxi" path="res://Scenes/card_ui/card_states/card_released_state.gd" id="7_ev7j6"]
 [ext_resource type="Texture2D" uid="uid://egnybu1rsd6e" path="res://Assets/Img/Symboles/Bonus/Icon4.png" id="10_4jrdu"]
@@ -26,6 +26,7 @@ height = 138
 noise = SubResource("FastNoiseLite_4jrdu")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj616"]
+resource_local_to_scene = true
 shader = ExtResource("1_iiw4v")
 shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_6qphx")
 shader_parameter/dissolve_value = 1.0

@@ -15,6 +15,7 @@ signal card_drag_ended(card_ui : CardUI)
 signal player_hand_drawn
 signal turnchange
 signal emitButtonColor
+signal botcardplayed
 
 #variables
 

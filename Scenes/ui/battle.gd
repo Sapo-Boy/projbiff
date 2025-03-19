@@ -32,16 +32,16 @@ func _on_bots_ai_gameover() -> void:
 
 
 func _on_button_pressed() -> void: #Bouton saute tour (on change extrashmove pour qu'on puisse changer la couleur du button) 
-	if Events.extraschmove == 0:
+	if Events.extraschmove < (Events.nbcardplayed / 5):
 		Events.playerturn = 1
 		Events.turnchange.emit()
-		Events.extraschmove = 1
+		Events.extraschmove = (Events.nbcardplayed / 5)
 		changebuttoncol()
 	else:
 		bibliothequeSons.SonCarteErreur()
 
 func changebuttoncol():
-	if Events.extraschmove == 0 and (Events.nbcardplayed > 4):
+	if Events.extraschmove < ((Events.nbcardplayed / 5)) and (Events.nbcardplayed > 4):
 		passbutton.modulate.a = 1
 	else:
 		passbutton.modulate.a = 0.7

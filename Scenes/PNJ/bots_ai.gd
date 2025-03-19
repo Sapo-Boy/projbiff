@@ -20,6 +20,7 @@ var plswork
 var rng = RandomNumberGenerator.new()
 var rngx
 var rngy
+var tween_portal: Tween
 signal npc_turn(nb: int)
 signal gameover()
 
@@ -265,9 +266,13 @@ func _movecard():
 	rngx = rng.randf_range(-100.0, 0.0)
 	rngy = rng.randf_range(-100.0, 0.0)
 	check = 1
+	tween_portal = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	tween_portal.tween_property(AnewCardUi.material, "shader_parameter/dissolve_value", 1.0, 1.0).from(0.0)
+	Events.botcardplayed.emit()
 	print_debug(AnewCardUi.position)
 	return
 	
 func _process(_delta):
 	if check == 1:
 		AnewCardUi.position = AnewCardUi.position.move_toward(coordcard.position + Vector2(rngx,rngy),25.0)
+		#AnewCardUi.material.set_shader_parameter("dissolve_value",_delta)

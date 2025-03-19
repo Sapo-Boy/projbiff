@@ -32,14 +32,14 @@ func on_input(event: InputEvent) -> void:
 				get_viewport().set_input_as_handled()
 				if (Events.extraschmove == 0) or (Events.nbcardplayed < 5):
 					Events.playerturn = 1
-					Events.turnchange.emit()
-					Events.extraschmove = 1
-					Events.emitButtonColor.emit()
 					Events.nbcardplayed = Events.nbcardplayed + 1
+					Events.extraschmove = Events.nbcardplayed / 5
+					Events.emitButtonColor.emit()
+					Events.turnchange.emit()
 					transition_requested.emit(self, CardState.State.RELEASED)
 					
 				else:
-					Events.extraschmove = 0
+					Events.extraschmove = Events.extraschmove - 1
 					Events.emitButtonColor.emit()
 					transition_requested.emit(self, CardState.State.RELEASED)
 			else:
