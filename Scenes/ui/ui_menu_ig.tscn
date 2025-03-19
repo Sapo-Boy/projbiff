@@ -657,12 +657,16 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -441.0
 offset_top = -41.0
-offset_right = -57.0
-offset_bottom = 183.0
+offset_right = -25.0
+offset_bottom = 227.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 16
-text = "Vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre."
+text = "Vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre.
+
+Une fois que vous pouvez poser plusieurs cartes, vous avez accès à un bouton \"pass\" vous permettant, après avoir poser une carte, de passer votre tour dans le cas, entre autre, où vous ne pouvez poser une autre carte.
+
+"
 
 [node name="Node2D" type="Node2D" parent="CanvasLayer/PanelContainer/Panel"]
 position = Vector2(1, 6)
