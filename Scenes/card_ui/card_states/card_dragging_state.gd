@@ -37,6 +37,7 @@ func on_input(event: InputEvent) -> void:
 					Events.emitButtonColor.emit()
 					Events.nbcardplayed = Events.nbcardplayed + 1
 					transition_requested.emit(self, CardState.State.RELEASED)
+					
 				else:
 					Events.extraschmove = 0
 					Events.emitButtonColor.emit()
