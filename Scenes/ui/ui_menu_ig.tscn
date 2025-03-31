@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bpri1ymqpycjc"]
+[gd_scene load_steps=22 format=4 uid="uid://bpri1ymqpycjc"]
 
 [ext_resource type="Script" uid="uid://5c5jo0eoca8f" path="res://ui_menu_ig.gd" id="1_b7ks2"]
 [ext_resource type="PackedScene" uid="uid://bjxki3cbau1q6" path="res://Scenes/GestionSon/BibliSons.tscn" id="2_ced7o"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cfkpfjlc3sylr" path="res://Assets/Img/Symboles/UI/icon_parchment.png" id="5_iepd1"]
 [ext_resource type="Theme" uid="uid://dfqkve6hwu801" path="res://Assets/UI/Theme/theme_global.tres" id="7_iepd1"]
 [ext_resource type="Theme" uid="uid://go7mn727e8yf" path="res://Assets/UI/Theme/Menu.tres" id="7_wrbov"]
+[ext_resource type="Script" uid="uid://csu6j3ck0ojo6" path="res://Scenes/ui/timertutorial.gd" id="8_vcv1w"]
 [ext_resource type="Texture2D" uid="uid://dvfwqwfcg7gck" path="res://Assets/Img/Symboles/UI/icon_card.png" id="10_5ohiq"]
 [ext_resource type="Texture2D" uid="uid://cjbq24cmqg4dr" path="res://Assets/Img/Symboles/UI/icon_heart.png" id="11_vcv1w"]
 [ext_resource type="Texture2D" uid="uid://dxh2u2sgi5yt3" path="res://Assets/Img/Symboles/UI/icon_hand.png" id="12_klxa5"]
@@ -582,6 +583,21 @@ layout_mode = 2
 theme = ExtResource("3_wrbov")
 icon = ExtResource("5_iepd1")
 icon_alignment = 1
+
+[node name="Node" type="Node" parent="CanvasLayer/BoutonMenuZdJ"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/BoutonMenuZdJ/Node"]
+offset_left = 63.0
+offset_top = -11.0
+offset_right = 205.0
+offset_bottom = 29.0
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("7_wrbov")
+bbcode_enabled = true
+text = "[pulse] <-  Tutorial "
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_vcv1w")
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 visible = false
