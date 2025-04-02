@@ -4,7 +4,9 @@ extends Control
 @onready var animation: AnimationPlayer = $CanvasLayer/Panel/AnimationPlayer
 @onready var panelend: Panel = $CanvasLayer/Panel
 func _ongameend() -> void:
+	Events.over = true
 	panelend.show()
+	print("Over")
 	match Events.playerturn:
 		0:
 			textvictory.text = "[wave amp=35.0 freq=5.0 connected=1] You win!"

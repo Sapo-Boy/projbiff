@@ -93,5 +93,7 @@ func draw_cardsbot3(amount: int) -> void:
 	)
 
 func _on_button_pressed() -> void:
-	bibliothequeSons.SonCarteErreur()
-	draw_card()
+	print(Events.over)
+	if Events.over == false:
+		bibliothequeSons.SonCarteErreur()
+		draw_card()

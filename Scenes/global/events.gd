@@ -27,3 +27,4 @@ var cardbot3
 var nbcardplayed
 var extraschmove
 var checkempty = 0
+var over = false
