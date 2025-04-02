@@ -592,6 +592,7 @@ offset_top = -11.0
 offset_right = 205.0
 offset_bottom = 29.0
 scale = Vector2(1.5, 1.5)
+mouse_filter = 2
 theme = ExtResource("7_wrbov")
 bbcode_enabled = true
 text = "[pulse] <-  Tutorial "
@@ -674,14 +675,15 @@ anchor_bottom = 0.5
 offset_left = -441.0
 offset_top = -41.0
 offset_right = -25.0
-offset_bottom = 227.0
+offset_bottom = 289.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 16
-text = "Vous devez recouvrir la dernière carte jouée par vos adversaires pour recouvrir une carte déjà présente dans la zone de dépose: pour cela, le symbole ou le chiffre doivent correspondre.
+text = "Vous devez recouvrir la dernière carte jouée par vos adversaires dans la zone de dépose: glisser et déposer une carte ayant le même symbole et, ou la même couleur.
 
-Une fois que vous pouvez poser plusieurs cartes, vous avez accès à un bouton \"pass\" vous permettant, après avoir poser une carte, de passer votre tour dans le cas, entre autre, où vous ne pouvez poser une autre carte.
+Après avoir poser plusieurs cartes, vous aurez la posiblité dans jouer une autre en plus et aurez accès à un bouton \"pass\" vous permettant, après avoir poser une carte, de passer votre tour dans le cas, entre autre, où vous ne pouvez poser une autre carte.
 
+La partie se termine par la victoire du joueur ou de la joueuse n'ayant plus de cartes en main.
 "
 
 [node name="Node2D" type="Node2D" parent="CanvasLayer/PanelContainer/Panel"]
